@@ -1,7 +1,9 @@
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
+import Steps from "./Components/Steps";
 
 export default function Home() {
   return (
+    <>
     <div className='w-full text-charcoal'>
       <div className='max-w-[1400px] px-10 py-[100px] flex flex-col md:flex-row justify-between items-center flex-wrap mx-auto my-0 gap-10 md:gap-0'>
         <div className='w-full md:w-[50%]'>
@@ -18,5 +20,9 @@ export default function Home() {
         </div>
       </div>
     </div>
+
+    <Steps />
+
+    </>
   )
 }
