@@ -1,3 +1,5 @@
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+
 export default function Steps() {
     return (
     <div className='w-full text-charcoal bg-vanilla'>
@@ -33,7 +35,7 @@ export default function Steps() {
             </div>
           </div>
 
-          <div className='border-4 border-charcoal rounded-md p-[30px] flex-grow relative              max-w-[100%] md:max-w-[32%]'>
+          <div className='border-4 border-charcoal rounded-md p-[30px] flex-grow relative max-w-[100%] md:max-w-[32%]'>
             <div className='absolute w-full top-[-55px] left-0 flex justify-center'>
               <div className='bg-maize flex justify-center items-center rounded-full w-[100px] h-[100px]'>
                 <img src='/body.png' />
@@ -47,6 +49,9 @@ export default function Steps() {
           </div>
           
         </div>
+
+        <p className='text-xl max-w-[900px] mx-auto mt-[80px] mb-[40px]'>At Lifestyle Medly, we're not selling a dream – we are helping you curate a lifestyle guided by principles of medicine and healthy living. </p>
+        <button className='mx-auto my-0 py-4 px-10 text-lg rounded-full bg-charcoal text-white mt-16 flex justify-center items-center gap-3'>Get Started Today <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button>
       </div>
     </div>
     )
