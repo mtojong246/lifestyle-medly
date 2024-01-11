@@ -1,8 +1,8 @@
 import { IoArrowForwardCircleOutline } from "react-icons/io5";
 import Steps from "./Components/Steps";
 import Medication from "./Components/Medication";
-import { CiCircleCheck } from "react-icons/ci";
-import { FaRegCheckCircle } from "react-icons/fa";
+import { AiFillPlusCircle } from "react-icons/ai";
+import Pricing from "./Components/Pricing";
 
 export default function Home() {
   return (
@@ -28,181 +28,101 @@ export default function Home() {
 
     <Medication />
 
-    <div className='w-full text-charcoal bg-vanilla'>
-      <div className='max-w-[1400px] px-10 py-[100px] mx-auto my-0 text-center'>
-        <p className='text-[54px] font-bold mb-[100px]'>Discover the right fit, affordable plans for every inch.</p>
+    <Pricing />
+    
+    <div className='w-full text-charcoal'>
+      <div className='max-w-[1400px] mx-auto px-10 py-[100px] flex flex-col justify-center items-center gap-[40px]'>
 
-        <div className='flex flex-col lg:flex-row justify-center items-stretch gap-10'>
-          <div className='p-10 w-full mx-auto max-w-[900px] lg:w-1/3 text-left bg-white rounded-md'>
-              <p className='font-bold text-[32px]'>Start-Up Plan <span className='text-gold'>(Semaglutide)</span></p>
-              <p className='font-bold text-[52px] mt-3 text-nowrap'>$169 <span className='font-normal text-lg text-gold'>per month</span></p>
-              <p className='text-lg font-medium mt-5'>Duration: 11 weeks | Processing Time: 3-5 days</p>
-              <button className='mt-8 text-lg font-medium text-white bg-maize lg:w-full py-4 lg:px-6 px-10 rounded-full'>Start your kickstart today!</button>
-              <div className='mt-10 flex flex-col justify-center items-start gap-10'>
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>11-weeks of Compounded Semaglutide (0.25mg-0.5mg weekly dose) prescription</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>BONUS welcome kit full of helpful resources for your first month</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE Overnight Shipping</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE Initial Consultation & Follow-up via telehealth</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE in-office injections with personalized teaching by our registered nurses</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
-                </div>
-
-              </div>
+        <div className='w-full'>
+          <div className='flex justify-between items-start'>
+            <p className='text-[42px] font-bold max-w-[1200px]'>What is Semaglutide for Weight Loss?</p>
+            <AiFillPlusCircle className='h-[60px] w-[60px] text-maize' />
           </div>
+          <div className='border border-maize rounded-md p-8 mt-10 text-[22px]'>
+            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='mb-5'>Semaglutide is a special medicine that helps people lose weight. It works like a hormone in your body to control hunger, make insulin, and help with digestion. First made for type 2 diabetes, doctors found out it also helps people lose weight. So, they did more studies called the STEP trials to learn about this.</p>
+            <p className='mb-5'>One big study in the STEP trials was STEP 5. It lasted 104 weeks and had 304 people who were overweight or had obesity. These people didn't have diabetes. They got either Semaglutide or placebo. Everyone also ate fewer calories and did more exercise.</p>
+            <p>The study looked at how much weight people lost and how their bodies changed. They found that nearly 90% of people lost at least 5% of their weight. This is a big deal because no other weight loss medicine has done this well before. Because of these great results, in June 2022, the FDA said Semaglutide could be used for losing weight.</p>
+          </div>
+        </div>
 
-          <div className='border-box p-10 text-left mx-auto max-w-[900px] w-full lg:w-1/3 bg-white rounded-md relative mt-10 lg:mt-0'>
-            <div className='absolute top-[-40px] left-0 right-0 p-4 text-center bg-maize rounded-t-md'>
-              <p className='font-bold text-white text-lg'>Limited Time Offer!</p>
+        <div className='w-full'>
+          <div className='flex justify-between items-start'>
+            <p className='text-[42px] font-bold max-w-[1200px]'>What is Tirzepatide for Weight Loss?</p>
+            <AiFillPlusCircle className='h-[60px] w-[60px] text-maize' />
+          </div>
+          <div className='border border-maize rounded-md p-8 mt-10 text-[22px]'>
+            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='mb-5'>Tirzepatide is like a precision tool designed for weight management. It acts as a dual GIP and GLP-1 receptor agonist, targeting two key hormones that regulate appetite and insulin. Initially developed to manage type 2 diabetes, tirzepatide's effectiveness in weight loss emerged as a significant benefit. This discovery led to focused research, revealing impressive results in body weight reduction. In clinical trials, tirzepatide demonstrated remarkable efficacy:</p>
+            <ul className='list-disc ml-20'>
+              <li className='mb-5'>15.3% of adults on a 5 mg dose achieved an average weight loss of 25% (around 57 lbs)</li>
+              <li>32.3% of adults on a 10 mg dose saw similar results (approximately 58 lbs)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className='w-full'>
+          <div className='flex justify-between items-start'>
+            <p className='text-[42px] font-bold max-w-[1200px]'>How Do Semaglutide and Tirzepatide Help with Weight Loss?</p>
+            <AiFillPlusCircle className='h-[60px] w-[60px] text-maize' />
+          </div>
+          <div className='border border-maize rounded-md p-8 mt-10 text-[22px]'>
+            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='mb-5'>Semaglutide and Tirzepatide are like special helpers for losing weight. They both work in ways that make your body better at managing weight.</p>
+            <p className='mb-5 font-semibold'>Semaglutide:</p>
+            <ul className='list-disc ml-20 mb-5'>
+              <li className='mb-5'>It acts like a hormone in your body to control hunger. This means you feel less hungry and eat less.</li>
+              <li className='mb-5'>It helps to balance your insulin, which is important for controlling blood sugar and stopping cravings.</li>
+              <li>It slows down how fast your food is digested, so you feel full longer.</li>
+            </ul>
+            <p className='mb-5 font-semibold'>Tirzepatide:</p>
+            <ul className='list-disc ml-20 mb-5'>
+              <li className='mb-5'>It also works like a hormone to control hunger and insulin.</li>
+              <li>What's cool about Tirzepatide is that it targets two hormones at once, making it really effective at managing weight.</li>
+            </ul>
+            <p className='mb-5'>Both of these medicines were first used for type 2 diabetes but were found to help a lot with weight loss too. In studies, a lot of people lost a significant amount of weight using these medicines. They're not magic injections, though. They work best when you also eat healthily and exercise.</p>
+            <p className='mb-5'>Remember, these medicines are only for people with a doctor's prescription, and they can have some side effects. But most of these side effects are mild and go away after a while.</p>
+          </div>
+        </div>
+
+        <div className='w-full'>
+          <div className='flex justify-between items-center'>
+            <p className='text-[42px] font-bold max-w-[1200px]'>What are those side effects and how common are they?</p>
+            <AiFillPlusCircle className='h-[60px] w-[60px] text-maize' />
+          </div>
+          <div className='border border-maize rounded-md p-8 mt-10 text-[22px]'>
+            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <ul className='list-disc ml-10'>
+              <li className='mb-5'>Stomach related side effects - nausea, vomiting, diarrhea, constipation, abdominal pain (approx 1 in 10 people experience these) </li>
+              <li className='mb-5'>Site reactions (3 in a 100 people reported)</li>
+              <li className='mb-5'>Fatigue (up to 1 in 10 people reported)</li>
+              <li>Headaches (up to 2 in 10 reported)</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className='w-full'>
+          <div className='flex justify-between items-start'>
+            <p className='text-[42px] font-bold max-w-[1200px]'>How does our curated weight loss program work?</p>
+            <AiFillPlusCircle className='h-[60px] w-[60px] text-maize' />
+          </div>
+          <div className='border border-maize rounded-md p-8 mt-10 text-[22px]'>
+            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <div className='ml-10'>
+              <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 1:</span> We begin with a quick online questionnaire to understand your goals, health history, and lifestyle and consent to treat you.</p>
+              <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 2:</span> A dedicated nurse will personally guide you through enrollment, ensuring your safety and answering any questions.</p>
+              <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 3:</span> A telehealth appointment with your weight loss provider lets you review your blood work and discuss your personalized roadmap.</p>
+              <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 4:</span> Based on your blood work and needs, your provider selects the optimal medication dosing based on your needs and desired weight loss goal.</p>
+              <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 5:</span> We will place your order through one of our partner pharmacies for home delivery.  We will also ship a complementary injection and PPE customized kit to the patient’s home.</p>
+              <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 6:</span> We equip you with comprehensive medication training via video training or in person office injection training support to ensure a smooth and confident start. (inquire about our optional nurse at home teaching) for medication injection for your FIRST TIME.</p>
+              <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 7:</span> Together: Stay on track with weekly phone follow-ups where we monitor your progress, address any concerns, and receive ongoing nutritional and motivational coaching.</p>
+              <p><span className='inline-block mr-2 font-semibold'>Step 8:</span> Reach Your Peak: As you achieve milestones, your provider and weight loss specialist will help you gain and maintain desired effect. Whether it’s medication dosage adjustment or to celebrate your triumphs. We will always be available.</p>
             </div>
-            <div className='absolute top-0 right-0 bottom-0 left-0 border-maize border-2 rounded-md'></div>
-            <p className='font-bold text-[32px]'>Power-Up Plan <span className='text-gold'>(Terzeptide)</span></p>
-              <p className='font-bold text-[52px] mt-3 text-nowrap'>$169 <span className='font-normal text-lg text-gold'>per month</span></p>
-              <p className='text-lg font-medium mt-5'>Duration: 6 weeks | Processing Time: 3-5 days</p>
-              <button className='mt-8 text-lg font-medium text-white bg-maize lg:w-full py-4 lg:px-6 px-10 rounded-full'>Unlock your Power-Up now!</button>
-              <div className='mt-10 flex flex-col justify-center items-start gap-10'>
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>6-weeks of Compounded Tirzepatide (2.5mg-5mg weekly dose) prescription</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>BONUS welcome kit on your 1st month packed with essential resources!</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE Overnight Shipping</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE Initial Consultation & Follow-up via telehealth</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE in-office injections with personalized teaching by our registered nurses</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
-                </div>
-
-              </div>
-            
-          </div>
-          <div className='p-10 text-left w-full mx-auto max-w-[900px] lg:w-1/3 bg-white rounded-md'>
-            <p className='font-bold text-[32px]'>Loyalty Program Plan <span className="text-gold">(Continuation)</span></p>
-              <p className='font-bold text-[52px] mt-3 text-nowrap'>$99 <span className='font-normal text-lg text-gold'>per month</span></p>
-              <p className='text-lg font-medium mt-5'>Exclusive discounts & priority access!</p>
-              <button className='mt-8 text-lg font-medium text-white bg-maize lg:w-full py-4 lg:px-6 px-10 rounded-full'>Continue Your Journey!</button>
-              <div className='mt-10 flex flex-col justify-center items-start gap-10'>
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>10% off labs at home for follow-up</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>Consistent medication delivery to your home</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>Priority booking for Telehealth and Lab Appointments</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE monthly consultation with expert physicians</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE in-office injections with personalized teaching by our registered nurses</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
-                </div>
-
-                <div className='flex justify-start items-start gap-3'>
-                  <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                  <p className='text-lg'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
-                </div>
-
-              </div>
           </div>
         </div>
 
-        <div className='mt-20 mx-auto text-left max-w-[900px]'>
-          <p className='text-xl font-semibold'>Not included:</p>
-          <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-            <img src='/x.svg' className='w-7 h-7' />
-            <p className='text-lg'>Labs (insurance or $50)</p>
-          </div>
-          <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-            <img src='/x.svg' className='w-7 h-7' />
-            <p className='text-lg'>Medications (as low as $25/week)</p>
-          </div>
-          <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-            <img src='/x.svg' className='w-7 h-7' />
-            <p className='text-lg'>Optional nurse teaching for home injections for as low as $100 (for Central NJ customers</p>
-          </div>
-        </div>
 
       </div>
-
     </div>
 
     </>
