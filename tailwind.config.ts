@@ -17,7 +17,7 @@ const config: Config = {
         'charcoal': '#303030',
         'maize': '#F0C453',
         'gold': '#AB8100',
-        'dark-vanilla': '#545454',
+        'darkvanilla': '#545454',
         'vanilla': '#F8F5F2',
       }
     },

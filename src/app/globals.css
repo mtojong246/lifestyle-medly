@@ -23,6 +23,14 @@ body {
 
 }
 
+.gold {
+  filter: invert(84%) sepia(84%) saturate(7489%) hue-rotate(317deg) brightness(101%) contrast(88%);
+}
+
+.dark-gold {
+  filter: invert(63%) sepia(51%) saturate(6929%) hue-rotate(28deg) brightness(96%) contrast(101%);
+}
+
 #nav-icon4 {
   width: 60px;
   height: 45px;
