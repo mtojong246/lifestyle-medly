@@ -14,11 +14,11 @@ export default function Navigation() {
     }
 
     return (
-        <div className='w-full'>
+        <div className='w-full sticky top-0 bg-white z-10'>
             <div className="max-w-[1400px] my-0 mx-auto p-4 flex justify-between items-center gap-8">
                 <div className='flex justify-center items-center gap-8'>
                     <img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' />
-                    <Link className='hidden md:block' href='#'>How It Works</Link>
+                    <Link  className='hidden md:block' href='#'>How It Works</Link>
                     <Link className='hidden md:block' href='#'>Direct Pay</Link>
                     <Link className='hidden md:block' href='#'>FAQ</Link>
                 </div>
