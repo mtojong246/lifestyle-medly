@@ -1,14 +1,16 @@
 'use client';
 
-import Logo from '../../../public/lifestyle_logo.png';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Hamburger from './Hamburger';
 import { useState, MouseEvent } from 'react';
 import { Link as Scroll, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import Dropdown from './Dropdown';
+import { GoArrowLeft } from "react-icons/go";
 
 export default function Navigation() {
     const [ isOpen, setIsOpen ] = useState(false);
+    const pathname = usePathname();
 
     const toggleOpen = (e:MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -17,22 +19,37 @@ export default function Navigation() {
 
     return (
         <div className='w-full sticky top-0 bg-white z-10'>
-            <div className="max-w-[1400px] my-0 mx-auto p-4 flex justify-between items-center gap-8">
-                <div className='flex justify-center items-center gap-8'>
-                    <Link href='/'><img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' /></Link>
-                    <Scroll to='how-it-works' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'>How It Works</Scroll>
-                    <Scroll to='direct-pay' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'>Direct Pay</Scroll>
-                    <Scroll to='faq' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'>FAQ</Scroll>
+            {pathname === '/Eligibility' ? (
+                <>
+                <div className="max-w-[1400px] my-0 mx-auto p-4 relative">
+                    <button className='relative z-10 rounded-full p-2 hover:bg-vanilla'><Link href='/'><GoArrowLeft className='text-charcoal h-7 w-7' /></Link></button>
+                    <div className='absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center'>
+                        <img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' />
+                    </div>
                 </div>
-                <div className='flex justify-center items-center gap-8'>
-                    {/* <Link className='hidden md:block' href='#'>For Patients</Link> */}
-                    <Dropdown />
-                    <Link className='hidden md:block' href='#'>Blog</Link>
-                    <Link className='hidden md:block' href='#'>Contact</Link>
-                    <Link className='hidden md:block' href='/Eligibility'><button className='py-2 px-6 rounded-full bg-charcoal text-white hidden md:block'>Get Started</button></Link>
-                    <button onClick={toggleOpen} className='block md:hidden'><Hamburger isOpen={isOpen}/></button>
+                <div className='w-full h-[2px] bg-vanilla'>
+                    <div className='h-[2px] bg-gold w-1/5'></div>
                 </div>
-            </div>
+                </>
+            ) : (
+                <div className="max-w-[1400px] my-0 mx-auto p-4 flex justify-between items-center gap-8">
+                    <div className='flex justify-center items-center gap-8'>
+                        <Link href='/'><img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' /></Link>
+                        <Scroll to='how-it-works' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'>How It Works</Scroll>
+                        <Scroll to='direct-pay' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'>Direct Pay</Scroll>
+                        <Scroll to='faq' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'>FAQ</Scroll>
+                    </div>
+                    <div className='flex justify-center items-center gap-8'>
+                        {/* <Link className='hidden md:block' href='#'>For Patients</Link> */}
+                        <Dropdown />
+                        <Link className='hidden md:block' href='#'>Blog</Link>
+                        <Link className='hidden md:block' href='#'>Contact</Link>
+                        <Link className='hidden md:block' href='/Eligibility'><button className='py-2 px-6 rounded-full bg-charcoal text-white hidden md:block'>Get Started</button></Link>
+                        <button onClick={toggleOpen} className='block md:hidden'><Hamburger isOpen={isOpen}/></button>
+                    </div>
+                </div>
+            )}
+            
         </div>
     )
 }

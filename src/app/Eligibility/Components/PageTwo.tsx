@@ -1,3 +1,18 @@
+const genders = [
+    {
+        value: 'Female',
+        label: 'Female'
+    },
+    {
+        value: 'Male',
+        label: 'Male'
+    },
+    {
+        value: 'Intersex/other',
+        label: 'Intersex/other'
+    }
+]
+
 export default function PageTwo() {
     return (
         <div className='max-w-[600px] mx-auto'>
@@ -11,6 +26,14 @@ export default function PageTwo() {
                     <label className='block'>Last name</label>
                     <input className="rounded block p-4 border-b border-darkvanilla focus:border-maize focus:outline-none w-full bg-[#e8e8e8]/[.54]" />
                 </div>
+            </div>
+            <div className='text-left mb-5'>
+                <label className='block'>Gender</label>
+                <select className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54] appearance-none">
+                    {genders.map(gender => (
+                        <option value={gender.value}>{gender.label}</option>
+                    ))}
+                </select>
             </div>
             <div className='text-left mb-5'>
                 <label className='block'>Date of birth</label>
@@ -37,8 +60,8 @@ export default function PageTwo() {
                     <input className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="lbs" />
                 </div>
                 <div className='text-left grow'>
-                    <label className='block'>BMI</label>
-                    <input className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="lbs" />
+                    <label className='block'>Waist Size</label>
+                    <input className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="Inches"/>
                 </div>
             </div>
         </div>
