@@ -6,7 +6,8 @@ import PageTwo from "./Components/PageTwo";
 import PageThree from "./Components/PageThree";
 import PageFour from "./Components/PageFour";
 import Confirmation from "./Components/Confirmation";
-import { useState, MouseEvent, useEffect } from "react";
+import { useState, MouseEvent, useEffect, useContext } from "react";
+import { GlobalContext } from "../context/context";
 
 export interface User {
     first_name: string,
@@ -40,23 +41,24 @@ const defaultUser = {
 
 export default function Eligibility() {
     const [ newUser, setNewUser ] = useState<User>(defaultUser);
-    const [ pageCount, setPageCount ] = useState(0);
+    const { pageCount, nextPage, previousPage } = useContext(GlobalContext)
+    // const [ pageCount, setPageCount ] = useState(0);
 
     useEffect(() => {
         window.scrollTo(0,0)
     }, [pageCount])
 
-    const nextPage = (e:MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        const count = pageCount + 1;
-        setPageCount(count);
-    }
+    // const nextPage = (e:MouseEvent<HTMLButtonElement>) => {
+    //     e.preventDefault();
+    //     const count = pageCount + 1;
+    //     setPageCount(count);
+    // }
 
-    const previousPage = (e:MouseEvent<HTMLButtonElement>) => {
-        e.preventDefault();
-        const count = pageCount - 1;
-        setPageCount(count);
-    }
+    // const previousPage = (e:MouseEvent<HTMLButtonElement>) => {
+    //     e.preventDefault();
+    //     const count = pageCount - 1;
+    //     setPageCount(count);
+    // }
 
     return (
         <div className='py-[100px] px-10 min-h-screen'>

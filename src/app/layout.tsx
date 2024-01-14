@@ -3,6 +3,7 @@ import { Inter, Montserrat } from 'next/font/google'
 import './globals.css'
 import Navigation from './Components/Navigation';
 import Footer from './Components/Footer';
+import { GlobalContextProvider } from './context/context';
 
 const inter = Inter({ subsets: ['latin'] });
 const monst = Montserrat({ subsets: ['latin'] })
@@ -20,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={monst.className}>
-        <Navigation />
-        {children}
-        <Footer />
+        <GlobalContextProvider>
+          <Navigation />
+            {children}
+          <Footer />
+        </GlobalContextProvider>
       </body>
     </html>
   )
