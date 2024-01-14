@@ -1,6 +1,6 @@
 export default function Pricing() {
     return (
-        <div className='w-full text-charcoal bg-vanilla'>
+        <div className='w-full text-charcoal bg-vanilla' id='direct-pay'>
         <div className='max-w-[1400px] px-10 py-[100px] mx-auto my-0 text-center'>
             <p className='text-[54px] font-bold mb-[100px]'>Discover the right fit, affordable plans for every inch.</p>
 

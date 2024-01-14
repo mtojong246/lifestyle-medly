@@ -5,7 +5,7 @@ import { AiFillPlusCircle } from "react-icons/ai";
 
 export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HTMLButtonElement>, number: string) => void, open: {one: boolean, two: boolean, three: boolean, four: boolean, five: boolean} }) {
     return (
-    <div className='w-full text-charcoal'>
+    <div className='w-full text-charcoal' id='faq'>
       <div className='max-w-[1400px] mx-auto px-10 py-[100px] flex flex-col justify-center items-center gap-[40px]'>
 
         <div className='w-full'>

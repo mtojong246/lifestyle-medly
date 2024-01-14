@@ -3,7 +3,7 @@ import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 export default function Steps() {
     return (
     <div className='w-full text-charcoal bg-vanilla' id='how-it-works'>
-      <div className='max-w-[1400px] px-10 py-[100px] mx-auto my-0 text-center'>
+      <div className='max-w-[1400px] px-10 py-[100px] mx-auto my-0 text-center' >
         <img src='/heart-rate.png' className='h-20 w-20 mb-5 mx-auto my-0' />
         <p className='text-[54px] font-bold mb-5'>A weight loss program that is seamless, empowering, and result-driven.</p>
         <p className='text-lg max-w-[600px] mx-auto my-0'>Welcome to your personally tailored program, where results are  promised and <span className='font-bold'>DELIVERED!</span></p>
