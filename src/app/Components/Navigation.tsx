@@ -3,19 +3,29 @@
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Hamburger from './Hamburger';
-import { useState, MouseEvent } from 'react';
+import { useState, MouseEvent, useContext, useEffect } from 'react';
 import { Link as Scroll, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import Dropdown from './Dropdown';
 import { GoArrowLeft } from "react-icons/go";
+import { GlobalContext } from '../context/context';
 
 export default function Navigation() {
     const [ isOpen, setIsOpen ] = useState(false);
+    const [ percentage, setPercentage ] = useState(0);
     const pathname = usePathname();
+    const { pageCount } = useContext(GlobalContext);
 
     const toggleOpen = (e:MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         setIsOpen(!isOpen)
-    }
+    };
+
+    useEffect(() => {
+        const perc = ((pageCount + 1)/5)*100;
+        setPercentage(perc)
+    }, [pageCount])
+
+
 
     return (
         <div className='w-full sticky top-0 bg-white z-10'>
@@ -28,7 +38,7 @@ export default function Navigation() {
                     </div>
                 </div>
                 <div className='w-full h-[2px] bg-vanilla'>
-                    <div className='h-[2px] bg-gold w-1/5'></div>
+                    <div className={`h-[2px] bg-gold`} style={{width: `${percentage}%`}}></div>
                 </div>
                 </>
             ) : (
