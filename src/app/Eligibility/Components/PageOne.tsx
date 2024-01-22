@@ -1,3 +1,6 @@
+import { Dispatch, SetStateAction } from "react";
+import { UserType } from "../page";
+
 export default function PageOne() {
     return (
         <>

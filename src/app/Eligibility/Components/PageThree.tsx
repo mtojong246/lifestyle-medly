@@ -1,14 +1,24 @@
 import { states } from "@/app/states";
 import { RxChevronDown } from "react-icons/rx";
+import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { UserType} from "../page";
 
 
-export default function PageThree() {
+export default function PageThree({newUser, setNewUser}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>}) {
+
+    const handleSelect = (e:ChangeEvent<HTMLSelectElement>) => {
+        setNewUser({
+            ...newUser,
+            state: e.target.value,
+        })
+    }
+
     return (
         <div className='max-w-[600px] mx-auto'>
             <p className='text-xl mb-10'>Which state do you live in?</p>
-            <select className={`rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54] appearance-none`} name='state'>
+            <select onChange={handleSelect} value={newUser.state} className={`rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54] appearance-none`} name='state'>
                 {states.map(state => (
-                    <option value={state.value}>{state.value}</option>
+                    <option value={state.value}>{state.label}</option>
                 ))}
             </select>
         </div>

@@ -16,7 +16,7 @@ const config: Config = {
       colors: {
         'charcoal': '#303030',
         'maize': '#F0C453',
-        'gold': '#AB8100',
+        'gold': '#CBA55B',
         'darkvanilla': '#545454',
         'vanilla': '#F8F5F2',
       }

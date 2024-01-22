@@ -1,4 +1,6 @@
 import { FaCheck } from "react-icons/fa6";
+import { Dispatch, SetStateAction } from "react";
+import { UserType } from "../page";
 
 const conditions = [
     {
@@ -31,14 +33,29 @@ const conditions = [
     }
 ]
 
-export default function PageFour() {
+export default function PageFour({newUser, setNewUser}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>}) {
+
+    const handleSelection = (value: string) => {
+        setNewUser({
+            ...newUser,
+            conditions: newUser.conditions.map(cond => {
+                if (cond.value === value) {
+                    return { ...cond, isSelected: !cond.isSelected }
+                } else {
+                    return { ...cond }
+                }
+            })
+        })
+    }
+
+
     return (
         <div className='max-w-[600px] mx-auto'>
             <p className='text-xl mb-10'>Please check any of the following conditions that apply to you:</p>
-            {conditions.map(condition => (
-                <div className={`p-4 mb-5 flex justify-between items-center gap-10 border-2 rounded bg-maize/[.54] hover:bg-maize/[.8] hover:cursor-pointer border-gold text-gold font-medium text-left`}>
-                    <p>{condition.value}</p>
-                    <FaCheck className={`h-4 w-4 ${condition.isSelected ? 'block' : 'hidden'}`} />
+            {newUser.conditions.map(condition => (
+                <div onClick={() => handleSelection(condition.value)} className={`p-4 mb-5 flex justify-between items-center gap-10 border-2 rounded bg-maize/[.54] hover:bg-maize/[.8] hover:cursor-pointer border-gold text-gold font-medium text-left`}>
+                    <p>{condition.label}</p>
+                    <FaCheck className={`h-4 w-4 ${condition.isSelected ? 'opacity-100' : 'opacity-0'}`} />
                 </div>
             ))}
         </div>

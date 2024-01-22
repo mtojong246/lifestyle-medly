@@ -1,5 +1,9 @@
 export const states = [
     {
+        value: '',
+        label: 'Select a state',
+    },
+    {
         value: 'Alabama',
         label: 'Alabama',
     },

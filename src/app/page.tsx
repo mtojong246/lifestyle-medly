@@ -5,7 +5,7 @@ import Steps from "./Components/Steps";
 import Medication from "./Components/Medication";
 import { AiFillPlusCircle } from "react-icons/ai";
 import Pricing from "./Components/Pricing";
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, useEffect } from "react";
 import FAQ from "./Components/FAQ";
 
 export default function Home() {
@@ -23,6 +23,10 @@ export default function Home() {
       [number]: !open[number as keyof object],
     })
   }
+
+  useEffect(() => {
+    localStorage.removeItem('user')
+  }, [])
 
   return (
     <>

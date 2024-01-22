@@ -1,4 +1,7 @@
-export default function Confirmation() {
+import { Dispatch, SetStateAction } from "react";
+import { User } from "../page";
+
+export default function Confirmation({newUser, setNewUser}: {newUser: User, setNewUser: Dispatch<SetStateAction<User>>}) {
     return (
         <>
             <p className='text-[36px] mb-5'><span className='text-maize'>Thank you</span> for taking the quiz!</p>

@@ -8,8 +8,10 @@ import PageFour from "./Components/PageFour";
 import Confirmation from "./Components/Confirmation";
 import { useState, MouseEvent, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/context";
+import { addUser, updateUser } from "../api/firebase";
 
-export interface User {
+export interface UserType {
+    id: string,
     first_name: string,
     last_name: string,
     gender: string,
@@ -22,9 +24,16 @@ export interface User {
     height_feet: number,
     height_inches: number,
     bmi: number,
+    state: string,
+    conditions: {
+        label: string,
+        value: string,
+        isSelected: boolean,
+    }[],
 }
 
 const defaultUser = {
+    id: '',
     first_name: '',
     last_name: '',
     gender: '',
@@ -37,43 +46,102 @@ const defaultUser = {
     height_feet: 0,
     height_inches: 0,
     bmi: 0,
+    state: '',
+    conditions: [
+        {
+            label: 'Current pregnant or planning to become pregnant within the next year',
+            value: 'pregnancy',
+            isSelected: false,
+        },
+        {
+            label: 'History of medullary thyroid cancer',
+            value: 'cancer',
+            isSelected: false,
+        },
+        {
+            label: 'MEN (Multiple endocrine neoplasia) syndrome (family history)',
+            value: 'men',
+            isSelected: false,
+        },
+        {
+            label: 'Active eating disorder (anorexia, bulimia, etc.)',
+            value: 'eating',
+            isSelected: false,
+        },
+        {
+            label: 'Substance abuse',
+            value: 'substance',
+            isSelected: false,
+        },
+        {
+            label: 'History of gastroparesis',
+            value: 'gastroparesis',
+            isSelected: false,
+        },
+        {
+            label: 'Type 1 diabetes',
+            value: 'diabetes',
+            isSelected: false,
+        }
+    ]
 }
 
 export default function Eligibility() {
-    const [ newUser, setNewUser ] = useState<User>(defaultUser);
+    const [ newUser, setNewUser ] = useState<UserType>(defaultUser);
     const { pageCount, nextPage, previousPage } = useContext(GlobalContext)
     // const [ pageCount, setPageCount ] = useState(0);
 
     useEffect(() => {
         window.scrollTo(0,0)
-    }, [pageCount])
+    }, [pageCount]);
 
-    // const nextPage = (e:MouseEvent<HTMLButtonElement>) => {
-    //     e.preventDefault();
-    //     const count = pageCount + 1;
-    //     setPageCount(count);
-    // }
+    useEffect(() => {
+        const fetchUser = async () => {
+            const existingUser = localStorage.getItem('user');
+            if (existingUser) {
+                const parsedUser: UserType = JSON.parse(existingUser);
+                setNewUser(parsedUser);
+            } else {
+                try {
+                    const userData = await addUser(defaultUser);
+                    setNewUser(userData as UserType);
+                    localStorage.setItem('user', JSON.stringify(userData));
+                } catch (err:any) {
+                    console.log(err)
+                }
+            }
+        }
+        fetchUser();
+        
+    }, []);
 
-    // const previousPage = (e:MouseEvent<HTMLButtonElement>) => {
-    //     e.preventDefault();
-    //     const count = pageCount - 1;
-    //     setPageCount(count);
-    // }
+    const handleSave = async (e:MouseEvent<HTMLButtonElement>) => {
+        e.preventDefault();
+        const existingUser = localStorage.getItem('user');
+        if (existingUser) {
+            try {
+                await updateUser(newUser, newUser.id);
+                localStorage.setItem('user', JSON.stringify(newUser));
+            } catch (err:any) {
+                console.log(err)
+            }
+        } 
+    }
 
     return (
         <div className='py-[100px] px-10 min-h-screen'>
             <div className='max-w-[900px] mx-auto my-0 text-center text-charcoal'>
 
                 {pageCount === 0 ? (
-                    <PageOne />
+                    <PageOne/>
                 ) : pageCount === 1 ? (
-                    <PageTwo />
+                    <PageTwo newUser={newUser} setNewUser={setNewUser}/>
                 ) : pageCount === 2 ? (
-                    <PageThree />
+                    <PageThree newUser={newUser} setNewUser={setNewUser}/>
                 ) : pageCount === 3 ? (
-                    <PageFour />
+                    <PageFour newUser={newUser} setNewUser={setNewUser}/>
                 ) : pageCount === 4 ? (
-                    <Confirmation />
+                    <Confirmation newUser={newUser} setNewUser={setNewUser}/>
                 ) : null}                
 
                 <div className={`max-w-[600px] mx-auto flex mt-20 ${pageCount !== 0 ? 'justify-between' : 'justify-center'}`}>
