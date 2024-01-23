@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { Montserrat } from 'next/font/google';
+import { RxChevronDown, RxChevronUp } from "react-icons/rx";
 
 const monst = Montserrat({ subsets: ['latin'] })
 
@@ -25,7 +26,7 @@ export default function Dropdown() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        For Patients
+        <p className='flex justify-center items-center gap-1 under'>For Patients {!open ? <RxChevronDown className='h-4 w-4' /> : <RxChevronUp className='h-4 w-4'/>}</p>
       </button>
       <Menu
         id="basic-menu"
