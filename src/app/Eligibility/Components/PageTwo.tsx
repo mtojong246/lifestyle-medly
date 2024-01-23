@@ -61,7 +61,23 @@ export default function PageTwo({newUser, setNewUser}: {newUser: UserType, setNe
             ...newUser,
             age,
         })
-    }, [newUser.date_of_birth])
+    }, [newUser.date_of_birth]);
+
+    let formatPhoneNumber = (str:string) => {
+        //Filter only numbers from the input
+        let cleaned = ('' + str).replace(/\D/g, '');
+        
+        //Check if the input is of correct length
+        let match = cleaned.match(/^(\d{3})(\d{3})(\d{4})$/);
+      
+        if (match) {
+          return '(' + match[1] + ') ' + match[2] + '-' + match[3]
+        };
+      
+        return str;
+      };
+
+     
 
 
     return (
@@ -70,38 +86,38 @@ export default function PageTwo({newUser, setNewUser}: {newUser: UserType, setNe
             <div className='flex justify-between items-center gap-5 mb-5'>
                 <div className='text-left grow'>
                     <label className='block'>First name</label>
-                    <input onChange={handleInput} value={newUser.first_name} name='first_name' className="rounded block p-4 border-b border-darkvanilla focus:border-maize focus:outline-none w-full bg-[#e8e8e8]/[.54]" />
+                    <input placeholder="John" onChange={handleInput} value={newUser.first_name} name='first_name' className="rounded block p-4 border-b border-darkvanilla focus:border-maize focus:outline-none w-full bg-[#e8e8e8]/[.54]" />
                 </div>
                 <div className='text-left grow'>
                     <label className='block'>Last name</label>
-                    <input onChange={handleInput} value={newUser.last_name} name='last_name' className="rounded block p-4 border-b border-darkvanilla focus:border-maize focus:outline-none w-full bg-[#e8e8e8]/[.54]" />
+                    <input placeholder="Doe" onChange={handleInput} value={newUser.last_name} name='last_name' className="rounded block p-4 border-b border-darkvanilla focus:border-maize focus:outline-none w-full bg-[#e8e8e8]/[.54]" />
                 </div>
             </div>
             <div className='text-left mb-5'>
                 <label className='block'>Gender</label>
-                <select onChange={handleSelect} name='gender' value={newUser.gender} className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54] appearance-none">
+                <select onChange={handleSelect} name='gender' style={{color:`${newUser.gender ? 'black' : '#999'}`}} value={newUser.gender} className={`rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54] arrow`}>
                     {genders.map((gender,i) => (
-                        <option key={i} value={gender.value}>{gender.label}</option>
+                        <option key={i}  value={gender.value}>{gender.label}</option>
                     ))}
                 </select>
             </div>
             <div className='text-left mb-5'>
                 <label className='block'>Date of birth</label>
-                <input onChange={handleInput} value={newUser.date_of_birth} name='date_of_birth' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" type='date' />
+                <input onChange={handleInput} style={{color:`${newUser.date_of_birth ? 'black' : '#999'}`}}  value={newUser.date_of_birth} name='date_of_birth' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" type='date' />
             </div>
             <div className='text-left mb-5'>
                 <label className='block'>Phone number</label>
-                <input onChange={handleInput} value={newUser.phone_number} name='phone_number' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]"  />
+                <input placeholder="(999) 999-9999" onChange={handleInput} value={formatPhoneNumber(newUser.phone_number)} name='phone_number' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]"  />
             </div>
             <div className='text-left mb-5'>
                 <label className='block'>Email</label>
-                <input onChange={handleInput} value={newUser.email} name='email' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" />
+                <input placeholder="johnDoe@example.com" onChange={handleInput} value={newUser.email} name='email' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" />
             </div>
             <div className='mb-5 text-left'>
                 <label className='block'>Height</label>
                 <div className='flex justify-between items-center gap-5 '>
-                    <input onChange={handleInput} value={newUser.height_feet ? newUser.height_feet : ''} name='height_feet' className="rounded p-4 border-b border-darkvanilla grow focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="Feet" />
-                    <input onChange={handleInput} value={newUser.height_inches ? newUser.height_inches : ''} name='height_inches' className="rounded p-4 border-b border-darkvanilla grow focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="Inches" />
+                    <input onChange={handleInput} value={newUser.height_feet ? newUser.height_feet : ''} name='height_feet' className="rounded p-4 border-b border-darkvanilla grow focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="feet" />
+                    <input onChange={handleInput} value={newUser.height_inches ? newUser.height_inches : ''} name='height_inches' className="rounded p-4 border-b border-darkvanilla grow focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="inches" />
                 </div>
             </div>
             <div className='flex justify-between items-center gap-5 mb-5'>
@@ -111,7 +127,7 @@ export default function PageTwo({newUser, setNewUser}: {newUser: UserType, setNe
                 </div>
                 <div className='text-left grow'>
                     <label className='block'>Waist Size</label>
-                    <input onChange={handleInput} value={newUser.waist_size ? newUser.waist_size : ''} name='waist_size' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="Inches"/>
+                    <input onChange={handleInput} value={newUser.waist_size ? newUser.waist_size : ''} name='waist_size' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="inches"/>
                 </div>
             </div>
         </div>

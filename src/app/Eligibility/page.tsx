@@ -9,6 +9,7 @@ import Confirmation from "./Components/Confirmation";
 import { useState, MouseEvent, useEffect, useContext } from "react";
 import { GlobalContext } from "../context/context";
 import { addUser, updateUser } from "../api/firebase";
+import { useRouter } from "next/navigation";
 
 export interface UserType {
     id: string,
@@ -88,7 +89,8 @@ const defaultUser = {
 
 export default function Eligibility() {
     const [ newUser, setNewUser ] = useState<UserType>(defaultUser);
-    const { pageCount, nextPage, previousPage } = useContext(GlobalContext)
+    const { pageCount, nextPage, previousPage } = useContext(GlobalContext);
+    const router = useRouter();
     // const [ pageCount, setPageCount ] = useState(0);
 
     useEffect(() => {
@@ -126,7 +128,7 @@ export default function Eligibility() {
                 console.log(err)
             }
         } 
-    }
+    };
 
     return (
         <div className='py-[100px] px-10 min-h-screen'>
@@ -145,11 +147,11 @@ export default function Eligibility() {
                 ) : null}                
 
                 <div className={`max-w-[600px] mx-auto flex mt-20 ${pageCount !== 0 ? 'justify-between' : 'justify-center'}`}>
-                    {pageCount !== 0 && <button onClick={previousPage} className='py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'><MdOutlineKeyboardArrowLeft className='h-5 w-5'/> Back</button>}
+                    {pageCount !== 0 && <button onClick={(e:MouseEvent<HTMLButtonElement>) => {previousPage(e); handleSave(e)}} className='py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'><MdOutlineKeyboardArrowLeft className='h-5 w-5'/> Back</button>}
                     {pageCount !== 4 ? 
-                        <button onClick={nextPage} className='py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button>
+                        <button onClick={(e:MouseEvent<HTMLButtonElement>) => {nextPage(e); pageCount !== 0 && handleSave(e)}} className='py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button>
                     : 
-                        <button className='py-4 px-10 text-lg rounded-full bg-charcoal text-white'>Submit</button>
+                        <button onClick={(e:MouseEvent<HTMLButtonElement>) => {handleSave(e); router.push('/')}} className='py-4 px-10 text-lg rounded-full bg-charcoal text-white'>Submit</button>
                     }
                 </div>
             </div>

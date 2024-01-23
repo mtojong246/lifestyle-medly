@@ -5,8 +5,9 @@ import Steps from "./Components/Steps";
 import Medication from "./Components/Medication";
 import { AiFillPlusCircle } from "react-icons/ai";
 import Pricing from "./Components/Pricing";
-import { useState, MouseEvent, useEffect } from "react";
+import { useState, MouseEvent, useEffect, useContext } from "react";
 import FAQ from "./Components/FAQ";
+import { GlobalContext } from "./context/context";
 
 export default function Home() {
   const [ open, setIsOpen ] = useState({
@@ -15,7 +16,8 @@ export default function Home() {
     three: false,
     four: false,
     five: false,
-  })
+  });
+  const { setPageCount } = useContext(GlobalContext);
   const toggleOpen = (e:MouseEvent<HTMLButtonElement>, number: string) => {
     e.preventDefault();
     setIsOpen({
@@ -25,7 +27,8 @@ export default function Home() {
   }
 
   useEffect(() => {
-    localStorage.removeItem('user')
+    localStorage.removeItem('user');
+    setPageCount(0);
   }, [])
 
   return (
