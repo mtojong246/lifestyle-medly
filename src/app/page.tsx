@@ -8,6 +8,7 @@ import Pricing from "./Components/Pricing";
 import { useState, MouseEvent, useEffect, useContext } from "react";
 import FAQ from "./Components/FAQ";
 import { GlobalContext } from "./context/context";
+import Link from "next/link";
 
 export default function Home() {
   const [ open, setIsOpen ] = useState({
@@ -38,7 +39,7 @@ export default function Home() {
         <div className='w-full md:w-[50%]'>
           <p className='text-[64px] leading-[5rem] font-bold'>START Your Weight Loss Journey Now!</p>
           <p className='font-medium text-lg mt-8'>Join us on this transformative ride! Our customized program combines powerful medications and expert guidance to curate your weight loss experience.</p>
-          <button className='py-4 px-10 text-lg rounded-full bg-charcoal text-white mt-16'>How Can We Help?</button>
+          <Link className='btn inline-block py-4 px-10 text-lg rounded-full bg-charcoal text-white mt-16' href={'/Eligibility'}>How Can We Help?</Link>
           <div className='flex justify-start items-center mt-16 gap-2'>
             <IoArrowForwardCircleOutline className='h-8 w-8' />
             <p className='font-medium text-lg'>Learn More</p>
