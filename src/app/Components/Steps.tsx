@@ -1,4 +1,5 @@
 import { MdOutlineKeyboardArrowRight } from "react-icons/md";
+import Link from "next/link";
 
 export default function Steps() {
     return (
@@ -51,7 +52,7 @@ export default function Steps() {
         </div>
 
         <p className='text-xl max-w-[900px] mx-auto mt-[80px] mb-[40px]'>At Lifestyle Medly, we're not selling a dream – we are helping you curate a lifestyle guided by principles of medicine and healthy living. </p>
-        <button className='mx-auto my-0 py-4 px-10 text-lg rounded-full bg-charcoal text-white mt-16 flex justify-center items-center gap-3'>Get Started Today <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button>
+        <Link href='/Eligibility'><button className='mx-auto my-0 py-4 px-10 text-lg rounded-full text-white mt-16 flex justify-center items-center gap-3 slide-btn'>Get Started Today <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button></Link>
       </div>
     </div>
     )
