@@ -233,7 +233,7 @@ body {
   margin: 0;
   padding: 0px 32px;
   -webkit-transition: all .5s ease-in-out 0s;
-  transition: all 0.8s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s;
 }
 
 .faq-open {
@@ -276,6 +276,27 @@ body {
   transform: rotate(45deg);
   color: #AB8100;
 }
+
+#learn-more {
+  transition: all 0.2s;
+}
+
+#learn-more:hover {
+  transform: translateY(-3px);
+
+}
+
+#learn-more:hover .learn-more {
+  transform: rotate(90deg);
+  color: #AB8100;
+}
+
+#learn-more:hover p {
+  color: #AB8100;
+  transition: all 0.5s;
+}
+
+
 
 .slide:hover,
 .slide:focus {
