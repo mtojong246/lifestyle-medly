@@ -8,6 +8,7 @@ import { Link as Scroll, Button, Element, Events, animateScroll as scroll, scrol
 import Dropdown from './Dropdown';
 import { GoArrowLeft } from "react-icons/go";
 import { GlobalContext } from '../context/context';
+import MobileMenu from './MobileMenu';
 
 export default function Navigation() {
     const [ isOpen, setIsOpen ] = useState(false);
@@ -42,22 +43,28 @@ export default function Navigation() {
                 </div>
                 </>
             ) : (
-                <div className="max-w-[1400px] my-0 mx-auto p-4 flex justify-between items-center gap-8">
-                    <div className='flex justify-center items-center gap-8'>
-                        <Link href='/'><img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' /></Link>
-                        <Scroll to='how-it-works' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'><p className='under'>How It Works</p></Scroll>
-                        <Scroll to='direct-pay' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'><p className='under'>Direct Pay</p></Scroll>
-                        <Scroll to='faq' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'><p className='under'>FAQ</p></Scroll>
+                <>
+                    <div className="w-full shadow-lg">
+                        <div className='max-w-[1400px] my-0 mx-auto p-4 flex justify-between items-center gap-8'>
+                            <div className='flex justify-center items-center gap-8'>
+                                <Link href='/'><img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' /></Link>
+                                <Scroll to='how-it-works' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'><p className='under'>How It Works</p></Scroll>
+                                <Scroll to='direct-pay' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'><p className='under'>Direct Pay</p></Scroll>
+                                <Scroll to='faq' spy={true} smooth={true} offset={-50} duration={500} className='hidden md:block hover:cursor-pointer'><p className='under'>FAQ</p></Scroll>
+                            </div>
+                            <div className='flex justify-center items-center gap-8'>
+                                {/* <Link className='hidden md:block' href='#'>For Patients</Link> */}
+                                <Dropdown />
+                                <Link className='hidden md:block' href='#'><p className='under'>Blog</p></Link>
+                                <Link className='hidden md:block' href='#'><p className='under'>Contact</p></Link>
+                                <Link className='hidden md:inline-block' href='/Eligibility'><button className='py-2 px-6 rounded-full bg-charcoal text-white hidden md:inline-block'>Get Started</button></Link>
+                                <button onClick={toggleOpen} className='block md:hidden'><Hamburger isOpen={isOpen}/></button>
+                            </div>
+                        </div>
+                        <MobileMenu isOpen={isOpen} toggleOpen={toggleOpen}/>
                     </div>
-                    <div className='flex justify-center items-center gap-8'>
-                        {/* <Link className='hidden md:block' href='#'>For Patients</Link> */}
-                        <Dropdown />
-                        <Link className='hidden md:block' href='#'><p className='under'>Blog</p></Link>
-                        <Link className='hidden md:block' href='#'><p className='under'>Contact</p></Link>
-                        <Link className='hidden md:block' href='/Eligibility'><button className='py-2 px-6 rounded-full bg-charcoal text-white hidden md:block'>Get Started</button></Link>
-                        <button onClick={toggleOpen} className='block md:hidden'><Hamburger isOpen={isOpen}/></button>
-                    </div>
-                </div>
+                    
+                </>
             )}
             
         </div>
