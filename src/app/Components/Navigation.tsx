@@ -9,6 +9,7 @@ import Dropdown from './Dropdown';
 import { GoArrowLeft } from "react-icons/go";
 import { GlobalContext } from '../context/context';
 import MobileMenu from './MobileMenu';
+import ContactPopup from './ContactPopup';
 
 export default function Navigation() {
     const [ isOpen, setIsOpen ] = useState(false);
@@ -56,7 +57,8 @@ export default function Navigation() {
                                 {/* <Link className='hidden md:block' href='#'>For Patients</Link> */}
                                 <Dropdown />
                                 <Link className='hidden md:block' href='#'><p className='under'>Blog</p></Link>
-                                <Link className='hidden md:block' href='#'><p className='under'>Contact</p></Link>
+                                {/* <Link className='hidden md:block' href='/Contact'><p className='under'>Contact</p></Link> */}
+                                <div className='hidden md:block'><ContactPopup/></div>
                                 <Link className='hidden md:inline-block' href='/Eligibility'><button className='py-2 px-6 rounded-full bg-charcoal text-white hidden md:inline-block'>Get Started</button></Link>
                                 <button onClick={toggleOpen} className='block md:hidden'><Hamburger isOpen={isOpen}/></button>
                             </div>

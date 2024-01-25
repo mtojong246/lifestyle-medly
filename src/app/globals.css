@@ -37,6 +37,10 @@ body {
   filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(154deg) brightness(107%) contrast(101%);
 }
 
+.charcoal {
+  filter: invert(12%) sepia(8%) saturate(10%) hue-rotate(315deg) brightness(95%) contrast(81%);
+}
+
 .arrow {
   -moz-appearance: none;
   -webkit-appearance: none;

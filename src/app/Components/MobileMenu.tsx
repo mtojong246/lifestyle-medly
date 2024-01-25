@@ -5,6 +5,7 @@ import { Link as Scroll, Button, Element, Events, animateScroll as scroll, scrol
 import { MouseEvent } from "react";
 import { RxChevronDown, RxChevronUp } from "react-icons/rx";
 import { useState } from "react";
+import ContactPopup from "./ContactPopup";
 
 
 
@@ -31,7 +32,8 @@ export default function MobileMenu({isOpen, toggleOpen} : {isOpen: boolean, togg
                 <p className="mt-8">Blog</p>
             </div>
             
-            <p>Contact</p>
+            {/* <p>Contact</p> */}
+            <div className='block md:hidden'><ContactPopup /></div>
             <p>Get Started</p>
         </div>
     )
