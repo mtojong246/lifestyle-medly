@@ -21,7 +21,7 @@ export default function PageThree({newUser, setNewUser, setIsDisabled, pageCount
                 setIsDisabled(false);
             }
         }
-    }, [newUser.state])
+    }, [newUser.state, pageCount])
 
     return (
         <div className='max-w-[600px] mx-auto'>

@@ -72,7 +72,7 @@ export default function PageTwo({newUser, setNewUser, setIsDisabled, pageCount}:
                     setIsDisabled(false);
                 }
         }
-    }, [newUser.first_name, newUser.last_name, newUser.gender, newUser.date_of_birth, newUser.phone_number, newUser.email, newUser.height_feet, newUser.height_inches, newUser.weight, newUser.waist_size])
+    }, [newUser.first_name, newUser.last_name, newUser.gender, newUser.date_of_birth, newUser.phone_number, newUser.email, newUser.height_feet, newUser.height_inches, newUser.weight, newUser.waist_size, pageCount])
 
 
     let formatPhoneNumber = (str:string) => {

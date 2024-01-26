@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction } from "react";
 import { UserType } from "../page";
+import 'animate.css';
 
 export default function PageOne() {
     return (

@@ -117,6 +117,7 @@ export default function Eligibility() {
         fetchUser();
         
     }, []);
+    
 
     const handleSave = async (e:MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -136,7 +137,11 @@ export default function Eligibility() {
         } 
     };
 
-
+    useEffect(() => {
+        if (pageCount === 0) {
+            setIsDisabled(false)
+        }
+    }, [pageCount])
 
     return (
         <div className='py-[100px] px-10 min-h-screen'>
@@ -157,7 +162,7 @@ export default function Eligibility() {
                 <div className={`max-w-[600px] mx-auto flex mt-20 ${pageCount !== 0 ? 'justify-between' : 'justify-center'}`}>
                     {pageCount !== 0 && <button onClick={(e:MouseEvent<HTMLButtonElement>) => {previousPage(e); handleSave(e)}} className='slide-btn-rev py-4 px-10 text-lg rounded-full bg-charcoal text-white'><div className='rev flex justify-center items-center gap-3'><MdOutlineKeyboardArrowLeft className='h-5 w-5'/> Back</div></button>}
                     {pageCount !== 4 ? 
-                        <button disabled={isDisabled} onClick={(e:MouseEvent<HTMLButtonElement>) => {nextPage(e); pageCount !== 0 && handleSave(e)}} className='disabled:opacity-40 slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button>
+                        <div className="fade-up"><button disabled={isDisabled} onClick={(e:MouseEvent<HTMLButtonElement>) => {nextPage(e); pageCount !== 0 && handleSave(e)}} className='disabled:opacity-40 slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button></div>
                     : 
                         <button onClick={(e:MouseEvent<HTMLButtonElement>) => {handleSave(e); router.push('/')}} className='slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white'>Submit</button>
                     }

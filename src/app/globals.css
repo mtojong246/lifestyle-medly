@@ -120,6 +120,7 @@ body {
   opacity: 0;
 }
 
+
 .slide-btn, .slide-btn-rev {
   display: flex;
   transition: all .3s;
@@ -374,6 +375,13 @@ body {
 .fade-down {
   animation-name: fadeInDown; /* referring directly to the animation's @keyframe declaration */
   animation-duration: 1500ms; /* don't forget to set a duration! */
+  animation-delay: 0;
+  animation-fill-mode: backwards;
+}
+
+.fade-up {
+  animation-name: fadeInUp; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 500ms; /* don't forget to set a duration! */
   animation-delay: 0;
   animation-fill-mode: backwards;
 }

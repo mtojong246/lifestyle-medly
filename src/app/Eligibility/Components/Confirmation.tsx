@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
-import { User } from "../page";
+import { UserType } from "../page";
 
-export default function Confirmation({newUser, setNewUser}: {newUser: User, setNewUser: Dispatch<SetStateAction<User>>}) {
+export default function Confirmation({newUser, setNewUser}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>}) {
     return (
         <>
             <p className='text-[36px] mb-5'><span className='text-maize'>Thank you</span> for taking the quiz!</p>

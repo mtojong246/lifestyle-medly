@@ -82,7 +82,7 @@ export default function PageFour({newUser, setNewUser, setIsDisabled, pageCount}
                 console.log(list)
             }
         } 
-    }, [newUser.conditions, none])
+    }, [newUser.conditions, none, pageCount])
 
 
     return (
