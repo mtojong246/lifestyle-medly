@@ -3,9 +3,9 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 export default function Pricing() {
     return (
         <div className='w-full text-charcoal bg-vanilla' id='direct-pay'>
-        <div className='max-w-[1400px] px-10 py-[100px] mx-auto my-0 text-center'>
-            <p className='text-[48px] font-bold mb-1'>Pricing plan</p>
-            <p className='text-xl mb-[120px]'>Discover the right fit, affordable plans for every inch.</p>
+        <div className='max-w-[1400px] px-10 py-[80px] sm:py-[100px] mx-auto my-0 text-center'>
+            <p className='text-[40px] sm:text-[48px] font-bold mb-2'>Pricing plan</p>
+            <p className='text-lg sm:text-xl mb-[60px] sm:mb-[120px]'>Discover the right fit, affordable plans for every inch.</p>
 
             <div className='flex flex-col lg:flex-row justify-center items-stretch lg:gap-0 gap-20'>
             <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true} className='shadow-lg flex flex-col w-full mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
@@ -60,7 +60,7 @@ export default function Pricing() {
                 </div>
             </AnimationOnScroll>
 
-            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='relative shadow-lg flex flex-col w-full mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
+            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='relative shadow-lg flex flex-col w-full mt-[60px] lg:mt-0 mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
                 <div className='absolute top-[-58px] left-0 right-0 p-4 text-center bg-maize rounded-t-md'>
                 <p className='font-semibold text-white text-lg'>Limited Time Offer!</p>
                 </div>
@@ -170,41 +170,45 @@ export default function Pricing() {
                 </AnimationOnScroll>
             </div>
 
-            <div className='mt-20 mx-auto text-left max-w-[900px]'>
-                <p className='text-xl font-semibold'>All plans include:</p>
-                <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-                    <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-md'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
+            <div className='max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-center items-stretch mt-20 gap-20 lg:gap-10 '>
+                <div className='w-full lg:w-1/2 mx-auto text-left max-w-[600px]'>
+                    <p className='text-xl font-semibold'>All plans include:</p>
+                    <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                        <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                        <p className='text-md'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
+                    </div>
+                    <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                        <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                        <p className='text-md'>FREE in-office injections with personalized teaching by our registered nurses</p>
+                    </div>
+                    <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                        <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                        <p className='text-md'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
+                    </div>
+                    <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                        <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                        <p className='text-md'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
+                    </div>
                 </div>
-                <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-                    <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-md'>FREE in-office injections with personalized teaching by our registered nurses</p>
-                </div>
-                <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-                    <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-md'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
-                </div>
-                <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-                    <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-md'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
+
+                <div className='w-full lg:w-1/2 mx-auto text-left max-w-[600px]'>
+                    <p className='text-xl font-semibold'>Not included:</p>
+                    <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                        <img src='/x.svg' className='w-7 h-7' />
+                        <p className='text-md'>Labs (insurance or $50)</p>
+                    </div>
+                    <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                        <img src='/x.svg' className='w-7 h-7' />
+                        <p className='text-md'>Medications (as low as $25/week)</p>
+                    </div>
+                    <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                        <img src='/x.svg' className='w-7 h-7' />
+                        <p className='text-md'>Optional nurse teaching for home injections for as low as $100 (for Central NJ customers)</p>
+                    </div>
                 </div>
             </div>
 
-            <div className='mt-20 mx-auto text-left max-w-[900px]'>
-            <p className='text-xl font-semibold'>Not included:</p>
-            <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-                <img src='/x.svg' className='w-7 h-7' />
-                <p className='text-md'>Labs (insurance or $50)</p>
-            </div>
-            <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-                <img src='/x.svg' className='w-7 h-7' />
-                <p className='text-md'>Medications (as low as $25/week)</p>
-            </div>
-            <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
-                <img src='/x.svg' className='w-7 h-7' />
-                <p className='text-md'>Optional nurse teaching for home injections for as low as $100 (for Central NJ customers)</p>
-            </div>
-            </div>
+            
 
         </div>
 

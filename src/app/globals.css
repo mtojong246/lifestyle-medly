@@ -317,7 +317,7 @@ body {
 
 .menu-open {
   max-height: 2000px;
-  padding: 32px 16px 64px 16px;
+  padding: 32px 0px 64px 0px;
   opacity: 1;
   z-index: 9999;
 }
