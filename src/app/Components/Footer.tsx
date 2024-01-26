@@ -5,7 +5,7 @@ import { MdEmail } from "react-icons/md";
 export default function Footer() {
     return (
         <div className='w-full bg-charcoal p-16'>
-            <div className='max-w-[900px] mx-auto my-0 flex flex-col md:flex-row justify-between items-stretch md:items-start text-sm text-white gap-16 md:gap-0'>
+            <div className='max-w-[1000px] mx-auto my-0 flex flex-col md:flex-row justify-between items-stretch md:items-start text-sm text-white gap-16 md:gap-0'>
             <div className='md:hidden flex flex-col justify-start items-center gap-10 '>
                     <img src='/lifestyle_logo.png' width='200px' height='200px' className='white'/>
                 </div>
