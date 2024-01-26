@@ -55,10 +55,10 @@ export default function Navigation() {
         <div className='w-full sticky top-0 bg-white z-20 '>
             {pathname === '/Eligibility' ? (
                 <>
-                <div className="max-w-[1400px] my-0 mx-auto p-4 relative">
-                    <button className='relative z-10 rounded-full p-2 hover:bg-vanilla'><Link href='/'><GoArrowLeft className='text-charcoal h-7 w-7' /></Link></button>
+                <div className="max-w-[1400px] my-0 mx-auto px-4 py-10 sm:py-4 relative">
+                    <button className='relative z-10 rounded-full p-2 hover:bg-vanilla'><Link href='/'><GoArrowLeft className='text-charcoal h-12 w-12 sm:h-7 sm:w-7' /></Link></button>
                     <div className='absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center'>
-                        <img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' />
+                        <img className='sm:w-[50px] sm:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' />
                     </div>
                 </div>
                 <div className='w-full h-[2px] bg-vanilla'>

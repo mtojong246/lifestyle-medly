@@ -125,11 +125,14 @@ export default function PageTwo({newUser, setNewUser, setIsDisabled, pageCount}:
                 <label className='block'>Email</label>
                 <input placeholder="johnDoe@example.com" onChange={handleInput} value={newUser.email} name='email' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" />
             </div>
-            <div className='mb-5 text-left'>
-                <label className='block'>Height</label>
-                <div className='flex justify-between items-center gap-5 '>
-                    <input onChange={handleInput} value={newUser.height_feet ? newUser.height_feet : ''} name='height_feet' className="rounded p-4 border-b border-darkvanilla grow focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="feet" />
-                    <input onChange={handleInput} value={newUser.height_inches ? newUser.height_inches : ''} name='height_inches' className="rounded p-4 border-b border-darkvanilla grow focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="inches" />
+            <div className='flex justify-between items-center gap-5 mb-5'>
+                <div className='text-left grow'>
+                    <label className='block'>Height</label>
+                    <input onChange={handleInput} value={newUser.height_feet ? newUser.height_feet : ''} name='height_feet' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="feet" />
+                </div>
+                <div className='text-left grow'>
+                    <label className='block opacity-0'>Height</label>
+                    <input onChange={handleInput} value={newUser.height_inches ? newUser.height_inches : ''} name='height_inches' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="inches" />
                 </div>
             </div>
             <div className='flex justify-between items-center gap-5 mb-5'>

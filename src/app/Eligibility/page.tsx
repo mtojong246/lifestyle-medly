@@ -144,8 +144,8 @@ export default function Eligibility() {
     }, [pageCount])
 
     return (
-        <div className='py-[100px] px-10 min-h-screen'>
-            <div className='max-w-[900px] mx-auto my-0 text-center text-charcoal'>
+        <div className='py-[80px] sm:py-[100px] min-h-screen'>
+            <div className='max-w-[900px] mx-auto my-0 text-center text-charcoal px-10'>
 
                 {pageCount === 0 ? (
                     <PageOne/>
@@ -159,12 +159,12 @@ export default function Eligibility() {
                     <Confirmation newUser={newUser} setNewUser={setNewUser}/>
                 ) : null}                
 
-                <div className={`max-w-[600px] mx-auto flex mt-20 ${pageCount !== 0 ? 'justify-between' : 'justify-center'}`}>
-                    {pageCount !== 0 && <button onClick={(e:MouseEvent<HTMLButtonElement>) => {previousPage(e); handleSave(e)}} className='slide-btn-rev py-4 px-10 text-lg rounded-full bg-charcoal text-white'><div className='rev flex justify-center items-center gap-3'><MdOutlineKeyboardArrowLeft className='h-5 w-5'/> Back</div></button>}
+                <div className={`max-w-[600px] mx-auto flex flex-col sm:flex-row gap-5 mt-20 ${pageCount !== 0 ? 'justify-between' : 'justify-center'}`}>
+                    {pageCount !== 0 && <button onClick={(e:MouseEvent<HTMLButtonElement>) => {previousPage(e); handleSave(e)}} className='slide-btn-rev py-4 px-10 text-lg rounded-full bg-charcoal text-white'><div className='mx-auto rev flex justify-center items-center gap-3'><MdOutlineKeyboardArrowLeft className='h-5 w-5'/> Back</div></button>}
                     {pageCount !== 4 ? 
-                        <div className="fade-up"><button disabled={isDisabled} onClick={(e:MouseEvent<HTMLButtonElement>) => {nextPage(e); pageCount !== 0 && handleSave(e)}} className='disabled:opacity-40 slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button></div>
+                        <div className="fade-up"><button disabled={isDisabled} onClick={(e:MouseEvent<HTMLButtonElement>) => {nextPage(e); pageCount !== 0 && handleSave(e)}} className='disabled:opacity-40 w-full slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button></div>
                     : 
-                        <button onClick={(e:MouseEvent<HTMLButtonElement>) => {handleSave(e); router.push('/')}} className='slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white'>Submit</button>
+                        <button onClick={(e:MouseEvent<HTMLButtonElement>) => {handleSave(e); router.push('/')}} className='w-full slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white text-center'><div className='mx-auto'>Submit</div></button>
                     }
                 </div>
             </div>
