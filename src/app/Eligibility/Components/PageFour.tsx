@@ -1,7 +1,7 @@
 'use client';
 
 import { FaCheck } from "react-icons/fa6";
-import { Dispatch, SetStateAction, useState } from "react";
+import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { UserType } from "../page";
 
 const conditions = [
@@ -35,7 +35,7 @@ const conditions = [
     }
 ]
 
-export default function PageFour({newUser, setNewUser}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>}) {
+export default function PageFour({newUser, setNewUser, setIsDisabled, pageCount}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>, setIsDisabled: Dispatch<SetStateAction<boolean>>, pageCount: number}) {
     const [ none, setNone ] = useState(false);
 
     const handleSelection = (value: string) => {
@@ -62,6 +62,27 @@ export default function PageFour({newUser, setNewUser}: {newUser: UserType, setN
             setNone(false);
         }
     }
+
+    useEffect(() => {
+        if (pageCount === 3) {
+            if (none) {
+                setIsDisabled(false)
+            } else {
+                let list: string[] = [];
+                newUser.conditions.forEach(cond => {
+                    if (cond.isSelected) {
+                        list.push(cond.value)
+                    }
+                })
+                if (list.length) {
+                    setIsDisabled(false);
+                } else {
+                    setIsDisabled(true)
+                }
+                console.log(list)
+            }
+        } 
+    }, [newUser.conditions, none])
 
 
     return (

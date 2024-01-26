@@ -89,6 +89,7 @@ const defaultUser = {
 
 export default function Eligibility() {
     const [ newUser, setNewUser ] = useState<UserType>(defaultUser);
+    const [ isDisabled, setIsDisabled ] = useState(false);
     const { pageCount, nextPage, previousPage } = useContext(GlobalContext);
     const router = useRouter();
     // const [ pageCount, setPageCount ] = useState(0);
@@ -123,12 +124,19 @@ export default function Eligibility() {
         if (existingUser) {
             try {
                 await updateUser(newUser, newUser.id);
-                localStorage.setItem('user', JSON.stringify(newUser));
+                if (pageCount !== 4) {
+                    localStorage.setItem('user', JSON.stringify(newUser));
+                } else {
+                    localStorage.removeItem('user');
+                }
+                
             } catch (err:any) {
                 console.log(err)
             }
         } 
     };
+
+
 
     return (
         <div className='py-[100px] px-10 min-h-screen'>
@@ -137,11 +145,11 @@ export default function Eligibility() {
                 {pageCount === 0 ? (
                     <PageOne/>
                 ) : pageCount === 1 ? (
-                    <PageTwo newUser={newUser} setNewUser={setNewUser}/>
+                    <PageTwo newUser={newUser} setNewUser={setNewUser} setIsDisabled={setIsDisabled} pageCount={pageCount}/>
                 ) : pageCount === 2 ? (
-                    <PageThree newUser={newUser} setNewUser={setNewUser}/>
+                    <PageThree newUser={newUser} setNewUser={setNewUser} setIsDisabled={setIsDisabled} pageCount={pageCount}/>
                 ) : pageCount === 3 ? (
-                    <PageFour newUser={newUser} setNewUser={setNewUser}/>
+                    <PageFour newUser={newUser} setNewUser={setNewUser} setIsDisabled={setIsDisabled} pageCount={pageCount}/>
                 ) : pageCount === 4 ? (
                     <Confirmation newUser={newUser} setNewUser={setNewUser}/>
                 ) : null}                
@@ -149,7 +157,7 @@ export default function Eligibility() {
                 <div className={`max-w-[600px] mx-auto flex mt-20 ${pageCount !== 0 ? 'justify-between' : 'justify-center'}`}>
                     {pageCount !== 0 && <button onClick={(e:MouseEvent<HTMLButtonElement>) => {previousPage(e); handleSave(e)}} className='slide-btn-rev py-4 px-10 text-lg rounded-full bg-charcoal text-white'><div className='rev flex justify-center items-center gap-3'><MdOutlineKeyboardArrowLeft className='h-5 w-5'/> Back</div></button>}
                     {pageCount !== 4 ? 
-                        <button onClick={(e:MouseEvent<HTMLButtonElement>) => {nextPage(e); pageCount !== 0 && handleSave(e)}} className='slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button>
+                        <button disabled={isDisabled} onClick={(e:MouseEvent<HTMLButtonElement>) => {nextPage(e); pageCount !== 0 && handleSave(e)}} className='disabled:opacity-40 slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button>
                     : 
                         <button onClick={(e:MouseEvent<HTMLButtonElement>) => {handleSave(e); router.push('/')}} className='slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white'>Submit</button>
                     }

@@ -167,6 +167,10 @@ body {
   width: 100%;
 }
 
+.slide-btn:disabled:hover::before {
+  width: 0%;
+}
+
 
 .up {  
   transition: 0.25s;

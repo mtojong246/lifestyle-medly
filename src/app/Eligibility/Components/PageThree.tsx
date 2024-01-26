@@ -1,10 +1,10 @@
 import { states } from "@/app/states";
 import { RxChevronDown } from "react-icons/rx";
-import { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { ChangeEvent, Dispatch, SetStateAction, useEffect } from "react";
 import { UserType} from "../page";
 
 
-export default function PageThree({newUser, setNewUser}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>}) {
+export default function PageThree({newUser, setNewUser, setIsDisabled, pageCount}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>, setIsDisabled: Dispatch<SetStateAction<boolean>>, pageCount: number}) {
 
     const handleSelect = (e:ChangeEvent<HTMLSelectElement>) => {
         setNewUser({
@@ -12,6 +12,16 @@ export default function PageThree({newUser, setNewUser}: {newUser: UserType, set
             state: e.target.value,
         })
     }
+
+    useEffect(() => {
+        if (pageCount === 2) {
+            if (!newUser.state) {
+                setIsDisabled(true);
+            } else {
+                setIsDisabled(false);
+            }
+        }
+    }, [newUser.state])
 
     return (
         <div className='max-w-[600px] mx-auto'>

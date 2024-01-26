@@ -20,7 +20,7 @@ const genders = [
     }
 ]
 
-export default function PageTwo({newUser, setNewUser}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>}) {
+export default function PageTwo({newUser, setNewUser, setIsDisabled, pageCount}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>, setIsDisabled: Dispatch<SetStateAction<boolean>>, pageCount: number }) {
 
     const handleInput = (e:ChangeEvent<HTMLInputElement>) => {
         setNewUser({
@@ -62,6 +62,18 @@ export default function PageTwo({newUser, setNewUser}: {newUser: UserType, setNe
             age,
         })
     }, [newUser.date_of_birth]);
+
+    useEffect(() => {
+        if (pageCount === 1) {
+            if (!newUser.first_name || !newUser.last_name || !newUser.gender || !newUser.date_of_birth || !newUser.phone_number
+                || !newUser.email || !newUser.height_feet || !newUser.height_inches || !newUser.weight || !newUser.waist_size) {
+                    setIsDisabled(true);
+                } else {
+                    setIsDisabled(false);
+                }
+        }
+    }, [newUser.first_name, newUser.last_name, newUser.gender, newUser.date_of_birth, newUser.phone_number, newUser.email, newUser.height_feet, newUser.height_inches, newUser.weight, newUser.waist_size])
+
 
     let formatPhoneNumber = (str:string) => {
         //Filter only numbers from the input
