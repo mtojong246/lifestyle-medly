@@ -13,6 +13,7 @@ import ContactPopup from './ContactPopup';
 
 export default function Navigation() {
     const [ isOpen, setIsOpen ] = useState(false);
+    const [ isTop, setIsTop ] = useState(false);
     const [ percentage, setPercentage ] = useState(0);
     const pathname = usePathname();
     const { pageCount } = useContext(GlobalContext);
@@ -26,6 +27,25 @@ export default function Navigation() {
         const perc = ((pageCount + 1)/5)*100;
         setPercentage(perc)
     }, [pageCount])
+
+    const handleScroll = () => {
+        const current = window.scrollY;
+        if (current === 0) {
+            setIsTop(true)
+        } else {
+            setIsTop(false);
+        }
+    }
+
+    useEffect(() => {
+        // Add scroll event listener on component mount
+        window.addEventListener('scroll', handleScroll);
+
+        // Clean up the event listener on component unmount
+        return () => {
+        window.removeEventListener('scroll', () => handleScroll);
+        };
+    }, []);
 
 
 
@@ -45,7 +65,7 @@ export default function Navigation() {
                 </>
             ) : (
                 <>
-                    <div className="w-full shadow-lg">
+                    <div className={`w-full transition-all ease-in  ${isTop ? 'shadow-none': 'shadow-md'}`}>
                         <div className='max-w-[1400px] my-0 mx-auto p-4 flex justify-between items-center gap-8'>
                             <div className='flex justify-center items-center gap-8'>
                                 <Link href='/'><img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' /></Link>

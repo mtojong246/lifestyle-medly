@@ -12,47 +12,47 @@ export default function Pricing() {
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>$169<span className='font-normal text-lg text-gold'>/month</span></p>
                     <p className='text-md font-medium mt-5 text-darkvanilla'>Duration: 11 weeks</p>
                     <p className='text-md font-medium'>Processing Time: 3-5 days</p>
-                    <button className='mt-8 text-lg font-medium text-white bg-maize lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Start your kickstart today!</button>
+                    <button className='up mt-8 text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Start your kickstart today!</button>
                 </div>
-                <div className='grow bg-maize/[0.15] p-10 flex flex-col justify-center items-start gap-10'>
+                <div className='grow bg-maize/[0.15] p-10 flex flex-col justify-start items-start gap-10'>
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>11-weeks of Compounded Semaglutide (0.25mg-0.5mg weekly dose) prescription</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>11-weeks of Compounded Semaglutide (0.25mg-0.5mg weekly dose) prescription</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>BONUS welcome kit full of helpful resources for your first month</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>BONUS welcome kit full of helpful resources for your first month</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE Overnight Shipping</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE Overnight Shipping</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE Initial Consultation & Follow-up via telehealth</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE Initial Consultation & Follow-up via telehealth</p>
                     </div>
 
                     {/* <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE in-office injections with personalized teaching by our registered nurses</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE in-office injections with personalized teaching by our registered nurses</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
                     </div> */}
 
                 </div>
@@ -68,47 +68,47 @@ export default function Pricing() {
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>$169<span className='font-normal text-lg text-gold'>/month</span></p>
                     <p className='text-md font-medium mt-5'>Duration: 6 weeks</p>
                     <p className='text-md font-medium'>Processing Time: 3-5 days</p>
-                    <button className='mt-8 text-lg font-medium text-white bg-maize lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Unlock your Power-Up now!</button>
+                    <button className='relative z-10 up mt-8 text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Unlock your Power-Up now!</button>
                 </div>
-                <div className='grow bg-maize/[0.15] p-10 flex flex-col justify-center items-start gap-10'>
+                <div className='grow bg-maize/[0.15] p-10 flex flex-col justify-start items-start gap-10'>
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>6-weeks of Compounded Tirzepatide (2.5mg-5mg weekly dose) prescription</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>6-weeks of Compounded Tirzepatide (2.5mg-5mg weekly dose) prescription</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>BONUS welcome kit on your 1st month packed with essential resources!</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>BONUS welcome kit on your 1st month packed with essential resources!</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE Overnight Shipping</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE Overnight Shipping</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE Initial Consultation & Follow-up via telehealth</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE Initial Consultation & Follow-up via telehealth</p>
                     </div>
 
                     {/* <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE in-office injections with personalized teaching by our registered nurses</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE in-office injections with personalized teaching by our registered nurses</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
-                    <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                    <p className='text-lg'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
+                    <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                    <p className='text-md'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
                     </div> */}
 
                 </div>
@@ -120,47 +120,47 @@ export default function Pricing() {
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>$99<span className='font-normal text-lg text-gold'>/month</span></p>
                     <p className='text-md font-medium mt-5'>Exclusive discounts</p>
                     <p className='text-md font-medium'>& priority access!</p>
-                    <button className='mt-8 text-lg font-medium text-white bg-maize lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Continue Your Journey!</button>
+                    <button className='up mt-8 text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Continue Your Journey!</button>
                 </div>
-                <div className='grow bg-maize/[0.15] p-10 flex flex-col justify-center items-start gap-10'>
+                <div className='grow bg-maize/[0.15] p-10 flex flex-col justify-start items-start gap-10'>
                         <div className='flex justify-start items-start gap-3'>
-                        <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-lg'>10% off labs at home for follow-up</p>
+                        <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                        <p className='text-md'>10% off labs at home for follow-up</p>
                         </div>
 
                         <div className='flex justify-start items-start gap-3'>
-                        <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-lg'>Consistent medication delivery to your home</p>
+                        <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                        <p className='text-md'>Consistent medication delivery to your home</p>
                         </div>
 
                         <div className='flex justify-start items-start gap-3'>
-                        <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-lg'>Priority booking for Telehealth and Lab Appointments</p>
+                        <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                        <p className='text-md'>Priority booking for Telehealth and Lab Appointments</p>
                         </div>
 
                         <div className='flex justify-start items-start gap-3'>
-                        <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-lg'>FREE monthly consultation with expert physicians</p>
+                        <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                        <p className='text-md'>FREE monthly consultation with expert physicians</p>
                         </div>
 
                         {/* <div className='flex justify-start items-start gap-3'>
-                        <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-lg'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
+                        <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                        <p className='text-md'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
                         </div>
 
                         <div className='flex justify-start items-start gap-3'>
-                        <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-lg'>FREE in-office injections with personalized teaching by our registered nurses</p>
+                        <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                        <p className='text-md'>FREE in-office injections with personalized teaching by our registered nurses</p>
                         </div>
 
                         <div className='flex justify-start items-start gap-3'>
-                        <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-lg'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
+                        <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                        <p className='text-md'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
                         </div>
 
                         <div className='flex justify-start items-start gap-3'>
-                        <img src='/check-square.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-lg'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
+                        <img src='/check.svg' className='w-6 h-6 dark-gold' />
+                        <p className='text-md'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
                         </div> */}
 
                     </div>
@@ -171,15 +171,15 @@ export default function Pricing() {
             <p className='text-xl font-semibold'>Not included:</p>
             <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
                 <img src='/x.svg' className='w-7 h-7' />
-                <p className='text-lg'>Labs (insurance or $50)</p>
+                <p className='text-md'>Labs (insurance or $50)</p>
             </div>
             <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
                 <img src='/x.svg' className='w-7 h-7' />
-                <p className='text-lg'>Medications (as low as $25/week)</p>
+                <p className='text-md'>Medications (as low as $25/week)</p>
             </div>
             <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
                 <img src='/x.svg' className='w-7 h-7' />
-                <p className='text-lg'>Optional nurse teaching for home injections for as low as $100 (for Central NJ customers)</p>
+                <p className='text-md'>Optional nurse teaching for home injections for as low as $100 (for Central NJ customers)</p>
             </div>
             </div>
 
