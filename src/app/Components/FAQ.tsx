@@ -6,12 +6,12 @@ import { AiFillPlusCircle } from "react-icons/ai";
 export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HTMLButtonElement>, number: string) => void, open: {one: boolean, two: boolean, three: boolean, four: boolean, five: boolean} }) {
     return (
     <div className='w-full text-charcoal' id='faq'>
-      <div className='max-w-[1400px] mx-auto px-10 py-[100px] flex flex-col justify-center items-center gap-[40px]'>
+      <div className='max-w-[1400px] mx-auto px-10 py-[80px] flex flex-col justify-center items-center gap-[46px]'>
 
         <div className='w-full'>
           <div className='flex justify-between items-start'>
             <p className='text-[42px] font-bold max-w-[1200px]'>What is Semaglutide for Weight Loss?</p>
-            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'one')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[800ms] ${open.one ? 'rotate' : ''}`} /></button>
+            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'one')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.one ? 'rotate' : ''}`} /></button>
           </div>
           <div className={`hover:text-gold border border-maize rounded-md p-8 mt-10 text-[22px] closed ${open.one ? 'faq-open' : ''}`}>
             <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
@@ -24,7 +24,7 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
         <div className='w-full'>
           <div className='flex justify-between items-start'>
             <p className='text-[42px] font-bold max-w-[1200px]'>What is Tirzepatide for Weight Loss?</p>
-            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'two')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[800ms] ${open.two ? 'rotate' : ''}`} /></button>
+            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'two')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.two ? 'rotate' : ''}`} /></button>
           </div>
           <div className={`hover:text-gold border border-maize rounded-md p-8 mt-10 text-[22px] closed ${open.two ? 'faq-open' : ''}`}>
             <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
@@ -39,7 +39,7 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
         <div className='w-full'>
           <div className='flex justify-between items-start'>
             <p className='text-[42px] font-bold max-w-[1200px]'>How Do Semaglutide and Tirzepatide Help with Weight Loss?</p>
-            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'three')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[800ms] ${open.three ? 'rotate' : ''}`} /></button>
+            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'three')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.three ? 'rotate' : ''}`} /></button>
           </div>
           <div className={`hover:text-gold border border-maize rounded-md p-8 mt-10 text-[22px] closed ${open.three ? 'faq-open' : ''}`}>
             <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
@@ -63,7 +63,7 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
         <div className='w-full'>
           <div className='flex justify-between items-center'>
             <p className='text-[42px] font-bold max-w-[1200px]'>What are those side effects and how common are they?</p>
-            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'four')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[800ms] ${open.four ? 'rotate' : ''}`}/></button>
+            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'four')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.four ? 'rotate' : ''}`}/></button>
           </div>
           <div className={`hover:text-gold border border-maize rounded-md p-8 mt-10 text-[22px] closed ${open.four ? 'faq-open' : ''}`}>
             <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
@@ -79,7 +79,7 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
         <div className='w-full'>
           <div className='flex justify-between items-start'>
             <p className='text-[42px] font-bold max-w-[1200px]'>How does our curated weight loss program work?</p>
-            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'five')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[800ms] ${open.five ? 'rotate' : ''}`} /></button>
+            <button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'five')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.five ? 'rotate' : ''}`} /></button>
           </div>
           <div className={`hover:text-gold border border-maize rounded-md p-8 mt-10 text-[22px] closed ${open.five ? 'faq-open' : ''}`}>
             <p className='font-semibold mb-5 text-[32px]'>Answer:</p>

@@ -60,7 +60,7 @@ export default function Pricing() {
                 </div>
             </AnimationOnScroll>
 
-            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='shadow-lg flex flex-col w-full mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
+            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='relative shadow-lg flex flex-col w-full mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
                 <div className='absolute top-[-58px] left-0 right-0 p-4 text-center bg-maize rounded-t-md'>
                 <p className='font-semibold text-white text-lg'>Limited Time Offer!</p>
                 </div>
@@ -168,6 +168,26 @@ export default function Pricing() {
 
                     </div>
                 </AnimationOnScroll>
+            </div>
+
+            <div className='mt-20 mx-auto text-left max-w-[900px]'>
+                <p className='text-xl font-semibold'>All plans include:</p>
+                <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                    <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                    <p className='text-md'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
+                </div>
+                <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                    <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                    <p className='text-md'>FREE in-office injections with personalized teaching by our registered nurses</p>
+                </div>
+                <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                    <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                    <p className='text-md'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
+                </div>
+                <div className='flex justify-start items-start gap-3 ml-10 mt-5'>
+                    <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                    <p className='text-md'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
+                </div>
             </div>
 
             <div className='mt-20 mx-auto text-left max-w-[900px]'>
