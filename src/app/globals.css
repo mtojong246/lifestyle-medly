@@ -356,3 +356,27 @@ body {
 .slide:focus {
   box-shadow: inset 6.5em 0 0 0 #F0C453;
 }
+
+
+/* ANIMATE.CSS */
+
+.fade-left {
+  animation-name: fadeInLeft; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1500ms; /* don't forget to set a duration! */
+  animation-delay: 500ms;
+  animation-fill-mode: backwards;
+}
+
+.fade-down {
+  animation-name: fadeInDown; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 1500ms; /* don't forget to set a duration! */
+  animation-delay: 0;
+  animation-fill-mode: backwards;
+}
+
+.fade-in {
+  animation-name: fadeIn;
+  animation-duration: 1500ms;
+  animation-delay: 500ms;
+  animation-fill-mode: backwards;
+}

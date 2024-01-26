@@ -10,10 +10,11 @@ import { GoArrowLeft } from "react-icons/go";
 import { GlobalContext } from '../context/context';
 import MobileMenu from './MobileMenu';
 import ContactPopup from './ContactPopup';
+import 'animate.css';
 
 export default function Navigation() {
     const [ isOpen, setIsOpen ] = useState(false);
-    const [ isTop, setIsTop ] = useState(false);
+    const [ isTop, setIsTop ] = useState(true);
     const [ percentage, setPercentage ] = useState(0);
     const pathname = usePathname();
     const { pageCount } = useContext(GlobalContext);
@@ -30,7 +31,7 @@ export default function Navigation() {
 
     const handleScroll = () => {
         const current = window.scrollY;
-        if (current === 0) {
+        if (current < 1) {
             setIsTop(true)
         } else {
             setIsTop(false);
@@ -39,6 +40,7 @@ export default function Navigation() {
 
     useEffect(() => {
         // Add scroll event listener on component mount
+        setIsTop(true);
         window.addEventListener('scroll', handleScroll);
 
         // Clean up the event listener on component unmount
@@ -50,7 +52,7 @@ export default function Navigation() {
 
 
     return (
-        <div className='w-full sticky top-0 bg-white z-10'>
+        <div className='w-full sticky top-0 bg-white z-20 '>
             {pathname === '/Eligibility' ? (
                 <>
                 <div className="max-w-[1400px] my-0 mx-auto p-4 relative">
@@ -65,7 +67,7 @@ export default function Navigation() {
                 </>
             ) : (
                 <>
-                    <div className={`w-full transition-all ease-in  ${isTop ? 'shadow-none': 'shadow-md'}`}>
+                    <div className={`w-full transition-all ease-in fade-down ${isTop ? 'shadow-none': 'shadow-md'}`}>
                         <div className='max-w-[1400px] my-0 mx-auto p-4 flex justify-between items-center gap-8'>
                             <div className='flex justify-center items-center gap-8'>
                                 <Link href='/'><img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' /></Link>
