@@ -35,10 +35,10 @@ export default function Footer() {
                     <a className='hover:text-maize' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Schedule Appointment</a>
                     <p className='font-semibold mt-16 md:mt-5'>STAY IN TOUCH</p>
                     <div className='flex justify-center items-center gap-2'>
-                        <FaFacebook className='h-8 w-8 md:h-5 md:w-5' />
-                        <FaInstagram className='h-8 w-8 md:h-5 md:w-5' />
-                        <FaTiktok className='h-8 w-8 md:h-5 md:w-5' />
-                        <FaYoutube className='h-8 w-8 md:h-5 md:w-5' />
+                        <a href='https://www.facebook.com/profile.php?id=61555345954621' target="_blank" rel="noreferrer"><FaFacebook className='h-8 w-8 md:h-5 md:w-5 hover:text-maize' /></a>
+                        <a href='https://www.instagram.com/lifestylemedly/' target="_blank" rel="noreferrer"><FaInstagram className='h-8 w-8 md:h-5 md:w-5 hover:text-maize' /></a>
+                        <a href='https://www.tiktok.com/@_lifestylemedly' target="_blank" rel="noreferrer"><FaTiktok className='h-8 w-8 md:h-5 md:w-5 hover:text-maize' /></a>
+                        <a href='https://www.youtube.com/channel/UC7sflAG70ohUbJYCsULx1og' target="_blank" rel="noreferrer"><FaYoutube className='h-8 w-8 md:h-5 md:w-5 hover:text-maize' /></a>
                     </div>
                 </div>
 
