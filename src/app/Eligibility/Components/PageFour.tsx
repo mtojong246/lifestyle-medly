@@ -1,5 +1,7 @@
+'use client';
+
 import { FaCheck } from "react-icons/fa6";
-import { Dispatch, SetStateAction } from "react";
+import { Dispatch, SetStateAction, useState } from "react";
 import { UserType } from "../page";
 
 const conditions = [
@@ -34,18 +36,31 @@ const conditions = [
 ]
 
 export default function PageFour({newUser, setNewUser}: {newUser: UserType, setNewUser: Dispatch<SetStateAction<UserType>>}) {
+    const [ none, setNone ] = useState(false);
 
     const handleSelection = (value: string) => {
-        setNewUser({
-            ...newUser,
-            conditions: newUser.conditions.map(cond => {
-                if (cond.value === value) {
-                    return { ...cond, isSelected: !cond.isSelected }
-                } else {
-                    return { ...cond }
-                }
+        if (value === 'none') {
+             if (!none === true) {
+                setNewUser({
+                    ...newUser,
+                    conditions: newUser.conditions.map(cond => ({...cond, isSelected: false }))
+                });
+             }
+             setNone(!none);
+             
+        } else {
+            setNewUser({
+                ...newUser,
+                conditions: newUser.conditions.map(cond => {
+                    if (cond.value === value) {
+                        return { ...cond, isSelected: !cond.isSelected }
+                    } else {
+                        return { ...cond }
+                    }
+                })
             })
-        })
+            setNone(false);
+        }
     }
 
 
@@ -53,11 +68,15 @@ export default function PageFour({newUser, setNewUser}: {newUser: UserType, setN
         <div className='max-w-[600px] mx-auto'>
             <p className='text-xl mb-10'>Please check any of the following conditions that apply to you:</p>
             {newUser.conditions.map((condition,i) => (
-                <div key={i} onClick={() => handleSelection(condition.value)} className={`p-4 mb-5 flex justify-between items-center gap-10 border-2 rounded bg-maize/[.54] hover:bg-maize/[.8] hover:cursor-pointer border-gold text-gold font-medium text-left`}>
+                <div key={i} onClick={() => handleSelection(condition.value)} className={`p-4 mb-5 flex justify-between items-center gap-10 border-2 rounded ${condition.isSelected ? 'bg-maize/[.54] border-gold text-gold ' : 'bg-none border-charcoal text-charcoal'}  hover:bg-maize/[.8] hover:cursor-pointer  font-medium text-left`}>
                     <p>{condition.label}</p>
                     <FaCheck className={`h-4 w-4 ${condition.isSelected ? 'opacity-100' : 'opacity-0'}`} />
                 </div>
             ))}
+            <div onClick={() => handleSelection('none')} className={`p-4 mb-5 flex justify-between items-center gap-10 border-2 rounded ${none ? 'bg-maize/[.54] border-gold text-gold ' : 'bg-none border-charcoal text-charcoal'} hover:bg-maize/[.8] hover:cursor-pointer font-medium text-left`}>
+                <p>None of the above</p>
+                <FaCheck className={`h-4 w-4 ${none ? 'opacity-100' : 'opacity-0'}`} />
+            </div>
         </div>
     )
 }
