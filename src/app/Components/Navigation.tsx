@@ -78,7 +78,7 @@ export default function Navigation() {
                             <div className='flex justify-center items-center gap-8'>
                                 {/* <Link className='hidden md:block' href='#'>For Patients</Link> */}
                                 <Dropdown />
-                                <Link className='hidden md:block' href='#'><p className='under'>Blog</p></Link>
+                                <Link className='hidden md:block' href='/Blog'><p className='under'>Blog</p></Link>
                                 {/* <Link className='hidden md:block' href='/Contact'><p className='under'>Contact</p></Link> */}
                                 <div className='hidden md:block'><ContactPopup/></div>
                                 <Link className='hidden md:inline-block' href='/Eligibility'><button className='slide-btn py-2 px-6 rounded-full bg-charcoal text-white hidden md:inline-block'>Get Started</button></Link>
