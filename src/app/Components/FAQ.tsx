@@ -62,7 +62,7 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
         </div>
 
         <div className='w-full'>
-          <div className='flex justify-between items-center gap-6'>
+          <div className='flex justify-between items-start gap-6'>
             <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[36px] sm:text-[42px] font-bold max-w-[1200px]'>What are those side effects and how common are they?</p></AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'four')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.four ? 'rotate' : ''}`}/></button></AnimationOnScroll>
           </div>

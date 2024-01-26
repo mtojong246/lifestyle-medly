@@ -7,8 +7,8 @@ export default function Pricing() {
             <p className='text-[40px] sm:text-[48px] font-bold mb-2'>Pricing plan</p>
             <p className='text-lg sm:text-xl mb-[60px] sm:mb-[120px]'>Discover the right fit, affordable plans for every inch.</p>
 
-            <div className='flex flex-col lg:flex-row justify-center items-stretch lg:gap-0 gap-20'>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true} className='shadow-lg flex flex-col w-full mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
+            <div className='flex flex-col lg:flex-row justify-center items-stretch lg:gap-0 gap-20 shadow-none lg:shadow-lg'>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true} className='shadow-lg lg:shadow-none flex flex-col w-full mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
                 <div className='p-10 text-center'>
                     <p className='font-semibold text-[26px]'>Start-Up Plan</p>
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>$169<span className='font-normal text-lg text-gold'>/month</span></p>
@@ -60,7 +60,7 @@ export default function Pricing() {
                 </div>
             </AnimationOnScroll>
 
-            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='relative shadow-lg flex flex-col w-full mt-[60px] lg:mt-0 mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
+            <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='relative shadow-lg lg:shadow-none flex flex-col w-full mt-[60px] lg:mt-0 mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
                 <div className='absolute top-[-58px] left-0 right-0 p-4 text-center bg-maize rounded-t-md'>
                 <p className='font-semibold text-white text-lg'>Limited Time Offer!</p>
                 </div>
@@ -117,7 +117,7 @@ export default function Pricing() {
                 
             </AnimationOnScroll>
 
-            <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true} className='shadow-lg flex flex-col w-full mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
+            <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true} className='shadow-lg lg:shadow-none flex flex-col w-full mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tl-none lg:rounded-bl-none'>
                 <div className='p-10 text-center'>
                     <p className='font-semibold text-[26px]'>Loyalty Program Plan</p>
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>$99<span className='font-normal text-lg text-gold'>/month</span></p>
