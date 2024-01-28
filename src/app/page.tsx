@@ -11,6 +11,7 @@ import { GlobalContext } from "./context/context";
 import Link from "next/link";
 import { Link as Scroll, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
 import 'animate.css';
+import ChatBox from "./Components/Chatbot/ChatBox";
 
 export default function Home() {
   const [ open, setIsOpen ] = useState({
@@ -28,6 +29,8 @@ export default function Home() {
       [number]: !open[number as keyof object],
     })
   }
+
+  
 
   
 
@@ -55,6 +58,8 @@ export default function Home() {
         </div>
       </div>
     </div>
+
+    <ChatBox/>
 
     <Steps />
 

@@ -164,7 +164,7 @@ export default function Eligibility() {
                     {pageCount !== 4 ? 
                         <div className="fade-up"><button disabled={isDisabled} onClick={(e:MouseEvent<HTMLButtonElement>) => {nextPage(e); pageCount !== 0 && handleSave(e)}} className='disabled:opacity-40 w-full slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white flex justify-center items-center gap-3'>Continue <MdOutlineKeyboardArrowRight className='h-5 w-5'/></button></div>
                     : 
-                        <button onClick={(e:MouseEvent<HTMLButtonElement>) => {handleSave(e); router.push('/')}} className='w-full slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white text-center'><div className='mx-auto'>Submit</div></button>
+                        <button onClick={(e:MouseEvent<HTMLButtonElement>) => {handleSave(e); router.push('/')}} className='w-full sm:w-auto slide-btn py-4 px-10 text-lg rounded-full bg-charcoal text-white text-center'><div className='mx-auto'>Submit</div></button>
                     }
                 </div>
             </div>

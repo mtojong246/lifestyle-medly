@@ -25,6 +25,10 @@ body {
 
 }
 
+.css-79ws1d-MuiModal-root {
+  padding: 40px !important;
+}
+
 .gold {
   filter: invert(84%) sepia(84%) saturate(7489%) hue-rotate(317deg) brightness(101%) contrast(88%);
 }
