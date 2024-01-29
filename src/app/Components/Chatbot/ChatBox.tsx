@@ -4,7 +4,7 @@ import Chatbot from 'react-chatbot-kit'
 import 'react-chatbot-kit/build/main.css'
 import { useState, MouseEvent } from 'react';
 
-import { IoChatboxEllipses } from "react-icons/io5";
+import { IoChatboxEllipses, IoClose} from "react-icons/io5";
 
 import config from './assets/config';
 import MessageParser from './assets/MessageParser';
@@ -25,10 +25,10 @@ export default function ChatBox() {
         config={config}
         messageParser={MessageParser}
         actionProvider={ActionProvider}
-        disableScrollToBottom
+        placeholderText='Type your response'
       />}
       <button onClick={toggleChat} className='mt-[20px] p-4 rounded-full bg-charcoal hover:bg-gold'>
-          <IoChatboxEllipses className='h-7 w-7 text-white' />
+          {!isChatOpen ? <IoChatboxEllipses className='h-7 w-7 text-white' /> : <IoClose className='h-7 w-7 text-white'/>}
       </button>
       
     </div>

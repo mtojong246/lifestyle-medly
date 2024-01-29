@@ -34,13 +34,20 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
   }
 
   const handleWhatIsLifestyle = () => {
-    const message = createChatBotMessage(
+    const message = 
+      createChatBotMessage(
       "We're a dedicated practice that believes everyone deserves access to effective weight loss solutions. We offer convenient telemedicine consultations and personalized programs that include FDA-approved medications like Semaglutide and Tirzepatide. Our approach combines medical intervention with lifestyle changes for transformative weight loss.", {}
     )
 
+    const second = createChatBotMessage("Is there anything else I can help you with?", {
+        delay: 5000,
+        widget: "close-options"
+      })
+  
+
     setState((prev:any) => ({
       ...prev,
-      messages: [ ...prev.messages, message ]
+      messages: [ ...prev.messages, message, second ]
     }))
   }
 
@@ -49,9 +56,14 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
       "Yes, we do! These medications have shown remarkable results in weight management when combined with lifestyle changes.", {}
     )
 
+    const second = createChatBotMessage("Is there anything else I can help you with?", {
+      delay: 5000,
+      widget: "close-options"
+    })
+
     setState((prev:any) => ({
       ...prev,
-      messages: [ ...prev.messages, message ]
+      messages: [ ...prev.messages, message, second ]
     }))
   }
 
@@ -63,10 +75,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
       2. Tirzepatide: A promising advancement in obesity treatment, offering hope for many.  [Link to FAQ#2]
       `, {}
     )
+    
+    const second = createChatBotMessage("Is there anything else I can help you with?", {
+      delay: 5000,
+      widget: "close-options"
+    })
 
     setState((prev:any) => ({
       ...prev,
-      messages: [ ...prev.messages, message ]
+      messages: [ ...prev.messages, message, second ]
     }))
   }
 
@@ -75,9 +92,14 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     'Absolutely! Our programs are designed and supervised by our licensed healthcare professionals to ensure safe medication administration, regular follow-ups, and personalized support.', {}
     )
 
+    const second = createChatBotMessage("Is there anything else I can help you with?", {
+      delay: 5000,
+      widget: "close-options"
+    })
+
     setState((prev:any) => ({
       ...prev,
-      messages: [ ...prev.messages, message ]
+      messages: [ ...prev.messages, message, second ]
     }))
   }
 
@@ -85,10 +107,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     const message = createChatBotMessage(
       "We currently operate on a private-pay basis. While we don't directly accept payments from insurance providers, you can get an itemized bill from us, and then submit it to your insurance for reimbursement if needed.", {}
       )
+
+      const second = createChatBotMessage("Is there anything else I can help you with?", {
+        delay: 5000,
+        widget: "close-options"
+      })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message ]
+        messages: [ ...prev.messages, message, second ]
       }))
   }
 
@@ -96,10 +123,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     const message = createChatBotMessage(
       "Pricing varies based on individual needs. View our plans here: [View Pricing Button]", {}
       )
+
+      const second = createChatBotMessage("Is there anything else I can help you with?", {
+        delay: 5000,
+        widget: "close-options"
+      })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message ]
+        messages: [ ...prev.messages, message, second ]
       }))
   }
 
@@ -107,10 +139,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     const message = createChatBotMessage(
       "You'll have virtual consultations with our dedicated healthcare team through secure video conferencing.  We'll monitor your progress remotely and provide ongoing support from the comfort of your home.", {}
       )
+
+      const second = createChatBotMessage("Is there anything else I can help you with?", {
+        delay: 5000,
+        widget: "close-options"
+      })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message ]
+        messages: [ ...prev.messages, message, second ]
       }))
   }
 
@@ -118,10 +155,15 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     const message = createChatBotMessage(
       "Take the first step towards a healthier you! Book a telemedicine appointment now [Book Appointment Button].", {}
       )
+
+      const second = createChatBotMessage("Is there anything else I can help you with?", {
+        delay: 5000,
+        widget: "close-options"
+      })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message ]
+        messages: [ ...prev.messages, message, second ]
       }))
   }
 
@@ -129,22 +171,43 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     const message = createChatBotMessage(
       "Visit us at [Clinic Address] or reach out", {}
       )
+
+      const second = createChatBotMessage("Is there anything else I can help you with?", {
+        delay: 5000,
+        widget: "close-options"
+      })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message ]
+        messages: [ ...prev.messages, message, second ]
       }))
   }
 
-  const handleFeedeback = () => {
+  const handleFeedback = () => {
     const message = createChatBotMessage(
       "Have questions? Check our FAQs or chat with our experts [FAQs Button] | [Chat with Expert Button].", {}
       )
+
+      const second = createChatBotMessage("Is there anything else I can help you with?", {
+        delay: 5000,
+        widget: "close-options"
+      })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message ]
+        messages: [ ...prev.messages, message, second ]
       }))
+  }
+
+  const handleMore = () => {
+    const message = createChatBotMessage("Great! What else can I help you with?", {
+      widget: "options"
+    })
+
+    setState((prev:any) => ({
+      ...prev,
+      messages: [ ...prev.messages, message ]
+    }))
   }
 
   const handleClose = () => {
@@ -175,8 +238,9 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
             handleTelemedicine,
             handleGetStarted,
             handleContact,
-            handleFeedeback,
+            handleFeedback,
             handleClose,
+            handleMore,
             handleName,
             handleEmail,
           },

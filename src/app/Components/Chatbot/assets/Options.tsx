@@ -9,11 +9,11 @@ export default function Options({...props}) {
         {text: 'How does telemedicine work?', handler: props.actionProvider.handleTelemedicine, id: 7},
         {text: 'How do I get started?', handler: props.actionProvider.handleGetStarted, id: 8},
         {text: 'Location and Contact', handler: props.actionProvider.handleContact, id: 9},
-        {text: 'FAQs and Feedback', handler: props.actionProvider.handleFeedeback, id: 10},
+        {text: 'FAQs and Feedback', handler: props.actionProvider.handleFeedback, id: 10},
     ]
 
     const optionsMarkup = options.map((option) => (
-        <button key={option.id} onClick={option.handler} className='p-3 text-sm rounded bg-none border m-1'>{option.text}</button>
+        <button key={option.id} onClick={option.handler} className='p-3 text-sm rounded bg-none border m-1 hover:bg-maize hover:border-maize hover:text-white'>{option.text}</button>
     ))
 
     return (
