@@ -4,7 +4,7 @@ import { MouseEvent } from "react";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HTMLButtonElement>, number: string) => void, open: {one: boolean, two: boolean, three: boolean, four: boolean, five: boolean} }) {
+export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HTMLButtonElement>, number: string) => void, open: {one: boolean, two: boolean, three: boolean, four: boolean, five: boolean, six: boolean} }) {
     return (
     <div className='w-full text-charcoal' id='faq'>
       <div className='max-w-[1200px] mx-auto px-10 py-[60px] sm:py-[80px] flex flex-col justify-center items-center gap-[60px] sm:gap-[46px]'>
@@ -94,6 +94,17 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
               <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 7:</span> Together: Stay on track with weekly phone follow-ups where we monitor your progress, address any concerns, and receive ongoing nutritional and motivational coaching.</p>
               <p><span className='inline-block mr-2 font-semibold'>Step 8:</span> Reach Your Peak: As you achieve milestones, your provider and weight loss specialist will help you gain and maintain desired effect. Whether it’s medication dosage adjustment or to celebrate your triumphs. We will always be available.</p>
             </div>
+          </div>
+        </div>
+
+        <div className='w-full'>
+          <div className='flex justify-between items-start gap-6'>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[36px] sm:text-[42px] font-bold max-w-[1200px]'>Do you accept insurance?</p></AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'six')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.six ? 'rotate' : ''}`}/></button></AnimationOnScroll>
+          </div>
+          <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open.six ? 'faq-open' : ''}`}>
+            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p>We currently operate on a private-pay basis. You can Use your pre-tax HSA (health Savings account) for payment. While we don't directly accept payments from insurance providers, you can get an itemized bill from us, which can be submitted to your insurance for reimbursement or towards your annual deductible obligations depending on your insurance plan coverage. please check with your insurance provider for further details on thier policies.</p>
           </div>
         </div>
 

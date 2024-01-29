@@ -20,6 +20,7 @@ export default function Home() {
     three: false,
     four: false,
     five: false,
+    six: false,
   });
   const { setPageCount } = useContext(GlobalContext);
   const toggleOpen = (e:MouseEvent<HTMLButtonElement>, number: string) => {
