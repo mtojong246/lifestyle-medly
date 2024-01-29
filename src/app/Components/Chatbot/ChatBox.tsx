@@ -19,18 +19,17 @@ export default function ChatBox() {
   }
 
   return (
-    <div className="fixed bottom-[40px] right-[40px] z-10">
-      {isChatOpen ? (
+    <div className="fixed bottom-[40px] right-[40px] z-10 text-right">
+      {isChatOpen && 
         <Chatbot
         config={config}
         messageParser={MessageParser}
         actionProvider={ActionProvider}
-      />
-      ) : (
-        <button onClick={toggleChat} className='p-4 rounded-full bg-charcoal hover:bg-gold'>
+        disableScrollToBottom
+      />}
+      <button onClick={toggleChat} className='mt-[20px] p-4 rounded-full bg-charcoal hover:bg-gold'>
           <IoChatboxEllipses className='h-7 w-7 text-white' />
-        </button>
-      )}
+      </button>
       
     </div>
   );
