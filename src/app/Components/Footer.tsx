@@ -25,7 +25,6 @@ export default function Footer() {
                     <a className='hover:text-maize' href='https://docs.google.com/document/d/10OSISyKsOgvIaUuSnPugaGHXJP3Hn9HV/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Terms of Service</a>
                     <a className='hover:text-maize' href='https://docs.google.com/document/d/17vN7Lte3dzR8v4EF0F0XEnO-cLd7yd7I/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Privacy Policy</a>
                     <a className='hover:text-maize' href='https://docs.google.com/document/d/1wwzlinQrw3f4poGW2IEbBH4lZmgUbDSp/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Privacy Practices</a>
-                    <a className='hover:text-maize' href='https://docs.google.com/document/d/12-evYVypmlqOxi3O8jAHVQCqOpg2mLDo/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">State Specific Notices</a>
                 </div>
 
                 <div className='flex flex-col justify-start items-center md:items-start gap-4 text-lg md:text-base'>
