@@ -34,7 +34,6 @@ body {
 .react-chatbot-kit-user-chat-message {
   background-color: #F0C453 !important;
   font-size: 14px !important;
-  margin-right: 11.5px !important;
 }
 
 .react-chatbot-kit-user-chat-message-arrow {
@@ -232,7 +231,7 @@ body {
 
 
 #nav-icon4 {
-  width: 60px;
+  width: 50px;
   height: 45px;
   position: relative;
   -webkit-transform: rotate(0deg);
@@ -312,7 +311,7 @@ body {
   -moz-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
-  top: 39px;
+  top: 33px;
   left: 8px;
 }
 

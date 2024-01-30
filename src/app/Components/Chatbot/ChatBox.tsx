@@ -19,7 +19,7 @@ export default function ChatBox() {
   }
 
   return (
-    <div className="fixed bottom-[40px] right-[40px] z-10 text-right">
+    <div className="fixed sm:bottom-[40px] sm:right-[40px] bottom-[20px] right-[20px] z-10 text-right">
       {isChatOpen && 
         <Chatbot
         config={config}
@@ -27,7 +27,7 @@ export default function ChatBox() {
         actionProvider={ActionProvider}
         placeholderText='Type your response'
       />}
-      <button onClick={toggleChat} className='mt-[20px] p-4 rounded-full bg-charcoal hover:bg-gold'>
+      <button onClick={toggleChat} className='mt-[20px] p-4 rounded-full bg-maize hover:bg-gold'>
           {!isChatOpen ? <IoChatboxEllipses className='h-7 w-7 text-white' /> : <IoClose className='h-7 w-7 text-white'/>}
       </button>
       
