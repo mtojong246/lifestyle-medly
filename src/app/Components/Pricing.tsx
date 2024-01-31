@@ -1,6 +1,9 @@
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { useRouter } from 'next/navigation';
 
 export default function Pricing() {
+    const router = useRouter();
+
     return (
         <div className='w-full text-charcoal bg-vanilla' id='direct-pay'>
         <div className='max-w-[1400px] px-10 py-[80px] sm:py-[100px] mx-auto my-0 text-center'>
@@ -12,29 +15,30 @@ export default function Pricing() {
                 <div className='p-[30px] text-center'>
                     <p className='font-semibold text-[26px]'>Start-Up Plan</p>
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>$169<span className='font-normal text-lg text-gold'>/month</span></p>
-                    <p className='text-md font-medium mt-5 text-darkvanilla'>Duration: 11 weeks</p>
+                    <p className='text-md font-medium mt-5'>Full trial, one-time fee**</p>
+                    <p className='text-md font-medium mt-5 text-darkvanilla'>Duration: 4 weeks</p>
                     <p className='text-md font-medium'>Processing Time: 3-5 days</p>
-                    <button className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-4 sm:px-10 rounded-lg'>Start your kickstart today!</button>
+                    <button onClick={() => router.push('/Eligibility')} className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-4 sm:px-10 rounded-lg'>Start your kickstart today!</button>
                 </div>
                 <div className='grow bg-maize/[0.15] p-[30px] flex flex-col justify-start items-start gap-10'>
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>11-weeks of Compounded Semaglutide (0.25mg-0.5mg weekly dose) prescription</p>
+                    <p className='text-md'>4-weeks of Compounded Semaglutide (0.25mg-0.5mg/week; subject to availability) prescription</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>BONUS welcome kit full of helpful resources for your first month</p>
+                    <p className='text-md'>Complimentary 3-Month Welcome Kit</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>FREE Overnight Shipping</p>
+                    <p className='text-md'>1 Initial (30-60 min) + 1 Follow-up (20-40 mins), scheduled based on medical needs & doctor availability.</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>FREE Initial Consultation & Follow-up via telehealth</p>
+                    <p className='text-md'>Up to 4 weekly phone check-ins (15 minutes each)</p>
                     </div>
 
                     {/* <div className='flex justify-start items-start gap-3'>
@@ -68,29 +72,30 @@ export default function Pricing() {
                 <div className='p-[30px] text-center'>
                     <p className='font-semibold text-[26px]'>Power-Up Plan</p>
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>$169<span className='font-normal text-lg text-gold'>/month</span></p>
+                    <p className='text-md font-medium mt-5'>Full trial, one-time fee**</p>
                     <p className='text-md font-medium mt-5'>Duration: 6 weeks</p>
                     <p className='text-md font-medium'>Processing Time: 3-5 days</p>
-                    <button className='relative z-10 up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Unlock your Power-Up now!</button>
+                    <button onClick={() => router.push('/Eligibility')} className='relative z-10 up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Unlock your Power-Up now!</button>
                 </div>
                 <div className='grow bg-maize/[0.15] p-[30px] flex flex-col justify-start items-start gap-10'>
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>6-weeks of Compounded Tirzepatide (2.5mg-5mg weekly dose) prescription</p>
+                    <p className='text-md'>6-weeks of Compounded Tirzepatide (2.5mg-5mg/week; subject to availability) prescription</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>BONUS welcome kit on your 1st month packed with essential resources!</p>
+                    <p className='text-md'>Complimentary 3-Month Welcome Kit</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>FREE Overnight Shipping</p>
+                    <p className='text-md'>1 Initial (30-60 min) + 1 Follow-up (20-40 mins), scheduled based on medical needs & doctor availability.</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>FREE Initial Consultation & Follow-up via telehealth</p>
+                    <p className='text-md'>Up to 4 weekly phone check-ins (15 minutes each)</p>
                     </div>
 
                     {/* <div className='flex justify-start items-start gap-3'>
@@ -121,14 +126,15 @@ export default function Pricing() {
                 <div className='p-[30px] text-center'>
                     <p className='font-semibold text-[26px]'>Loyalty Program Plan</p>
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>$99<span className='font-normal text-lg text-gold'>/month</span></p>
+                    <p className='text-md font-medium mt-5'>Ongoing support, billed monthly**</p>
                     <p className='text-md font-medium mt-5'>Exclusive discounts</p>
                     <p className='text-md font-medium'>& priority access!</p>
-                    <button className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Continue Your Journey!</button>
+                    <button onClick={() => router.push('/Eligibility')} className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal lg:w-full py-4 lg:px-6 px-10 rounded-lg'>Continue Your Journey!</button>
                 </div>
                 <div className='grow bg-maize/[0.15] p-[30px] flex flex-col justify-start items-start gap-10'>
                         <div className='flex justify-start items-start gap-3'>
                         <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                        <p className='text-md'>10% off labs at home for follow-up</p>
+                        <p className='text-md'>Get 15% off a 3-month supply! *Shipping not included</p>
                         </div>
 
                         <div className='flex justify-start items-start gap-3'>
@@ -143,7 +149,7 @@ export default function Pricing() {
 
                         <div className='flex justify-start items-start gap-3'>
                         <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                        <p className='text-md'>FREE monthly consultation with expert physicians</p>
+                        <p className='text-md'>Up to 4 Quarterly Follow-ups (20-40 min), scheduled based on medical needs & doctor availability.</p>
                         </div>
 
                         {/* <div className='flex justify-start items-start gap-3'>
@@ -175,19 +181,23 @@ export default function Pricing() {
                     <p className='text-xl font-semibold'>All plans include:</p>
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-md'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
+                        <p className='text-md'>Get 10% off fees for all optional services!</p>
                     </div>
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-md'>FREE in-office injections with personalized teaching by our registered nurses</p>
+                        <p className='text-md'>Select pharmacy-to-door Rx delivery! Shipping costs may apply.**</p>
                     </div>
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-md'>FREE access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
+                        <p className='text-md'>Access to our 24/7 hub of exclusive educational videos and Q&A sessions with our expert providers!</p>
                     </div>
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-md'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
+                        <p className='text-md'>Weekly emails with delicious, registered-dietitian-approved meal plans</p>
+                    </div>
+                    <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
+                        <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                        <p className='text-md'>No lock-in, cancel anytime via email</p>
                     </div>
                 </div>
 
@@ -195,18 +205,20 @@ export default function Pricing() {
                     <p className='text-xl font-semibold'>Not included:</p>
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/x.svg' className='w-7 h-7' />
-                        <p className='text-md'>Labs (insurance or $50)</p>
+                        <p className='text-md'>Home-drawn Labs ($50 add-on fee** subject to availability)</p>
                     </div>
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/x.svg' className='w-7 h-7' />
-                        <p className='text-md'>Medications (as low as $25/week)</p>
+                        <p className='text-md'>Medications (as low as $25/week**)</p>
                     </div>
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/x.svg' className='w-7 h-7' />
-                        <p className='text-md'>Optional nurse teaching for home injections for as low as $100 (for Central NJ customers)</p>
+                        <p className='text-md'>Optional nurse teaching for home injections for as low as $100** (for Central NJ customers)</p>
                     </div>
+                    <p className='text-md mt-5 ml-10'>**Pricing is subject to change based on medication availability. All plans excludes any and all items or services not expressly identified above. </p>
                 </div>
             </div>
+
 
             
 
