@@ -1,24 +1,30 @@
 'use client';
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, ChangeEvent } from "react";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 
 import Gallery from "./Components/Gallery";
 import Posts from "./Components/Posts";
 
 export default function Blog() {
-    const [ selection, setSelection ] = useState('articles')
+    const [ selection, setSelection ] = useState('articles');
+    const [ search, setSearch ] = useState('');
+    
 
     
 
     const handleSelection = (e:any) => {
         setSelection(e.target.value)
+    };
+
+    const handleInput = (e:ChangeEvent<HTMLInputElement>) => {
+        setSearch(e.target.value)
     }
 
     return (
         <div className='w-full pb-[100px]'>
             <div className='relative w-full px-10 py-20 min-h-[400px] bg-blog bg-cover flex justify-center items-center' style={{backgroundPosition: '50% 60% '}}>
-                <div className='absolute top-0 bottom-0 right-0 left-0 bg-black/[.7]'></div>
-                <div className='max-w-[900px] mx-auto grow relative z-10 text-left'>
+                <div className='absolute top-0 bottom-0 right-0 left-0 bg-[#332200]/[.7]'></div>
+                <div className='max-w-[1200px] mx-auto grow relative z-10 text-left'>
                     <p className='text-[52px] leading-[4rem] font-bold max-w-[600px] mb-3 text-white'>Welcome to our 24/7 Patient Hub</p>
                     <p className='text-white max-w-[600px]'>Discover a wealth of knowledge through insightful articles and engaging video resources, guiding you on your wellness journey.</p>
                     {/* <div className='flex justify-start items-center w-fit mt-10'>
@@ -33,7 +39,7 @@ export default function Blog() {
                 </div>
             </div>
             <div className="w-full px-10 py-5 mt-10">
-                <div className='max-w-[900px] mx-auto flex justify-between items-stretch'>
+                <div className='max-w-[1200px] mx-auto flex justify-between items-stretch'>
                     <div>
                         <p className="text-[24px]">Latest {selection === 'articles' ? 'Articles' : 'Videos'}</p>
                         <p className='text-[12px] text-slate-400'>1-5 of 5 items</p>
@@ -41,7 +47,7 @@ export default function Blog() {
                     <div className='flex justify-center items-center gap-3'>
                         <div className='max-w-[400px] px-2 w-full flex gap-2 justify-between items-center border border-charcoal rounded '>
                             <HiMagnifyingGlass className='w-6 h-6 text-charcoal' />
-                            <input className="focus:outline-none grow py-2" placeholder="Search collection" />
+                            <input value={search} onChange={handleInput} className="focus:outline-none grow py-2" placeholder="Search collection" />
                         </div>
                         <select onChange={handleSelection} className='focus:outline-none border border-charcoal rounded p-2 h-[42px]'>
                             <option value='articles'>Articles</option>
@@ -50,7 +56,7 @@ export default function Blog() {
                     </div>
                 </div>
             </div>
-            {selection === 'videos' ? <Gallery /> : <Posts />}
+            {selection === 'videos' ? <Gallery search={search} selection={selection}/> : <Posts search={search} selection={selection}/>}
             
         </div>
     )
