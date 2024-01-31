@@ -35,8 +35,8 @@ export default function Gallery() {
 
 
     return (
-        <>
-            <div className='mt-20 flex justify-between items-center flex-wrap gap-10'>
+        <div className='mt-20 w-full px-10'>
+            <div className='max-w-[900px] mx-auto flex justify-between items-center flex-wrap gap-10'>
                 {videos && videos.map(vid => (
                     <div onClick={(e:any) => toggleSelected(e, vid.video.fields.file.url)} className='w-1/2 relative'>
                         <div className='z-10 absolute top-0 bottom-0 right-0 left-0 bg-black/[.54] hover:bg-black/[.7] hover:cursor-pointer p-4 flex justify-start items-end' >
@@ -50,6 +50,6 @@ export default function Gallery() {
                     
             </div>
             {isOpen && <VideoModal selected={selected} toggleSelected={toggleSelected}/>}
-        </>
+        </div>
     )
 }
