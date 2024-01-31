@@ -144,7 +144,7 @@ export default function Eligibility() {
     }, [pageCount])
 
     return (
-        <div className='py-[80px] sm:py-[100px] min-h-screen'>
+        <div className='py-[40px] sm:py-[100px] min-h-screen'>
             <div className='max-w-[900px] mx-auto my-0 text-center text-charcoal px-10'>
 
                 {pageCount === 0 ? (

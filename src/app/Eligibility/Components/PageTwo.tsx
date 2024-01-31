@@ -136,11 +136,17 @@ export default function PageTwo({newUser, setNewUser, setIsDisabled, pageCount}:
                 </div>
             </div>
             <div className='flex justify-between items-center gap-5 mb-5'>
-                <div className='text-left grow'>
-                    <label className='block'>Weight</label>
-                    <input onChange={handleInput} value={newUser.weight ? newUser.weight : ''} name='weight' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="lbs" />
+                <div className='flex justify-between items-center gap-5 w-1/2'>
+                    <div className='text-left'>
+                        <label className='block'>Weight</label>
+                        <input onChange={handleInput} value={newUser.weight ? newUser.weight : ''} name='weight' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="lbs" />
+                    </div>
+                    <div className='text-left '>
+                        <label className='block'>BMI</label>
+                        <input value={newUser.bmi ? newUser.bmi : ''} disabled className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]"  />
+                    </div>
                 </div>
-                <div className='text-left grow'>
+                <div className='text-left w-1/2'>
                     <label className='block'>Waist Size</label>
                     <input onChange={handleInput} value={newUser.waist_size ? newUser.waist_size : ''} name='waist_size' className="rounded p-4 border-b border-darkvanilla w-full focus:border-maize focus:outline-none bg-[#e8e8e8]/[.54]" placeholder="inches"/>
                 </div>

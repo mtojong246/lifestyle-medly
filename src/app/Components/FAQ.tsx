@@ -7,15 +7,15 @@ import { AnimationOnScroll } from 'react-animation-on-scroll';
 export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HTMLButtonElement>, number: string) => void, open: {one: boolean, two: boolean, three: boolean, four: boolean, five: boolean, six: boolean} }) {
     return (
     <div className='w-full text-charcoal' id='faq'>
-      <div className='max-w-[1200px] mx-auto px-10 py-[60px] sm:py-[80px] flex flex-col justify-center items-center gap-[60px] sm:gap-[46px]'>
+      <div className='max-w-[1200px] mx-auto px-10 py-[40px] sm:py-[80px] flex flex-col justify-center items-center gap-[46px]'>
 
         <div className='w-full'>
           <div className='flex justify-between items-start gap-6'>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className=' text-[36px] sm:text-[42px] font-bold max-w-[1200px]'>What is Semaglutide for Weight Loss?</p></AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className=' text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>What is Semaglutide for Weight Loss?</p></AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'one')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.one ? 'rotate' : ''}`} /></button></AnimationOnScroll>
           </div>
           <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open.one ? 'faq-open' : ''}`}>
-            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
             <p className='mb-5'>Semaglutide is a special medicine that helps people lose weight. It works like a hormone in your body to control hunger, make insulin, and help with digestion. First made for type 2 diabetes, doctors found out it also helps people lose weight. So, they did more studies called the STEP trials to learn about this.</p>
             <p className='mb-5'>One big study in the STEP trials was STEP 5. It lasted 104 weeks and had 304 people who were overweight or had obesity. These people didn't have diabetes. They got either Semaglutide or placebo. Everyone also ate fewer calories and did more exercise.</p>
             <p>The study looked at how much weight people lost and how their bodies changed. They found that nearly 90% of people lost at least 5% of their weight. This is a big deal because no other weight loss medicine has done this well before. Because of these great results, in June 2022, the FDA said Semaglutide could be used for losing weight.</p>
@@ -24,11 +24,11 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
 
         <div className='w-full'>
           <div className='flex justify-between items-start gap-6'>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[36px] sm:text-[42px] font-bold max-w-[1200px]'>What is Tirzepatide for Weight Loss?</p></AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>What is Tirzepatide for Weight Loss?</p></AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'two')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.two ? 'rotate' : ''}`} /></button></AnimationOnScroll>
           </div>
           <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open.two ? 'faq-open' : ''}`}>
-            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
             <p className='mb-5'>Tirzepatide is like a precision tool designed for weight management. It acts as a dual GIP and GLP-1 receptor agonist, targeting two key hormones that regulate appetite and insulin. Initially developed to manage type 2 diabetes, tirzepatide's effectiveness in weight loss emerged as a significant benefit. This discovery led to focused research, revealing impressive results in body weight reduction. In clinical trials, tirzepatide demonstrated remarkable efficacy:</p>
             <ul className='list-disc ml-20'>
               <li className='mb-5'>15.3% of adults on a 5 mg dose achieved an average weight loss of 25% (around 57 lbs)</li>
@@ -39,11 +39,11 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
 
         <div className='w-full'>
           <div className='flex justify-between items-start gap-6'>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[36px] sm:text-[42px] font-bold max-w-[1200px]'>How do Semaglutide and Tirzepatide Help with Weight Loss?</p></AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>How do Semaglutide and Tirzepatide Help with Weight Loss?</p></AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'three')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.three ? 'rotate' : ''}`} /></button></AnimationOnScroll>
           </div>
           <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open.three ? 'faq-open' : ''}`}>
-            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
             <p className='mb-5'>Semaglutide and Tirzepatide are like special helpers for losing weight. They both work in ways that make your body better at managing weight.</p>
             <p className='mb-5 font-semibold'>Semaglutide:</p>
             <ul className='list-disc ml-20 mb-5'>
@@ -63,11 +63,11 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
 
         <div className='w-full'>
           <div className='flex justify-between items-start gap-6'>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[36px] sm:text-[42px] font-bold max-w-[1200px]'>What are those side effects and how common are they?</p></AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>What are those side effects and how common are they?</p></AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'four')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.four ? 'rotate' : ''}`}/></button></AnimationOnScroll>
           </div>
           <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open.four ? 'faq-open' : ''}`}>
-            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
             <ul className='list-disc ml-10'>
               <li className='mb-5'>Stomach related side effects - nausea, vomiting, diarrhea, constipation, abdominal pain (approx 1 in 10 people experience these) </li>
               <li className='mb-5'>Site reactions (3 in a 100 people reported)</li>
@@ -79,11 +79,11 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
 
         <div className='w-full'>
           <div className='flex justify-between items-start gap-6'>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[36px] sm:text-[42px] font-bold max-w-[1200px]'>How does our curated weight loss program work?</p></AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>How does our curated weight loss program work?</p></AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'five')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.five ? 'rotate' : ''}`} /></button></AnimationOnScroll>
           </div>
           <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open.five ? 'faq-open' : ''}`}>
-            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
             <div className='ml-10'>
               <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 1:</span> We begin with a quick online questionnaire to understand your goals, health history, and lifestyle and consent to treat you.</p>
               <p className='mb-5'><span className='inline-block mr-2 font-semibold'>Step 2:</span> A dedicated nurse will personally guide you through enrollment, ensuring your safety and answering any questions.</p>
@@ -99,11 +99,11 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
 
         <div className='w-full'>
           <div className='flex justify-between items-start gap-6'>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[36px] sm:text-[42px] font-bold max-w-[1200px]'>Do you accept insurance?</p></AnimationOnScroll>
+            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>Do you accept insurance?</p></AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'six')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.six ? 'rotate' : ''}`}/></button></AnimationOnScroll>
           </div>
           <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open.six ? 'faq-open' : ''}`}>
-            <p className='font-semibold mb-5 text-[32px]'>Answer:</p>
+            <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
             <p>We currently operate on a private-pay basis. You can Use your pre-tax HSA (health Savings account) for payment. While we don't directly accept payments from insurance providers, you can get an itemized bill from us, which can be submitted to your insurance for reimbursement or towards your annual deductible obligations depending on your insurance plan coverage. please check with your insurance provider for further details on thier policies.</p>
           </div>
         </div>
