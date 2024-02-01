@@ -1,6 +1,7 @@
 import { FaPhoneAlt } from "react-icons/fa";
 import { FaFax, FaFacebook, FaYoutube, FaTiktok, FaInstagram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Link from "next/link";
 
 export default function Footer() {
     return (
@@ -25,6 +26,7 @@ export default function Footer() {
                     <a className='hover:text-maize' href='https://docs.google.com/document/d/10OSISyKsOgvIaUuSnPugaGHXJP3Hn9HV/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Terms of Service</a>
                     <a className='hover:text-maize' href='https://docs.google.com/document/d/17vN7Lte3dzR8v4EF0F0XEnO-cLd7yd7I/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Privacy Policy</a>
                     <a className='hover:text-maize' href='https://docs.google.com/document/d/1wwzlinQrw3f4poGW2IEbBH4lZmgUbDSp/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Privacy Practices</a>
+                    <Link className='hover:text-maize' href='/Disclaimer'>Disclaimer</Link>
                 </div>
 
                 <div className='flex flex-col justify-start items-center md:items-start gap-4 text-lg md:text-base'>
