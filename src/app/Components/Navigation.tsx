@@ -52,7 +52,7 @@ export default function Navigation() {
 
 
     return (
-        <div className='w-full sticky top-0 bg-white z-20 '>
+        <div className='w-full sticky top-0 bg-white z-30 '>
             {pathname === '/Eligibility' ? (
                 <>
                 <div className="max-w-[1400px] my-0 mx-auto px-4 py-10 sm:py-4 relative">
