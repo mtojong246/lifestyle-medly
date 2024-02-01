@@ -26,7 +26,10 @@ export default function Post() {
               let list:any[] = [];
               entry.items.forEach(item => {
                   if (item.sys.contentType.sys.id === 'posts') {
-                      list.push(item.fields)
+                    list.push({
+                        ...item.fields,
+                        date: new Date(item.sys.createdAt),
+                    })
                   }
               })
               const foundPost = list.find(li => slugify(li.name) === params.slug);
@@ -43,25 +46,30 @@ export default function Post() {
     console.log(post)
 
     return (
-        <div className='w-full py-[40px] px-10'>
-            <div className='max-w-[900px] mx-auto text-center text-charcoal'>
+        <div className='w-full'>
+            <div className='text-center text-charcoal'>
             {post && (
                 <>
-                    <div className='w-full mb-10 relative'>
-                        {/* <div className="absolute top-0 bottom-0 right-0 left-0 flex justify-start items-center">
-                            <button className='rounded-full p-2 hover:bg-vanilla'><Link href='/Blog'><GoArrowLeft className='text-charcoal h-8 w-8' /></Link></button>
-                        </div> */}
-                        <p className='text-[28px] font-semibold mb-1'>{post.name}</p>
-                        <p className='text-sm text-[#9A9A9A] mb-10'>Publisher | Date</p>
-                    </div>
                     <div className='w-full h-[500px] overflow-hidden mb-5'>
                         <img src={post.mainImage.fields.file.url} className="object-cover w-full h-full object-center" /> 
                     </div>
-                    <div className='text-left'>
-                    <p className='font-medium mb-5'>{post.description}</p>
-                    {post.post.content.map((cont:any) => (
-                        <p className='mb-2'>{cont.content[0].value}</p>
-                    ))}
+                    <div className='px-10 py-10'>
+                        <div className="max-w-[900px] mx-auto text-left">
+                            <div className='w-full mb-5 relative'>
+                                {/* <div className="absolute top-0 bottom-0 right-0 left-0 flex justify-start items-center">
+                                    <button className='rounded-full p-2 hover:bg-vanilla'><Link href='/Blog'><GoArrowLeft className='text-charcoal h-8 w-8' /></Link></button>
+                                </div> */}
+                                <p className='text-[42px] font-semibold mb-1'>{post.name}</p>
+                                <p className='text-lg'>Published by {post.author} <span>&#8226;</span> {post.date.toLocaleString('default', {month: 'long'})} {post.date.getDate()}, {post.date.getFullYear()}</p>
+                            </div>
+                            
+                            <div className='text-left'>
+                            <p className='font-medium mb-12'>{post.description}</p>
+                            {post.post.content.map((cont:any) => (
+                                <p className='mb-5'>{cont.content[0].value}</p>
+                            ))}
+                            </div>
+                        </div>
                     </div>
                 </>
             )}
