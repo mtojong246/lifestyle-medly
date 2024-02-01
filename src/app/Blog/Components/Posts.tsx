@@ -57,17 +57,17 @@ export default function Posts({ search, selection }: { search: string, selection
 
     return (
         <div className='w-full px-10 mt-5'>
-            <div className='max-w-[1200px] mx-auto flex flex-col center items-center gap-10'>
+            <div className='max-w-[1200px] mx-auto flex flex-col center items-center gap-20 md:gap-10'>
                 {filteredArticles && filteredArticles.map(post => (
-                    <div onClick={(e:any) => router.push(`/Blog/${slugify(post.name)}`)} className='w-full hover:cursor-pointer flex justify-between items-stretch gap-10'>
-                        <div className='max-h-[400px] w-[60%]'>
+                    <div onClick={(e:any) => router.push(`/Blog/${slugify(post.name)}`)} className='w-full hover:cursor-pointer flex flex-col md:flex-row justify-between items-stretch gap-5 md:gap-10'>
+                        <div className='max-h-[400px] w-full md:w-[60%]'>
                             <img src={post.mainImage.fields.file.url} className='object-cover w-full h-full'/>
                         </div>
-                        <div className='w-[40%] flex flex-col justify-between'>
+                        <div className='w-full md:w-[40%] flex flex-col justify-between'>
                             <div>
-                                <p className='font-bold text-sm mb-10'>{post.date.toLocaleString('default', {month: 'long'})} {post.date.getDate()}, {post.date.getFullYear()}</p>
-                                <p className="font-medium text-[32px] mb-10">{post.name}</p>
-                                <p className='text-md'>{post.description}</p>
+                                <p className='font-bold text-sm mb-5 md:mb-10'>{post.date.toLocaleString('default', {month: 'long'})} {post.date.getDate()}, {post.date.getFullYear()}</p>
+                                <p className="font-medium text-[32px] mb-5 md:mb-10">{post.name}</p>
+                                <p className='text-md md:mb-0 mb-5'>{post.description}</p>
                             </div>
                             <p className='text-sm font-bold'>By {post.author}</p>
                             

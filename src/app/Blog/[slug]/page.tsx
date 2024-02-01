@@ -59,7 +59,7 @@ export default function Post() {
                                 {/* <div className="absolute top-0 bottom-0 right-0 left-0 flex justify-start items-center">
                                     <button className='rounded-full p-2 hover:bg-vanilla'><Link href='/Blog'><GoArrowLeft className='text-charcoal h-8 w-8' /></Link></button>
                                 </div> */}
-                                <p className='text-[42px] font-semibold mb-1'>{post.name}</p>
+                                <p className='text-[36px] sm:text-[42px] font-semibold mb-1'>{post.name}</p>
                                 <p className='text-lg'>Published by {post.author} <span>&#8226;</span> {post.date.toLocaleString('default', {month: 'long'})} {post.date.getDate()}, {post.date.getFullYear()}</p>
                             </div>
                             

@@ -54,7 +54,7 @@ export default function Gallery({ search, selection }: { search: string, selecti
         <div className='mt-5 w-full px-10'>
             <div className='max-w-[1200px] mx-auto flex justify-between items-center flex-wrap gap-10'>
                 {filteredVideos && filteredVideos.map(vid => (
-                    <div onClick={(e:any) => toggleSelected(e, vid.video.fields.file.url)} className='w-1/2 relative'>
+                    <div onClick={(e:any) => toggleSelected(e, vid.video.fields.file.url)} className='w-full md:w-1/2 relative'>
                         <div className='z-20 absolute top-0 bottom-0 right-0 left-0 bg-black/[.54] hover:bg-black/[.7] hover:cursor-pointer p-4 flex justify-between items-end' >
                             <IoIosPlay className='text-white h-16 w-16 top-[50%] left-[50%] absolute transform -translate-x-1/2 -translate-y-1/2' />
                             <p className="text-white">{vid.name}</p>
