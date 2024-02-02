@@ -31,8 +31,8 @@ export default function Footer() {
 
                 <div className='flex flex-col justify-start items-center md:items-start gap-4 text-lg md:text-base'>
                     <p className='font-semibold'>QUICK LINKS</p>
-                    <a className='hover:text-maize' href='https://docs.google.com/document/d/1APPpRZmCjbkBhawDEz_k7ApOngIG85n7/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Patient Consent</a>
-                    <a className='hover:text-maize' href='https://docs.google.com/document/d/1RemK2_8eyEV8RlUMN5f7O7cIcHwRMS0T/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Patient Registration</a>
+                    <a className='hover:text-maize' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Consent</a>
+                    <a className='hover:text-maize' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Registration</a>
                     <a className='hover:text-maize' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Schedule Appointment</a>
                     <p className='font-semibold mt-16 md:mt-5'>STAY IN TOUCH</p>
                     <div className='flex justify-center items-center gap-2'>

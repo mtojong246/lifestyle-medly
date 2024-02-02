@@ -37,8 +37,8 @@ export default function Dropdown() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='https://docs.google.com/document/d/1APPpRZmCjbkBhawDEz_k7ApOngIG85n7/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Patient Consent</a></MenuItem>
-        <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='https://docs.google.com/document/d/1RemK2_8eyEV8RlUMN5f7O7cIcHwRMS0T/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Patient Registration</a></MenuItem>
+        <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Consent</a></MenuItem>
+        <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Registration</a></MenuItem>
         <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Schedule Appointment</a></MenuItem>
       </Menu>
     </div>
