@@ -1,4 +1,5 @@
 import React, { Dispatch, ReactElement, ReactNode, SetStateAction } from 'react';
+import { createCustomMessage } from 'react-chatbot-kit';
 import { IMessageOptions } from 'react-chatbot-kit/build/src/interfaces/IMessages';
 
 const ActionProvider = ({ createChatBotMessage, setState, children }: { createChatBotMessage: (message: string, options: IMessageOptions) => void, setState:any, children:ReactElement[]  }) => {
@@ -40,7 +41,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     )
 
     const second = createChatBotMessage("Is there anything else I can help you with?", {
-        delay: 5000,
+        delay: 3000,
         widget: "close-options"
       })
   
@@ -56,14 +57,16 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
       "Yes, we do! These medications have shown remarkable results in weight management when combined with lifestyle changes.", {}
     )
 
+    const button = createCustomMessage('', 'one', {delay: 1000})
+
     const second = createChatBotMessage("Is there anything else I can help you with?", {
-      delay: 5000,
+      delay: 3000,
       widget: "close-options"
     })
 
     setState((prev:any) => ({
       ...prev,
-      messages: [ ...prev.messages, message, second ]
+      messages: [ ...prev.messages, message, button, second ]
     }))
   }
 
@@ -71,19 +74,21 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     const message = createChatBotMessage(
       `
       Sure! Here's a quick overview:
-      1. Semaglutide: Proven to reduce appetite, leading to an average weight loss of 14.9% over 68 weeks. [Link to FAQ#1].
-      2. Tirzepatide: A promising advancement in obesity treatment, offering hope for many.  [Link to FAQ#2]
+      1. Semaglutide: Proven to reduce appetite, leading to an average weight loss of 14.9% over 68 weeks..
+      2. Tirzepatide: A promising advancement in obesity treatment, offering hope for many. 
       `, {}
     )
+
+    const button = createCustomMessage('', 'one', {delay: 1000})
     
     const second = createChatBotMessage("Is there anything else I can help you with?", {
-      delay: 5000,
+      delay: 3000,
       widget: "close-options"
     })
 
     setState((prev:any) => ({
       ...prev,
-      messages: [ ...prev.messages, message, second ]
+      messages: [ ...prev.messages, message, button, second ]
     }))
   }
 
@@ -93,7 +98,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     )
 
     const second = createChatBotMessage("Is there anything else I can help you with?", {
-      delay: 5000,
+      delay: 3000,
       widget: "close-options"
     })
 
@@ -109,7 +114,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
       )
 
       const second = createChatBotMessage("Is there anything else I can help you with?", {
-        delay: 5000,
+        delay: 3000,
         widget: "close-options"
       })
   
@@ -121,17 +126,21 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
 
   const handleCost = () => {
     const message = createChatBotMessage(
-      "Pricing varies based on individual needs. View our plans here: [View Pricing Button]", {}
+      "Pricing varies based on individual needs.", {}
       )
 
+      const button = createCustomMessage('', 'pricing', {
+        delay: 1000,
+      })
+
       const second = createChatBotMessage("Is there anything else I can help you with?", {
-        delay: 5000,
+        delay: 3000,
         widget: "close-options"
       })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message, second ]
+        messages: [ ...prev.messages, message, button, second ]
       }))
   }
 
@@ -141,7 +150,7 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
       )
 
       const second = createChatBotMessage("Is there anything else I can help you with?", {
-        delay: 5000,
+        delay: 3000,
         widget: "close-options"
       })
   
@@ -153,49 +162,55 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
 
   const handleGetStarted = () => {
     const message = createChatBotMessage(
-      "Take the first step towards a healthier you! Book a telemedicine appointment now [Book Appointment Button].", {}
+      "Take the first step towards a healthier you! Book a telemedicine appointment now.", {}
       )
 
+      const button = createCustomMessage('', 'started', {delay: 1000})
+
       const second = createChatBotMessage("Is there anything else I can help you with?", {
-        delay: 5000,
+        delay: 3000,
         widget: "close-options"
       })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message, second ]
+        messages: [ ...prev.messages, message, button, second ]
       }))
   }
 
   const handleContact = () => {
     const message = createChatBotMessage(
-      "Visit us at [Clinic Address] or reach out", {}
+      "Visit us at 441 US-130, East Windsor, NJ 08520 or reach out through: Office phone: 201-844-9062 or email us at: support@lifestylemedly.com. Or visit our official social media page", {}
       )
 
+      const button = createCustomMessage('', 'social', { delay: 1000 })
+
       const second = createChatBotMessage("Is there anything else I can help you with?", {
-        delay: 5000,
+        delay: 3000,
         widget: "close-options"
       })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message, second ]
+        messages: [ ...prev.messages, message, button, second ]
       }))
   }
 
   const handleFeedback = () => {
     const message = createChatBotMessage(
-      "Have questions? Check our FAQs or chat with our experts [FAQs Button] | [Chat with Expert Button].", {}
+      "Have questions? Check our FAQs or chat with our experts.", {}
       )
 
+      const button = createCustomMessage('', 'faq', {delay: 1000})
+
       const second = createChatBotMessage("Is there anything else I can help you with?", {
-        delay: 5000,
+        delay: 3000,
         widget: "close-options"
       })
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message, second ]
+        messages: [ ...prev.messages, message, button, second ]
       }))
   }
 
@@ -214,10 +229,16 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
     const message = createChatBotMessage(
       "Thank you for considering Lifestyle Medly Clinic! We're excited to assist you on your path to a healthier you. ", {}
       )
+
+      const second = createChatBotMessage(
+        'Book your consultation now and unlock a special welcome offer!', {}
+      )
+
+      const button = createCustomMessage('', 'started', {delay: 1000})
   
       setState((prev:any) => ({
         ...prev,
-        messages: [ ...prev.messages, message ]
+        messages: [ ...prev.messages, message, second, button ]
       }))
   }
 
