@@ -27,16 +27,16 @@ export default function MobileMenu({isOpen, toggleOpen} : {isOpen: boolean, togg
 
 
     return (
-        <div className={`w-full pt-8 pb-16 flex flex-col gap-10 md:hidden text-center text-xl text-charcoal menu-closed ${isOpen ? 'menu-open' : ''}`}>
+        <div className={`w-full pt-8 pb-16 flex flex-col gap-10 md:hidden text-center text-xl text-white menu-closed ${isOpen ? 'menu-open' : ''}`}>
             <Scroll to='how-it-works' spy={true} smooth={true} offset={-50} duration={500}><button onClick={toggleOpen}>How It Works</button></Scroll>
             <Scroll to='direct-pay' spy={true} smooth={true} offset={-50} duration={500}><button onClick={toggleOpen}>Direct Pay</button></Scroll>
             <Scroll to='faq' spy={true} smooth={true} offset={-50} duration={500}><button onClick={toggleOpen}>FAQ</button></Scroll>
             <div className='w-full'>
                 <button onClick={togglePatients} className="mx-auto flex justify-center items-center gap-2 mb-5">For Patients {!openPatients ? <RxChevronDown className='h-6 w-6' /> : <RxChevronUp className='h-6 w-6' />}</button>
-                <div className={`w-full text-center flex flex-col gap-8 text-lg menu-closed bg-charcoal text-white ${openPatients ? 'smaller-menu-open' : ''}`}>
-                    <a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Registration</a>
-                    <a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Consent</a>
-                    <a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Schedule Appointment</a>
+                <div className={`w-full text-center flex flex-col gap-8 text-lg menu-closed bg-gold text-white ${openPatients ? 'smaller-menu-open' : ''}`}>
+                    <a className='hover:text-charcoal' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Registration</a>
+                    <a className='hover:text-charcoal' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Consent</a>
+                    <a className='hover:text-charcoal' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Schedule Appointment</a>
                 </div>
                 <button className='block md:hidden mt-5 mx-auto' onClick={(e:any) => {toggleOpen(e); router.push('/Blog')}}>Blog</button>
             </div>

@@ -93,7 +93,7 @@ body {
   position: relative;
   padding-bottom: 0.2em;
   overflow: hidden;
-  color: black;
+  color: #ffffff;
   transition: color 300ms;
 }
 
@@ -178,7 +178,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #303030;
+  background-color: #ffffff;
   border-radius: 10rem;
   z-index: -2;
 }
@@ -258,7 +258,7 @@ body {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: #303030;
+  background: #ffffff;
   border-radius: 9px;
   opacity: 1;
   left: 0;
