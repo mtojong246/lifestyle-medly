@@ -23,9 +23,9 @@ export default function Footer() {
 
                 <div className='flex flex-col justify-start items-center md:items-start gap-4 text-lg md:text-base'>
                     <p className='font-semibold'>COMPANY</p>
-                    <a className='hover:text-maize' href='https://docs.google.com/document/d/10OSISyKsOgvIaUuSnPugaGHXJP3Hn9HV/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Terms of Service</a>
-                    <a className='hover:text-maize' href='https://docs.google.com/document/d/17vN7Lte3dzR8v4EF0F0XEnO-cLd7yd7I/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Privacy Policy</a>
-                    <a className='hover:text-maize' href='https://docs.google.com/document/d/1wwzlinQrw3f4poGW2IEbBH4lZmgUbDSp/edit?usp=sharing&ouid=110993120075762838849&rtpof=true&sd=true' target="_blank" rel="noreferrer">Privacy Practices</a>
+                    <Link className='hover:text-maize' href='/TermsOfService' >Terms of Service</Link>
+                    <Link className='hover:text-maize' href='/PrivacyPolicy' >Privacy Policy</Link>
+                    <Link className='hover:text-maize' href='/PrivacyPractices' >Privacy Practices</Link>
                     <Link className='hover:text-maize' href='/Disclaimer'>Disclaimer</Link>
                 </div>
 
