@@ -19,6 +19,9 @@ export default function Navigation() {
     const pathname = usePathname();
     const { pageCount } = useContext(GlobalContext);
 
+    const [ isScrollingUp, setIsScrollingUp ] = useState(true);
+    const [ prevScrollPos, setPrevScrollPos ] = useState(0);
+
     const toggleOpen = (e:MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         setIsOpen(!isOpen)
@@ -29,30 +32,43 @@ export default function Navigation() {
         setPercentage(perc)
     }, [pageCount])
 
-    const handleScroll = () => {
-        const current = window.scrollY;
-        if (current < 1) {
+    // const handleScroll = () => {
+    //     const current = window.scrollY;
+    //     if (current < 1) {
+    //         setIsTop(true)
+    //     } else {
+    //         setIsTop(false);
+    //     }
+    // }
+
+    const handleDirectionalScroll = () => {
+        const currentScrollPos = window.scrollY;
+        if (currentScrollPos === 0) {
             setIsTop(true)
         } else {
-            setIsTop(false);
+            setIsTop(false)
         }
-    }
+
+        if (currentScrollPos) {
+            setIsScrollingUp(currentScrollPos < prevScrollPos);
+            setPrevScrollPos(currentScrollPos);
+        } 
+    };
 
     useEffect(() => {
         // Add scroll event listener on component mount
         setIsTop(true);
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleDirectionalScroll);
 
         // Clean up the event listener on component unmount
         return () => {
-        window.removeEventListener('scroll', () => handleScroll);
+        window.removeEventListener('scroll', () => handleDirectionalScroll);
         };
-    }, []);
-
+    }, [prevScrollPos]);
 
 
     return (
-        <div className='w-full sticky top-0 bg-charcoal z-30 '>
+        <div className='w-full sticky top-0 z-30 '>
             {pathname === '/Eligibility' ? (
                 <>
                 <div className="max-w-[1400px] my-0 mx-auto px-4 py-10 sm:py-4 relative">
@@ -67,7 +83,7 @@ export default function Navigation() {
                 </>
             ) : (
                 <>
-                    <div className={`w-full transition-all ease-in fade-down ${isTop ? 'shadow-none': 'shadow-md'}`}>
+                    <div className={`w-full bg-charcoal transition-all ease-in fade-down`} style={{ transform: isScrollingUp ? 'translateY(0)' : 'translateY(-100%)' }}>
                         <div className='max-w-[1400px] my-0 mx-auto p-4 flex justify-between items-center gap-8'>
                             <div className='flex justify-center items-center gap-8'>
                                 <Link href='/'><img className='md:w-[50px] md:h-[50px] w-[100px] h-[100px] white' src='/lifestyle_logo.png' /></Link>
@@ -81,7 +97,7 @@ export default function Navigation() {
                                 <Link className='hidden md:block' href='/Blog'><p className='under'>Blog</p></Link>
                                 {/* <Link className='hidden md:block' href='/Contact'><p className='under'>Contact</p></Link> */}
                                 <div className='hidden md:block'><ContactPopup/></div>
-                                <Link className='hidden md:inline-block' href='/Eligibility'><button className='slide-btn py-2 px-6 rounded-full bg-white text-charcoal hidden md:inline-block'>Get Started</button></Link>
+                                <Link className='hidden md:inline-block' href='/Eligibility'><button id='nav-btn' className='slide-btn py-2 px-6 rounded-full bg-white text-charcoal hidden md:inline-block'>Get Started</button></Link>
                                 <button onClick={toggleOpen} className='block md:hidden'><Hamburger isOpen={isOpen}/></button>
                             </div>
                         </div>
