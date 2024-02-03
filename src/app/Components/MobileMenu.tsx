@@ -27,7 +27,8 @@ export default function MobileMenu({isOpen, toggleOpen} : {isOpen: boolean, togg
 
 
     return (
-        <div className={`w-full pt-8 pb-16 flex flex-col gap-10 md:hidden text-center text-xl text-white menu-closed ${isOpen ? 'menu-open' : ''}`}>
+        <div className={`w-full block md:hidden text-center text-xl text-white bg-charcoal menu-closed ${isOpen ? 'menu-open' : ''}`}>
+            <div className='pt-8 pb-16 flex flex-col gap-10 max-h-[calc(100vh-132px)] overflow-auto'>
             <Scroll to='how-it-works' spy={true} smooth={true} offset={-50} duration={500}><button onClick={toggleOpen}>How It Works</button></Scroll>
             <Scroll to='direct-pay' spy={true} smooth={true} offset={-50} duration={500}><button onClick={toggleOpen}>Direct Pay</button></Scroll>
             <Scroll to='faq' spy={true} smooth={true} offset={-50} duration={500}><button onClick={toggleOpen}>FAQ</button></Scroll>
@@ -44,6 +45,7 @@ export default function MobileMenu({isOpen, toggleOpen} : {isOpen: boolean, togg
             {/* <p>Contact</p> */}
             <div className='block md:hidden'><ContactPopup /></div>
             <button className='block md:hidden mx-auto' onClick={(e:any) => {toggleOpen(e); router.push('/Eligibility')}}>Get Started</button>
+            </div>
         </div>
     )
 }

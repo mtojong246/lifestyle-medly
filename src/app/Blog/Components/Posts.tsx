@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { client } from "@/app/api/contentful";
 import { useRouter } from "next/navigation";
 
+
 export default function Posts({ search, selection }: { search: string, selection: string }) {
     const [ posts, setPosts ] = useState<any[]>([]);
     const [ filteredArticles, setFilteredArticles ] = useState<any[]>(posts);
@@ -14,6 +15,7 @@ export default function Posts({ search, selection }: { search: string, selection
     useEffect(() => {
         const fetchApi = async () => {
             const entry = await client.getEntries()
+            console.log(entry)
             if (entry) {
               let list:any[] = [];
               entry.items.forEach(item => {
