@@ -15,85 +15,105 @@ export default function PrivacyPolicy() {
                 <p className='mb-5'>This Privacy Policy does not cover the practices of third parties and/or companies that Lifestyle Medly LLC does not own or control or people we do not manage. This Privacy Policy describes how Lifestyle Medly may use and disclose your Protected Health Information (as defined by the Health Insurance Portability and Accountability Act of 1996 (“HIPAA”) and HIPAA Privacy Rule). If you do not agree to those terms, which are available here, you should not access or use the Website or use the Services.</p>
                 <p className='mb-5 font-semibold underline'>What Information Do We Collect?</p>
                 <p className='mb-5'>In order to access and use the Website, you may be required to submit or provide us with the following information, or such information may be collected from the use of cookies on our website (collectively “Information”):</p>
-                <p className='mb-5'><span className='font-semibold'>Personal and Contact Information:</span> We collect information by which you may be personally identified, such as your name, email and postal address, telephone number, driver’s license or other government-issued identification card number, date of birth, health insurance information, credit or debit card (for payment purposes only), images, photos, or videos of you, your medical history, your race or ethnicity, and other health information when you provide it to us to contact you or during your enrollment in our offered programs (“Personal Data”).</p>
-                <p className='mb-5'><span className='font-semibold'>Cookies and the like:</span> We may collect non-personally identifiable Information such as your IP address, pages visited, time spent on the website, type of browser and device, language and date of access, traffic data and logs, error information, clickstream data, and other communication data and the resources that you use on the Website for the purpose of identification and better navigation of the Website.</p>
-                <p className='mb-5'> <span className='font-semibold'>Subscription Updates and General Inquiries:</span> We collect your name, email address, mailing address, telephone number, and other contact details.</p>
+                <ul className="list-disc pl-10">
+                    <li><p className='mb-5'><span className='font-semibold'>Personal and Contact Information:</span> We collect information by which you may be personally identified, such as your name, email and postal address, telephone number, driver’s license or other government-issued identification card number, date of birth, health insurance information, credit or debit card (for payment purposes only), images, photos, or videos of you, your medical history, your race or ethnicity, and other health information when you provide it to us to contact you or during your enrollment in our offered programs (“Personal Data”).</p></li>
+                    <li><p className='mb-5'><span className='font-semibold'>Cookies and the like:</span> We may collect non-personally identifiable Information such as your IP address, pages visited, time spent on the website, type of browser and device, language and date of access, traffic data and logs, error information, clickstream data, and other communication data and the resources that you use on the Website for the purpose of identification and better navigation of the Website.</p></li>
+                    <li><p className='mb-5'> <span className='font-semibold'>Subscription Updates and General Inquiries:</span> We collect your name, email address, mailing address, telephone number, and other contact details.</p></li>
+                </ul>
 
                 <p className='mb-5 font-semibold underline'>Categories of Sources of Personal Data</p>
                 <p className='mb-5'>We may collect Personal Data about you from the following categories of sources:</p>
-                <p className='mb-5 font-semibold'>1. You.</p>
-                <p className='mb-5'>When you provide Personal Data or Information directly to us by:</p>
-                <p className='mb-5'>Providing information in free-form text boxes through the Website and Services or through responses to surveys or questionnaires.</p>
-                <p className='mb-5'>Sending us an email or other electronic messages.</p>
-                <p className='mb-5'>Calling us or leaving a voicemail.</p>
-                <p className='mb-5'>When you use the Website and Services, and Information is collected automatically:</p>
-                <p className='mb-5'>Through Cookies (as defined in the “Tracking Tools, Advertising and Opt-Out” section below).</p>
-                <p className='mb-5'>If you use a location-enabled browser, we may receive information about your location.</p>
-                <p className='mb-5'>If you download and install certain applications and software, we make available, we may receive and collect Personal Data or Information transmitted from your computing device to provide you with Services, such as information about when you are logged on and available to receive updates or alert notices.</p>
+                <div className='pl-10'>
+                    <p className='mb-5 font-semibold'>1. You.</p>
+                    <p className='mb-5'>When you provide Personal Data or Information directly to us by:</p>
+                    <ul className="list-disc pl-10">
+                        <li><p className='mb-5'>Providing information in free-form text boxes through the Website and Services or through responses to surveys or questionnaires.</p></li>
+                        <li><p className='mb-5'>Sending us an email or other electronic messages.</p></li>
+                        <li><p className='mb-5'>Calling us or leaving a voicemail.</p></li>
+                    </ul>
+                    <p className='mb-5'>When you use the Website and Services, and Information is collected automatically:</p>
+                    <ul className="list-disc pl-10">
+                        <li><p className='mb-5'>Through Cookies (as defined in the “Tracking Tools, Advertising and Opt-Out” section below).</p></li>
+                        <li><p className='mb-5'>If you use a location-enabled browser, we may receive information about your location.</p></li>
+                        <li><p className='mb-5'>If you download and install certain applications and software, we make available, we may receive and collect Personal Data or Information transmitted from your computing device to provide you with Services, such as information about when you are logged on and available to receive updates or alert notices.</p></li>
+                    </ul>
 
+                    <p className='mb-5 font-semibold'>2. Third Parties</p>
+                    <p className='mb-5 font-semibold'>Vendors:</p>
+                    <ul className="list-disc pl-10">
+                        <li><p className='mb-5'>We may use analytics providers to analyze how you interact and engage with the Website and Services.</p></li>
+                        <li><p className='mb-5'>We may use third parties to help us provide you with customer support.</p></li>
+                        <li><p className='mb-5'>We may use vendors to obtain information to generate leads and create user profiles.</p></li>
+                    </ul>
+                    <p className='mb-5 font-semibold'>Affiliates:</p>
+                    <ul className="list-disc pl-10">
+                        <li><p className='mb-5'>We may receive information about your participation in the Website and Services from our affiliates/associates or partners, such as professional health care providers, dietitians, or nutritionists (including the Lifestyle Medley and its providers).</p></li>
+                    </ul>
 
-                <p className='mb-5 font-semibold'>2. Third Parties</p>
-                <p className='mb-5 font-semibold'>Vendors:</p>
-                <p className='mb-5'>We may use analytics providers to analyze how you interact and engage with the Website and Services.</p>
-                <p className='mb-5'>We may use third parties to help us provide you with customer support.</p>
-                <p className='mb-5'>We may use vendors to obtain information to generate leads and create user profiles.</p>
-                <p className='mb-5 font-semibold'>Affiliates:</p>
-                <p className='mb-5'>We may receive information about your participation in the Website and Services from our affiliates/associates or partners, such as professional health care providers, dietitians, or nutritionists (including the Lifestyle Medley and its providers).</p>
-
-
-
-                <p className='mb-5 font-semibold'>Advertising Partners:</p>
-                <p className='mb-5'>We receive information about you from some of our vendors who assist us with marketing or promotional services related to how you interact with our websites, applications, products, Services, advertisements, or communications.</p>
-                <p className='mb-5 font-semibold'>Social Networks:</p>
-                <p className='mb-5'>If you provide your social network account credentials to us or otherwise sign into the Website and Services through a third-party site or service, some content and/or information in those accounts may be transmitted into your account with us.</p>
-
+                    <p className='mb-5 font-semibold'>Advertising Partners:</p>
+                    <ul className="list-disc pl-10">
+                        <li><p className='mb-5'>We receive information about you from some of our vendors who assist us with marketing or promotional services related to how you interact with our websites, applications, products, Services, advertisements, or communications.</p></li>
+                    </ul>
+                    <p className='mb-5 font-semibold'>Social Networks:</p>
+                    <ul className="list-disc pl-10">
+                        <li><p className='mb-5'>If you provide your social network account credentials to us or otherwise sign into the Website and Services through a third-party site or service, some content and/or information in those accounts may be transmitted into your account with us.</p></li>
+                    </ul>
+                </div>
                 <p className='mb-5 font-semibold underline'>How Do We Use Your Information?</p>
                 <p className='mb-5'>We use your Information to contact you when you give us your consent to do so. We also use your Information for the following purposes:</p>
-                <p className='mb-5'>Providing, Customizing and Improving the Services.</p>
-                <p className='mb-5'>Creating and managing your account or other user profiles.</p>
-                <p className='mb-5'>Processing orders or other transactions; billing.</p>
-                <p className='mb-5'>Providing you with the products, services, or information you request.</p>
-                <p className='mb-5'>Meeting or fulfilling the reason you provided the information to us.</p>
-                <p className='mb-5'>Providing support and assistance for the Website and Services.</p>
-                <p className='mb-5'>Improving the Website and Services, including testing, research, internal analytics, and product development.</p>
-                <p className='mb-5'>Personalizing the Website and Services, website content, and communications based on your preferences.</p>
-                <p className='mb-5'>Sending emails and other communications according to your preferences or that display content that we think will interest you.</p>
-                <p className='mb-5'>To monitor, improve and administer the Lifestyle Medly Sites and the Website and Services provided on the Lifestyle Medly Sites:</p>
-                <p className='mb-5'>Informing you of significant changes to this Privacy Policy.</p>
-                <p className='mb-5'>Marketing and selling the Website and Services.</p>
-                <p className='mb-5'>Showing you advertisements, including interest-based or online behavioral advertising.</p>
-                <p className='mb-5'>Corresponding with you including, responding to correspondence that we receive from you, contacting you when necessary or requested, and sending you information about Services.</p>
-                <p className='mb-5'>To detect and prevent fraud and to comply with and enforce our legal requirements, including but not limited to protecting the rights, property, or safety of you, Lifestyle Medly, or another party; ensuring compliance with our Terms of Use; resolving disputes. .</p>
-                <p className='mb-5'>Carrying out other business purposes stated when collecting your Personal Data or as otherwise set forth in applicable federal and state data privacy laws and regulations.</p>
+                <ul className="list-disc pl-10">
+                    <li><p className='mb-5'>Providing, Customizing and Improving the Services.</p></li>
+                    <li><p className='mb-5'>Creating and managing your account or other user profiles.</p></li>
+                    <li><p className='mb-5'>Processing orders or other transactions; billing.</p></li>
+                    <li><p className='mb-5'>Providing you with the products, services, or information you request.</p></li>
+                    <li><p className='mb-5'>Meeting or fulfilling the reason you provided the information to us.</p></li>
+                    <li><p className='mb-5'>Providing support and assistance for the Website and Services.</p></li>
+                    <li><p className='mb-5'>Improving the Website and Services, including testing, research, internal analytics, and product development.</p></li>
+                    <li><p className='mb-5'>Personalizing the Website and Services, website content, and communications based on your preferences.</p></li>
+                    <li><p className='mb-5'>Sending emails and other communications according to your preferences or that display content that we think will interest you.</p></li>
+                    <li><p className='mb-5'>To monitor, improve and administer the Lifestyle Medly Sites and the Website and Services provided on the Lifestyle Medly Sites:</p></li>
+                    <li><p className='mb-5'>Informing you of significant changes to this Privacy Policy.</p></li>
+                    <li><p className='mb-5'>Marketing and selling the Website and Services.</p></li>
+                    <li><p className='mb-5'>Showing you advertisements, including interest-based or online behavioral advertising.</p></li>
+                    <li><p className='mb-5'>Corresponding with you including, responding to correspondence that we receive from you, contacting you when necessary or requested, and sending you information about Services.</p></li>
+                    <li><p className='mb-5'>To detect and prevent fraud and to comply with and enforce our legal requirements, including but not limited to protecting the rights, property, or safety of you, Lifestyle Medly, or another party; ensuring compliance with our Terms of Use; resolving disputes. .</p></li>
+                    <li><p className='mb-5'>Carrying out other business purposes stated when collecting your Personal Data or as otherwise set forth in applicable federal and state data privacy laws and regulations.</p></li>
+                </ul>
 
 
                 <p className='mb-5 font-semibold underline'>Who Do We Share Your Information With?</p>
                 <p className='mb-5'>We do not share, sell, or otherwise disclose your Personal Data or Information other than to those outlined in this Privacy Policy. Moreover, we do not share your information with any third parties for marketing purposes. However, we may disclose aggregated information about our users and information that does not identify any individual without restriction. We do disclose your Information to certain third parties, including:</p>
-                <p className='mb-5'>Our affiliates, associates, and partners, which are bound to the terms of this Privacy Policy.</p>
-                <p className='mb-5'>Any alliance partners with whom we partner with to offer certain products and Services we may have and who are identified on the Lifestyle Medly Websites. We share your Personal Data as needed for them to comply with their legal obligations with respect to those services and to understand how to effectively market and improve those Services. Our alliance partners are bound by a duty of confidentiality to Lifestyle Medly.</p>
-                <p className='mb-5'>Our Service Providers, which are contractually obligated to provide services on our behalf in a manner consistent with this Privacy Policy. Our Service Providers include:</p>
-                <p className='mb-5'>Vendors and suppliers that provide us with hosting, technology, services, and/or content related to better operation and maintenance of the Lifestyle Medly Websites.</p>
-                <p className='mb-5'>Our attorneys and auditors.</p>
-                <p className='mb-5'>Security and fraud prevention consultants.</p>
-                <p className='mb-5'>Support and customer services vendors.</p>
-                <p className='mb-5'>Payment processors. Our payment processing partner Stripe Inc (“Stripe”) collects your voluntarily provided payment card information necessary to process your payment. Please see Stripe’s terms of service and privacy policy for information on its use and storage of your Personal Data.</p>
-                <p className='mb-5'>Vendors that provide analytics and research services.</p>
-                <p className='mb-5'>Advertising partners who help us market our services and provide you with other offers that may be of interest to you.</p>
-                <p className='mb-5'>Analytic partners who provide analytics on web traffic or usage of the Website and Services.</p>
-                <p className='mb-5'>Third parties you authorize, access, or authenticate including social media services.</p>
-                <p className='mb-5'>To another third party as part of a merger, acquisition, or other sale or transfer of Lifestyle Medly and/or any of its affiliates to such other party.</p>
-                <p className='mb-5'>To third parties in order to comply with our legal obligations or enforce our rights.</p>
-                <p className='mb-5'>To other third parties in other circumstances where you provide your consent.</p>
+                <ul className="list-disc pl-10">
+                    <li><p className='mb-5'>Our affiliates, associates, and partners, which are bound to the terms of this Privacy Policy.</p></li>
+                    <li><p className='mb-5'>Any alliance partners with whom we partner with to offer certain products and Services we may have and who are identified on the Lifestyle Medly Websites. We share your Personal Data as needed for them to comply with their legal obligations with respect to those services and to understand how to effectively market and improve those Services. Our alliance partners are bound by a duty of confidentiality to Lifestyle Medly.</p></li>
+                    <li><p className='mb-5'>Our Service Providers, which are contractually obligated to provide services on our behalf in a manner consistent with this Privacy Policy. Our Service Providers include:</p></li>
+                    <ul className="list-[circle] pl-10">
+                        <li><p className='mb-5'>Vendors and suppliers that provide us with hosting, technology, services, and/or content related to better operation and maintenance of the Lifestyle Medly Websites.</p></li>
+                        <li><p className='mb-5'>Our attorneys and auditors.</p></li>
+                        <li><p className='mb-5'>Security and fraud prevention consultants.</p></li>
+                        <li><p className='mb-5'>Support and customer services vendors.</p></li>
+                        <li><p className='mb-5'>Payment processors. Our payment processing partner Stripe Inc (“Stripe”) collects your voluntarily provided payment card information necessary to process your payment. Please see Stripe’s terms of service and privacy policy for information on its use and storage of your Personal Data.</p></li>
+                        <li><p className='mb-5'>Vendors that provide analytics and research services.</p></li>
+                        <li><p className='mb-5'>Advertising partners who help us market our services and provide you with other offers that may be of interest to you.</p></li>
+                        <li><p className='mb-5'>Analytic partners who provide analytics on web traffic or usage of the Website and Services.</p></li>
+                        <li><p className='mb-5'>Third parties you authorize, access, or authenticate including social media services.</p></li>
+                        <li><p className='mb-5'>To another third party as part of a merger, acquisition, or other sale or transfer of Lifestyle Medly and/or any of its affiliates to such other party.</p></li>
+                        <li><p className='mb-5'>To third parties in order to comply with our legal obligations or enforce our rights.</p></li>
+                        <li><p className='mb-5'>To other third parties in other circumstances where you provide your consent.</p></li>
+                    </ul>
+                </ul>
                 <p className='mb-5'>Please note that we may need to disclose your Personal Data and Information if we are required to do so by law, regulation or legal or administrative process, to exercise and protect the legal rights of Lifestyle Medly or its personnel and representatives, and to investigate, prevent or respond to suspected illicit activities, including fraud and threats of harm to individuals.</p>
 
 
                 <p className='mb-5 font-semibold underline'>Tracking Tools, Advertising and Opt-Out</p>
                 <p className='mb-5'>The Website and Services use cookies and similar technologies such as pixel tags, web beacons, clear GIFs, and JavaScript (collectively, “Cookies”) to enable our servers to recognize your web browser, tell us how and when you visit and use our Website and Services, analyze trends, learn about our user base and operate and improve our Website and Services. Cookies are small pieces of data – usually text files – placed on your computer, tablet, phone, or similar device when you use that device to access our Website and Services. We may also supplement the information we collect from you with information received from third parties, including third parties that have placed their own Cookies on your devices. Because of our use of Cookies, the Website and Services do not support “Do Not Track” requests sent from a browser at this time.</p>
                 <p className='mb-5'>We use the following types of Cookies:</p>
-                <p className='mb-5'>Essential Cookies. Essential Cookies are required for providing you with features or services that you have requested. For example, certain Cookies enable you to log into secure areas of our Website and Services. Disabling these Cookies may make certain features and services unavailable.</p>
-                <p className='mb-5'>Functional Cookies. Functional Cookies are used to record your choices and settings regarding our Website and Services, maintain your preferences over time, and recognize you when you return to our Website and Services. These Cookies help us personalize our content for you and remember your preferences (for example, your choice of language or region).</p>
-                <p className='mb-5'>Performance/Analytical Cookies. Performance/Analytical Cookies allow us to understand how visitors use our Website and Services. They do this by collecting information about the number of visitors to the Website and Services, what pages visitors view on our Website and Services, and how long visitors are viewing pages on the Website and Services. Performance/Analytical Cookies also help us measure the performance of our advertising campaigns to help us improve our campaigns and the Website and Services’ content for those who engage with our advertising. For example, Google LLC (“Google”) uses cookies in connection with its Google Analytics services. Google’s ability to use and share information collected by Google Analytics about your visits to the Website and Services is subject to the Google Analytics Terms of Use and the Google Privacy Policy. You have the option to opt-out of Google’s use of Cookies.</p>
-                <p className='mb-5'>Retargeting/Advertising Cookies. Retargeting/Advertising Cookies collect data about your online activity and identify your interests so that we can provide advertising that we believe is relevant to you.</p>
+                <ul className="list-disc pl-10">
+                    <li><p className='mb-5'>Essential Cookies. Essential Cookies are required for providing you with features or services that you have requested. For example, certain Cookies enable you to log into secure areas of our Website and Services. Disabling these Cookies may make certain features and services unavailable.</p></li>
+                    <li><p className='mb-5'>Functional Cookies. Functional Cookies are used to record your choices and settings regarding our Website and Services, maintain your preferences over time, and recognize you when you return to our Website and Services. These Cookies help us personalize our content for you and remember your preferences (for example, your choice of language or region).</p></li>
+                    <li><p className='mb-5'>Performance/Analytical Cookies. Performance/Analytical Cookies allow us to understand how visitors use our Website and Services. They do this by collecting information about the number of visitors to the Website and Services, what pages visitors view on our Website and Services, and how long visitors are viewing pages on the Website and Services. Performance/Analytical Cookies also help us measure the performance of our advertising campaigns to help us improve our campaigns and the Website and Services’ content for those who engage with our advertising. For example, Google LLC (“Google”) uses cookies in connection with its Google Analytics services. Google’s ability to use and share information collected by Google Analytics about your visits to the Website and Services is subject to the Google Analytics Terms of Use and the Google Privacy Policy. You have the option to opt-out of Google’s use of Cookies.</p></li>
+                    <li><p className='mb-5'>Retargeting/Advertising Cookies. Retargeting/Advertising Cookies collect data about your online activity and identify your interests so that we can provide advertising that we believe is relevant to you.</p></li>
+                </ul>
 
                 <p className='mb-5'>You can decide whether or not to accept Cookies through the “CookieBot” that appears each time you access the Website, or your internet browser’s settings, most of which have an option for turning off the Cookie feature, and which will prevent your browser from accepting new Cookies, as well.</p>
 
@@ -119,10 +139,12 @@ export default function PrivacyPolicy() {
                 <p className='mb-5'>The Lifestyle Medly Websites and Services are not directed to children under the age of eighteen (18), and we request that these individuals not provide Personal Data through the Lifestyle Medly Websites. The Lifestyle Medly Websites, its content, and its services are intended for individuals over the age of 18, without exception. The Lifestyle Medly Websites are not directed to, nor do we knowingly collect information from, children under the age of 18. If we actually know that a user under the age of 18 has volunteered Personal Data on the Lifestyle Medly Websites, we will delete such information from our records. If you become aware that your child or any child under your care has provided us with Personal Data, please contact us at the contact information listed below.</p>
 
                 <p className='mb-5 font-semibold underline'>What Are Your Rights?</p>
-                <p className='mb-5'>Right to Access Your Information: You have the right to request a copy of the Personal Data Lifestyle Medly has collected about you. This includes the categories of data, sources, purposes of collection, and third-party disclosures.</p>
-                <p className='mb-5'>Right to Correct or Delete Your Information: You have the right to request that Lifestyle Medly correct any inaccurate or incomplete data we hold about you. You also have the right to request that we delete your Personal Data under certain circumstances, such as if you withdraw your consent or if we no longer have a legitimate reason to retain it.</p>
-                <p className='mb-5'>Right to Opt-Out of Data Sharing: You have the right to opt-out of the sale of your Personal Data to third parties. We do not currently sell Personal Data, but this option is available for future changes.</p>
-                <p className='mb-5'>Right to File a Complaint: You have the right to file a complaint with the New Jersey Attorney General's Office or other state’s agency if you believe Lifestyle Medly has violated your privacy rights.</p>
+                <ul className="list-disc pl-10">
+                    <li><p className='mb-5'><span className="underline">Right to Access Your Information:</span> You have the right to request a copy of the Personal Data Lifestyle Medly has collected about you. This includes the categories of data, sources, purposes of collection, and third-party disclosures.</p></li>
+                    <li><p className='mb-5'><span className="underline">Right to Correct or Delete Your Information:</span> You have the right to request that Lifestyle Medly correct any inaccurate or incomplete data we hold about you. You also have the right to request that we delete your Personal Data under certain circumstances, such as if you withdraw your consent or if we no longer have a legitimate reason to retain it.</p></li>
+                    <li><p className='mb-5'><span className="underline">Right to Opt-Out of Data Sharing:</span> You have the right to opt-out of the sale of your Personal Data to third parties. We do not currently sell Personal Data, but this option is available for future changes.</p></li>
+                    <li><p className='mb-5'><span className="underline">Right to File a Complaint:</span> You have the right to file a complaint with the New Jersey Attorney General's Office or other state’s agency if you believe Lifestyle Medly has violated your privacy rights.</p></li>
+                </ul>
                 <p className='mb-5'>Please note that Lifestyle Medly may not be required to fulfill your requests in certain circumstances. These include instances where we must retain or restrict access to Personal Data in order to preserve scientific integrity, as your Personal Data must be managed in specific ways in order for the information to be reliable and accurate and to meet regulatory obligations of Lifestyle Medly and its affiliates.</p>
                 <p className='mb-5'>For your safety, whenever a request is made to exercise your rights, Lifestyle Medly may request some information and/or additional documents so that we can prove your identity, seeking to prevent fraud. We do this to ensure your safety and privacy.</p>
                 <p className='mb-5'>To exercise the rights described above, to file a concern or complaint, or to opt-out of particular programs, please contact our Privacy Officer at support@lifestylemedly.com or by calling 201-844-9062.</p>
@@ -132,11 +154,13 @@ export default function PrivacyPolicy() {
 
                 <p className='mb-5 font-semibold underline'>Your Privacy Rights</p>
                 <p className='mb-5'>Lifestyle Medly has collected the following categories of Personal Data from consumers within the last twelve (12) months:</p>
-                <p className='mb-5'>Contact Information (name, email, and postal address)</p>
-                <p className='mb-5'>Online Identifiers (IP address, cookie IDs)</p>
-                <p className='mb-5'>Demographic Information (age, race, gender)</p>
-                <p className='mb-5'>Internet Activity Information</p>
-                <p className='mb-5'>Audio Information (voicemail and other call recordings)</p>
+                <ul className="list-disc pl-10">
+                    <li><p className='mb-5'>Contact Information (name, email, and postal address)</p></li>
+                    <li><p className='mb-5'>Online Identifiers (IP address, cookie IDs)</p></li>
+                    <li><p className='mb-5'>Demographic Information (age, race, gender)</p></li>
+                    <li><p className='mb-5'>Internet Activity Information</p></li>
+                    <li><p className='mb-5'>Audio Information (voicemail and other call recordings)</p></li>
+                </ul>
 
                 <p className='mb-5 font-semibold underline'>Updates to This Privacy Policy and Contacting Us</p>
                 <p className='mb-5'>We may amend this Privacy Policy at any time. Any changes to this Privacy Policy will be posted on the Lifestyle Medly Websites. Should these amendments materially relate to any consents you may have given, Lifestyle Medly will contact you in order to obtain your consent to any change in the use of your Personal Data.</p>
