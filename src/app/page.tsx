@@ -68,7 +68,7 @@ export default function Home() {
 
     <Pricing />
     
-    <FAQ toggleOpen={toggleOpen} open={open} />
+    <FAQ />
 
     </>
   )

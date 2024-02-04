@@ -3,26 +3,94 @@
 import { MouseEvent } from "react";
 import { AiFillPlusCircle } from "react-icons/ai";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import { client } from "../api/contentful";
+import { useState, useEffect } from "react";
 
-export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HTMLButtonElement>, number: string) => void, open: {one: boolean, two: boolean, three: boolean, four: boolean, five: boolean, six: boolean} }) {
-    return (
+export default function FAQ() {
+  const [ faqs, setFaqs ] = useState<any[]>([]);
+  const [ open, setIsOpen ] = useState<any | null>(null);
+
+  const toggleOpen = (e:MouseEvent<HTMLButtonElement>, number: string) => {
+    e.preventDefault();
+    setIsOpen({
+      ...open,
+      [number]: !open[number as keyof object],
+    })
+  }
+  
+  const fetchApi = async () => {
+    const entries = await client.getEntries();
+
+    if (entries) {
+      let list:any[] = [];
+      let numbersObj:any = {};
+      entries.items.forEach(item => {
+          if (item.fields.question) {
+              list.push(item.fields)
+          }
+      })
+      setFaqs(list);
+      list.forEach((li,i) => {
+        numbersObj[i.toString() as keyof object] = false;
+      })
+      setIsOpen(numbersObj)
+
+    }
+  }
+
+  useEffect(() => {
+    fetchApi();
+  }, []);
+
+  console.log(faqs)
+
+
+
+  
+  return (
     <div className='w-full text-charcoal' id='faq'>
       <div className='max-w-[1200px] mx-auto px-10 py-[40px] sm:py-[80px] flex flex-col justify-center items-center gap-[46px]'>
+        {faqs && faqs.map((faq, index) => {
+          
+          return (
+            <div className='w-full'>
+              <div className='flex justify-between items-start gap-6'>
+                <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className=' text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>{faq.question}</p></AnimationOnScroll>
+                <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, index.toLocaleString())}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open[index.toLocaleString()] ? 'rotate' : ''}`} /></button></AnimationOnScroll>
+              </div>
+              <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open[index.toLocaleString()] ? 'faq-open' : ''}`}>
+                <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
+                {faq.formattedAnswers.content && faq.formattedAnswers.content.map((content:any, i:number) => (
+                  <>
+                  {content.content.map((c:any, index:number) => {
+                    
+                    if (c.nodeType === 'text') {
+                      return (
+                        <p className={`${c.marks && c.marks.length ? 'font-bold' : 'font-normal'} mb-5`}>{c.value}</p>
+                      )
+                    } else if (c.nodeType === 'list-item') {
+                      return (
+                      <ul className='list-disc pl-10 my-5'>
+                      {c.content.map((list:any) => (
+                        <li>{list.content[0].value}</li>
+                      ))}
+                      </ul>
+                      )
+                      
+                    }
+                    
+                  })}
+                  </>
+                  // <p className={`${i < content.length-1 ? 'mb-5' : 'mb-0'}`}>{content.content[0].value}</p>
+                ))}
+                
+              </div>
+            </div>
+          )
+        })}
+        
 
-        <div className='w-full'>
-          <div className='flex justify-between items-start gap-6'>
-            <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className=' text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>What is Semaglutide for Weight Loss?</p></AnimationOnScroll>
-            <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'one')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.one ? 'rotate' : ''}`} /></button></AnimationOnScroll>
-          </div>
-          <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open.one ? 'faq-open' : ''}`}>
-            <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
-            <p className='mb-5'>Semaglutide is a special medicine that helps people lose weight. It works like a hormone in your body to control hunger, make insulin, and help with digestion. First made for type 2 diabetes, doctors found out it also helps people lose weight. So, they did more studies called the STEP trials to learn about this.</p>
-            <p className='mb-5'>One big study in the STEP trials was STEP 5. It lasted 104 weeks and had 304 people who were overweight or had obesity. These people didn't have diabetes. They got either Semaglutide or placebo. Everyone also ate fewer calories and did more exercise.</p>
-            <p>The study looked at how much weight people lost and how their bodies changed. They found that nearly 90% of people lost at least 5% of their weight. This is a big deal because no other weight loss medicine has done this well before. Because of these great results, in June 2022, the FDA said Semaglutide could be used for losing weight.</p>
-          </div>
-        </div>
-
-        <div className='w-full'>
+        {/* <div className='w-full'>
           <div className='flex justify-between items-start gap-6'>
             <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true}><p className='text-[28px] sm:text-[42px] font-bold max-w-[1200px]'>What is Tirzepatide for Weight Loss?</p></AnimationOnScroll>
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, 'two')}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open.two ? 'rotate' : ''}`} /></button></AnimationOnScroll>
@@ -106,7 +174,7 @@ export default function FAQ({ toggleOpen, open }: { toggleOpen: (e:MouseEvent<HT
             <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
             <p>We currently operate on a private-pay basis. You can Use your pre-tax HSA (health Savings account) for payment. While we don't directly accept payments from insurance providers, you can get an itemized bill from us, which can be submitted to your insurance for reimbursement or towards your annual deductible obligations depending on your insurance plan coverage. please check with your insurance provider for further details on thier policies.</p>
           </div>
-        </div>
+        </div> */}
 
 
       </div>
