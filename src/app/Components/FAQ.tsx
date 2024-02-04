@@ -59,6 +59,11 @@ export default function FAQ() {
                 <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true}><button onClick={(e:MouseEvent<HTMLButtonElement>) => toggleOpen(e, index.toLocaleString())}><AiFillPlusCircle className={`hover:text-gold h-[60px] w-[60px] text-maize transition ease-in-out duration-[500ms] ${open[index.toLocaleString()] ? 'rotate' : ''}`} /></button></AnimationOnScroll>
               </div>
               <div className={`border border-maize rounded-md p-8 mt-10 text-[18px] closed ${open[index.toLocaleString()] ? 'faq-open' : ''}`}>
+                {faq.video && (
+                  <video className="w-full mb-5 border border-charcoal " controls>
+                    <source src={faq.video.fields.file.url} type={faq.video.fields.file.contentType}></source>
+                  </video>
+                )}
                 <p className='font-semibold mb-5 text-[28px] sm:text-[32px]'>Answer:</p>
                 {faq.formattedAnswers.content && faq.formattedAnswers.content.map((content:any, i:number) => (
                   <>
