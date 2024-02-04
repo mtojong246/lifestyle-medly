@@ -37,8 +37,8 @@ export default function Dropdown() {
           'aria-labelledby': 'basic-button',
         }}
       >
-        <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Consent</a></MenuItem>
-        <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Patient Registration</a></MenuItem>
+        <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='/informed_consent.pdf' download='consent' >Patient Consent</a></MenuItem>
+        <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='/registration_form.pdf' download='registration'>Patient Registration</a></MenuItem>
         <MenuItem style={monst.style} onClick={handleClose}><a className='hover:text-gold' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Schedule Appointment</a></MenuItem>
       </Menu>
     </div>
