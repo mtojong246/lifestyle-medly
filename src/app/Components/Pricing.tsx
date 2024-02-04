@@ -1,8 +1,40 @@
+'use client';
+
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import { useRouter } from 'next/navigation';
+import { useState, useEffect } from 'react';
+import { client } from '../api/contentful';
 
 export default function Pricing() {
     const router = useRouter();
+    const [ plans, setPlans ] = useState<any[]>([]);
+    const [ inclusions, setInclusions ] = useState<any | null>(null);
+    const [ exclusions, setExclusions ] = useState<any | null>(null);
+
+    const fetchApi = async () => {
+        const entries = await client.getEntries();
+    
+        if (entries) {
+            console.log(entries)
+          let list:any[] = [];
+          entries.items.forEach(item => {
+              if (item.fields.inclusions && !item.fields.price) {
+                  setInclusions(item.fields.inclusions)
+              } else if (item.fields.exclusions) {
+                setExclusions(item.fields);
+              } else if (item.fields.price) {
+                list.push(item.fields);
+              }
+              setPlans(list)
+          })
+        }
+    }
+
+    useEffect(() => {
+        fetchApi();
+    }, []);
+
+    console.log(plans)
 
     return (
         <div className='w-full text-charcoal bg-vanilla' id='direct-pay'>
@@ -11,14 +43,15 @@ export default function Pricing() {
             <p className='text-lg sm:text-xl mb-[60px]'>Discover the right fit, affordable plans for every inch.</p>
 
             <div className='flex flex-col lg:flex-row justify-center items-stretch gap-20 lg:gap-10'>
+            {plans && (
             <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true} className='border border-maize shadow-lg flex flex-col w-full mx-auto max-w-[600px] text-left bg-white rounded-md'>
                 <div className='p-[30px] text-center'>
-                    <p className='font-semibold text-[26px]'>Start-Up Plan</p>
-                    <p className='font-semibold text-[64px] mt-3 text-nowrap'>$169</p>
-                    <p className='text-md font-medium mt-5'>Full trial, one-time fee <span className='text-maize'>(limited offer)</span>**</p>
-                    <p className='text-md font-medium mt-5 text-darkvanilla'>Duration: 4 weeks</p>
-                    <p className='text-md font-medium'>Processing Time: 3-5 days</p>
-                    <button onClick={() => router.push('/Eligibility')} className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal py-4 w-full rounded-md'>Start your kickstart today!</button>
+                    <p className='font-semibold text-[26px]'>{plans[0].planName}</p>
+                    <p className='font-semibold text-[64px] mt-3 text-nowrap'>${plans[0].price}</p>
+                    <p className='text-md font-medium mt-5'>{plans[0].frequency} <span className='text-maize'>(limited offer)</span>**</p>
+                    <p className='text-md font-medium mt-5 text-darkvanilla'>Duration: {plans[0].duration}</p>
+                    <p className='text-md font-medium'>Processing Time: {plans[0].processingTime}</p>
+                    <button onClick={() => router.push('/Eligibility')} className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal py-4 w-full rounded-md'>{plans[0].button}</button>
                 </div>
                 <div className='grow bg-maize/[0.15] p-[30px] flex flex-col justify-start items-start gap-10'>
                     <div className='flex justify-start items-start gap-3'>
@@ -63,6 +96,7 @@ export default function Pricing() {
 
                 </div>
             </AnimationOnScroll>
+            )}
 
             {/* <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='relative shadow-lg lg:shadow-none flex flex-col w-full mt-[60px] lg:mt-0 mx-auto max-w-[600px] lg:w-1/3 text-left bg-white rounded-md lg:rounded-tr-none lg:rounded-br-none'>
                 <div className='absolute top-[-58px] left-0 right-0 p-4 text-center bg-maize rounded-t-md'>
@@ -101,15 +135,15 @@ export default function Pricing() {
                 </div>
                 
             </AnimationOnScroll> */}
-
+            {plans && (
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true} className='border border-maize shadow-lg flex flex-col w-full mx-auto max-w-[600px] text-left bg-white rounded-md'>
                 <div className='p-[30px] text-center'>
-                    <p className='font-semibold text-[26px]'>Loyalty Program Plan</p>
-                    <p className='font-semibold text-[64px] mt-3 text-nowrap'>$99</p>
-                    <p className='text-md font-medium mt-5'>Ongoing support, billed monthly**</p>
-                    <p className='text-md font-medium mt-5'>Exclusive discounts</p>
-                    <p className='text-md font-medium'>& priority access!</p>
-                    <button onClick={() => router.push('/Eligibility')} className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal py-4 w-full rounded-md'>Continue Your Journey!</button>
+                    <p className='font-semibold text-[26px]'>{plans[1].planName}</p>
+                    <p className='font-semibold text-[64px] mt-3 text-nowrap'>${plans[1].price}</p>
+                    <p className='text-md font-medium mt-5'>{plans[1].frequency}**</p>
+                    <p className='text-md font-medium mt-5'>Duration: {plans[1].duration}</p>
+                    <p className='text-md font-medium'>Processing Time: {plans[1].processingTime}</p>
+                    <button onClick={() => router.push('/Eligibility')} className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal py-4 w-full rounded-md'>{plans[1].button}</button>
                 </div>
                 <div className='grow bg-maize/[0.15] p-[30px] flex flex-col justify-start items-start gap-10'>
                         <div className='flex justify-start items-start gap-3'>
@@ -161,16 +195,20 @@ export default function Pricing() {
 
                     </div>
                 </AnimationOnScroll>
+                )}
             </div>
 
             <div className='max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-center items-stretch mt-20 gap-20 lg:gap-10 '>
                 <div className='w-full lg:w-1/2 mx-auto text-left max-w-[600px]'>
                     <p className='text-xl font-semibold'>All plans include:</p>
-                    <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
-                        <img src='/check.svg' className='w-7 h-7 dark-gold' />
-                        <p className='text-md'>Get 10% off fees for all optional services!</p>
-                    </div>
-                    <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
+                    {inclusions && inclusions.content[0].content.map((content:any) => (
+                        <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
+                            <img src='/check.svg' className='w-7 h-7 dark-gold' />
+                            <p className='text-md'>{content.content[0].content[0].value}</p>
+                        </div>
+                    ))}
+                    
+                    {/* <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/check.svg' className='w-7 h-7 dark-gold' />
                         <p className='text-md'>Select pharmacy-to-door Rx delivery! Shipping costs may apply.**</p>
                     </div>
@@ -185,16 +223,19 @@ export default function Pricing() {
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/check.svg' className='w-7 h-7 dark-gold' />
                         <p className='text-md'>No lock-in, cancel anytime via email</p>
-                    </div>
+                    </div> */}
                 </div>
 
                 <div className='w-full lg:w-1/2 mx-auto text-left max-w-[600px]'>
                     <p className='text-xl font-semibold'>Not included:</p>
-                    <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
-                        <img src='/x.svg' className='w-7 h-7' />
-                        <p className='text-md'>Medications (as low as $25/week**)</p>
-                    </div>
-                    <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
+                    {exclusions && exclusions.exclusions.content[0].content.map((content:any) => (
+                        <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
+                            <img src='/x.svg' className='w-7 h-7' />
+                            <p className='text-md'>{content.content[0].content[0].value}</p>
+                        </div>
+                    ))}
+                    
+                    {/* <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/x.svg' className='w-7 h-7' />
                         <p className='text-md'>Labs (typically covered by insurance)</p>
                     </div>
@@ -205,8 +246,8 @@ export default function Pricing() {
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/x.svg' className='w-7 h-7' />
                         <p className='text-md'>Optional* Home injections ($100 add-on fee** subject to availability)</p>
-                    </div>
-                    <p className='text-md mt-5 ml-10'>**Pricing is subject to change based on medication availability. All plans excludes any and all items or services not expressly identified above. </p>
+                    </div> */}
+                    <p className='text-md mt-5 ml-10'>{exclusions && exclusions.disclaimer}</p>
                 </div>
             </div>
 
