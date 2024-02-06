@@ -43,7 +43,7 @@ export default function Pricing() {
             <p className='text-lg sm:text-xl mb-[60px]'>Discover the right fit, affordable plans for every inch.</p>
 
             <div className='flex flex-col lg:flex-row justify-center items-stretch gap-20 lg:gap-10'>
-            {plans && (
+            {plans.length && (
             <AnimationOnScroll animateIn="animate__fadeInLeft" animateOnce={true} className='border border-maize shadow-lg flex flex-col w-full mx-auto max-w-[600px] text-left bg-white rounded-md'>
                 <div className='p-[30px] text-center'>
                     <p className='font-semibold text-[26px]'>{plans[0].planName}</p>
@@ -135,7 +135,7 @@ export default function Pricing() {
                 </div>
                 
             </AnimationOnScroll> */}
-            {plans && (
+            {plans.length && (
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true} className='border border-maize shadow-lg flex flex-col w-full mx-auto max-w-[600px] text-left bg-white rounded-md'>
                 <div className='p-[30px] text-center'>
                     <p className='font-semibold text-[26px]'>{plans[1].planName}</p>
