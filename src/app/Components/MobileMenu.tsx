@@ -35,8 +35,8 @@ export default function MobileMenu({isOpen, toggleOpen} : {isOpen: boolean, togg
             <div className='w-full'>
                 <button onClick={togglePatients} className="mx-auto flex justify-center items-center gap-2 mb-5">For Patients {!openPatients ? <RxChevronDown className='h-6 w-6' /> : <RxChevronUp className='h-6 w-6' />}</button>
                 <div className={`w-full text-center flex flex-col gap-8 text-lg menu-closed bg-gold text-white ${openPatients ? 'smaller-menu-open' : ''}`}>
-                    <a className='hover:text-charcoal' href='/informed_consent.pdf' download='consent'>Patient Registration</a>
-                    <a className='hover:text-charcoal' href='/registration_form.pdf' download='registration'>Patient Consent</a>
+                    <a className='hover:text-charcoal' href='https://drive.google.com/file/d/13k0h3_3sSd5XkgCUk-jlYhjF2mbnBLGt/view?usp=sharing' target='_blank' rel='noreferrer'>Patient Registration</a>
+                    <a className='hover:text-charcoal' href='https://drive.google.com/file/d/1mXaA7C1jHdQ2Lyw1GcKPUEIubEKNhNzK/view?usp=sharing' target='_blank' rel='noreferrer'>Patient Consent</a>
                     <a className='hover:text-charcoal' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Schedule Appointment</a>
                 </div>
                 <button className='block md:hidden mt-5 mx-auto' onClick={(e:any) => {toggleOpen(e); router.push('/Blog')}}>Blog</button>

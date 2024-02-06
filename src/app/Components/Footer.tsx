@@ -31,8 +31,8 @@ export default function Footer() {
 
                 <div className='flex flex-col justify-start items-center md:items-start gap-4 text-lg md:text-base'>
                     <p className='font-semibold'>QUICK LINKS</p>
-                    <a className='hover:text-maize' href='/informed_consent.pdf' download='consent'>Patient Consent</a>
-                    <a className='hover:text-maize' href='/registration_form.pdf' download='registration'>Patient Registration</a>
+                    <a className='hover:text-maize' href='https://drive.google.com/file/d/13k0h3_3sSd5XkgCUk-jlYhjF2mbnBLGt/view?usp=sharing' target='_blank' rel='noreferrer'>Patient Consent</a>
+                    <a className='hover:text-maize' href='https://drive.google.com/file/d/1mXaA7C1jHdQ2Lyw1GcKPUEIubEKNhNzK/view?usp=sharing' target='_blank' rel='noreferrer'>Patient Registration</a>
                     <a className='hover:text-maize' href='https://chluy.myaestheticrecord.com/online-booking/hash/Ml8yMDgzNl9jbGluaWNz' target="_blank" rel="noreferrer">Schedule Appointment</a>
                     <p className='font-semibold mt-16 md:mt-5'>STAY IN TOUCH</p>
                     <div className='flex justify-center items-center gap-2'>
