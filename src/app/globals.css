@@ -442,3 +442,8 @@ body {
   animation-delay: 500ms;
   animation-fill-mode: backwards;
 }
+
+.MuiPagination-ul {
+  justify-content: center !important;
+}
+

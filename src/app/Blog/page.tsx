@@ -5,6 +5,9 @@ import { HiMagnifyingGlass } from "react-icons/hi2";
 import Gallery from "./Components/Gallery";
 import Posts from "./Components/Posts";
 
+import Pagination from '@mui/material/Pagination';
+import Stack from '@mui/material/Stack';
+
 export default function Blog() {
     const [ selection, setSelection ] = useState('articles');
     const [ search, setSearch ] = useState('');
@@ -21,7 +24,7 @@ export default function Blog() {
     }
 
     return (
-        <div className='w-full pb-[100px]'>
+        <div className='w-full pb-[80px]'>
             <div className='relative w-full px-10 py-20 min-h-[400px] bg-blog bg-cover flex justify-center items-center' style={{backgroundPosition: '50% 60% '}}>
                 <div className='absolute top-0 bottom-0 right-0 left-0 bg-[#332200]/[.7]'></div>
                 <div className='max-w-[1200px] mx-auto grow relative z-10 text-left'>
@@ -38,7 +41,7 @@ export default function Blog() {
                     </div> */}
                 </div>
             </div>
-            <div className="w-full px-10 py-5 mt-10">
+            {/* <div className="w-full px-10 py-5 mt-10">
                 <div className='max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-stretch gap-5'>
                     <div>
                         <p className="text-[24px]">Latest {selection === 'articles' ? 'Articles' : 'Videos'}</p>
@@ -55,9 +58,12 @@ export default function Blog() {
                         </select>
                     </div>
                 </div>
-            </div>
-            {selection === 'videos' ? <Gallery search={search} selection={selection}/> : <Posts search={search} selection={selection}/>}
-            
+            </div> */}
+            {selection === 'videos' ? <Gallery search={search} selection={selection} handleSelection={handleSelection} handleInput={handleInput}/> : 
+            <Posts search={search} selection={selection} handleSelection={handleSelection} handleInput={handleInput}/>}
+            {/* <Stack spacing={2} className="mt-20">
+                <Pagination count={3} variant="outlined" shape="rounded" size="large"/>
+            </Stack> */}
         </div>
     )
 }
