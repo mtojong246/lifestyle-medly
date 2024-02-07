@@ -12,6 +12,7 @@ import Stack from '@mui/material/Stack';
 export default function Posts({ search, selection, handleSelection, handleInput }: { search: string, selection: string, handleSelection: (e:any) => void, handleInput: (e:ChangeEvent<HTMLInputElement>) => void }) {
     const [ posts, setPosts ] = useState<any[]>([]);
     const [ filteredArticles, setFilteredArticles ] = useState<any[]>(posts);
+    const [ pageCount, setPageCount ] = useState(0);
 
     const router = useRouter();
 
@@ -30,13 +31,15 @@ export default function Posts({ search, selection, handleSelection, handleInput 
                       })
                   }
               })
-              setPosts(list)
+              setPosts(list);
+              setPageCount(list.length/5);
    
             }
           }
       
           fetchApi();
     },[]);
+
 
     useEffect(() => {
         if (search.length && selection === 'articles') {
@@ -67,7 +70,7 @@ export default function Posts({ search, selection, handleSelection, handleInput 
                 <div className='max-w-[1200px] mx-auto flex flex-col sm:flex-row justify-between items-stretch gap-5'>
                     <div>
                         <p className="text-[24px]">Latest {selection === 'articles' ? 'Articles' : 'Videos'}</p>
-                        <p className='text-[12px] text-slate-400'>1-5 of 5 items</p>
+                        {/* <p className='text-[12px] text-slate-400'>1-5 of 5 items</p> */}
                     </div>
                     <div className='flex justify-center items-center gap-3'>
                         <div className='w-full sm:max-w-[400px] px-2 w-full flex gap-2 justify-between items-center border border-charcoal rounded '>
@@ -102,9 +105,9 @@ export default function Posts({ search, selection, handleSelection, handleInput 
                         
                 </div>
             </div>
-            <Stack spacing={2} className="mt-20">
+            {/* <Stack spacing={2} className="mt-20">
                 <Pagination count={3} variant="outlined" shape="rounded" size="large"/>
-            </Stack>
+            </Stack> */}
         </>
     )
 }
