@@ -36,8 +36,8 @@ export default function ContactPopup() {
         <Box sx={style}>
             <p className='text-[28px] font-medium'>Contact Us</p>
             <p className='font-semibold mt-5 mb-1 text-gold'>Lifestyle Medly</p>
-            <p>441 US-130</p>
-            <p className='mb-5'>East Windsor, NJ 08520</p>
+            {/* <p>441 US-130</p>
+            <p className='mb-5'>East Windsor, NJ 08520</p> */}
             <div className='flex justify-start items-center gap-3'><FaPhoneAlt className='h-3 w-3 text-gold' /> <p>201-844-9062</p></div>
             <div className='flex justify-start items-center gap-3'><FaFax className='h-3 w-3 text-gold' /><p>201-365-5737</p></div>
             <div className='flex justify-start items-center gap-3'><MdEmail className='h-4 w-4 text-gold'/><a href='mailto:support@lifestylemedly.com' className="hover:text-maize">support@lifestylemedly.com</a></div>

@@ -180,8 +180,10 @@ const ActionProvider = ({ createChatBotMessage, setState, children }: { createCh
 
   const handleContact = () => {
     const message = createChatBotMessage(
-      "Visit us at 441 US-130, East Windsor, NJ 08520, call us at 201-844-9062, email us at support@lifestylemedly.com or visit one of our official social media pages", {}
+      "Call us at 201-844-9062, email us at support@lifestylemedly.com or visit one of our official social media pages", {}
       )
+
+      const addressPlaceholder = 'Visit us at 441 US-130, East Windsor, NJ 08520,'
 
       const button = createCustomMessage('', 'social', { delay: 1000 })
 
