@@ -70,8 +70,8 @@ export default function Navigation() {
     return (
         <div className='w-full sticky top-0 z-30 '>
             {pathname === '/Eligibility' ? (
-                <>
-                <div className="max-w-[1400px] my-0 mx-auto px-4 py-10 sm:py-4 relative">
+            <div className={`w-full transition-all ease-in fade-down`} style={{ transform: isScrollingUp ? 'translateY(0)' : 'translateY(-100%)' }}>
+                <div className="w-full bg-white my-0 mx-auto px-4 py-10 sm:py-4 relative">
                     <button className='relative z-10 rounded-full p-2 hover:bg-vanilla'><Link href='/'><GoArrowLeft className='text-charcoal h-12 w-12 sm:h-7 sm:w-7' /></Link></button>
                     <div className='absolute top-0 bottom-0 left-0 right-0 flex justify-center items-center'>
                         <img className='sm:w-[50px] sm:h-[50px] w-[100px] h-[100px]' src='/lifestyle_logo.png' />
@@ -80,7 +80,7 @@ export default function Navigation() {
                 <div className='w-full h-[2px] bg-vanilla'>
                     <div className={`h-[2px] bg-gold`} style={{width: `${percentage}%`}}></div>
                 </div>
-                </>
+            </div>
             ) : (
                 <>
                     <div className={`w-full bg-charcoal transition-all ease-in fade-down`} style={{ transform: isScrollingUp ? 'translateY(0)' : 'translateY(-100%)' }}>
