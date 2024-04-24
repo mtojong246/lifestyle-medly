@@ -42,7 +42,7 @@ export default function Navigation() {
     // }
 
     const handleDirectionalScroll = () => {
-        const currentScrollPos = window.scrollY;
+        const currentScrollPos = window.scrollY || document.documentElement.scrollTop;
         if (currentScrollPos === 0) {
             setIsTop(true)
         } else {
