@@ -42,17 +42,21 @@ export default function Navigation() {
     // }
 
     const handleDirectionalScroll = () => {
-        const currentScrollPos = window.scrollY || document.documentElement.scrollTop;
-        if (currentScrollPos === 0) {
-            setIsTop(true)
-        } else {
-            setIsTop(false)
+        const currentScrollPos = window.scrollY
+        const navbar = document.getElementById('navbar');
+        if (navbar) {
+            if (currentScrollPos <= navbar.offsetHeight) {
+                setIsTop(true)
+            } else {
+                setIsTop(false)
+            }
+    
+            if (currentScrollPos) {
+                setIsScrollingUp(currentScrollPos < prevScrollPos);
+                setPrevScrollPos(currentScrollPos);
+            } 
         }
-
-        if (currentScrollPos) {
-            setIsScrollingUp(currentScrollPos < prevScrollPos);
-            setPrevScrollPos(currentScrollPos);
-        } 
+        
     };
 
     useEffect(() => {
@@ -68,7 +72,7 @@ export default function Navigation() {
 
 
     return (
-        <div className='w-full sticky top-0 z-30 '>
+        <div id='navbar' className='w-full sticky top-0 z-30 '>
             {pathname === '/Eligibility' ? (
             <div className={`w-full transition-all ease-in fade-down`} style={{ transform: isScrollingUp ? 'translateY(0)' : 'translateY(-100%)' }}>
                 <div className="w-full bg-white my-0 mx-auto px-4 py-10 sm:py-4 relative">
