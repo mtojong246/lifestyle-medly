@@ -12,10 +12,10 @@ export default function Footer() {
                 </div>
                 <div className='flex flex-col justify-start items-center md:items-start gap-4 text-lg md:text-base'>
                     <p className='font-semibold'>GET IN TOUCH</p>
-                    {/* <div className='text-center md:text-left'>
-                        <p>441 US-130</p>
-                        <p>East Windsor, NJ 08520</p>
-                    </div> */}
+                    <div className='text-center md:text-left'>
+                        <p>2650 US-130, Ste B</p>
+                        <p>Cranbury, NJ 08512</p>
+                    </div>
                     <div className='flex justify-center items-center gap-2'><FaPhoneAlt className='h-3 w-3' /> <p>201-844-9062</p></div>
                     <div className='flex justify-center items-center gap-2'><FaFax className='h-3 w-3' /><p>201-365-5737</p></div>
                     <div className='flex justify-center items-center gap-2'><MdEmail className='h-4 w-4'/><a href='mailto:support@lifestylemedly.com' className="hover:text-maize">support@lifestylemedly.com</a></div>
