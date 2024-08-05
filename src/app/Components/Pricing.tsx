@@ -48,30 +48,30 @@ export default function Pricing() {
                 <div className='p-[30px] text-center'>
                     <p className='font-semibold text-[26px]'>{plans[0].planName}</p>
                     <p className='font-semibold text-[64px] mt-3 text-nowrap'>${plans[0].price}</p>
-                    <p className='text-md font-medium mt-5'>{plans[0].frequency} <span className='text-maize'>(limited offer)</span>**</p>
+                    <p className='text-md font-medium mt-5'>{plans[0].frequency}</p>
                     <p className='text-md font-medium mt-5 text-darkvanilla'>Duration: {plans[0].duration}</p>
-                    <p className='text-md font-medium'>Processing Time: {plans[0].processingTime}</p>
-                    <button onClick={() => router.push('/Eligibility')} className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal py-4 w-full rounded-md'>{plans[0].button}</button>
+                    {/* <p className='text-md font-medium'>Processing Time: {plans[0].processingTime}</p> */}
+                    <button onClick={() => router.push('/Eligibility')} className='up mt-8 text-md sm:text-lg font-medium text-white bg-charcoal py-4 w-full rounded-md'>Start Your Weight Loss Journey Now!</button>
                 </div>
                 <div className='grow bg-maize/[0.15] p-[30px] flex flex-col justify-start items-start gap-10'>
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>4-weeks of Compounded Semaglutide or Tirzeptide prescription *subject to availability</p>
+                    <p className='text-md'>Initial Teleconsultation</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>Complimentary 3-Month PPE Start Kit</p>
+                    <p className='text-md'>4-week Medication Prescription (medication cost not included)</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>1 Initial (30-60 min) + 1 Follow-up (20-40 mins), scheduled based on medical needs & doctor availability</p>
+                    <p className='text-md'>Labs</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>Weekly weight loss support calls (up to 4x15 min)</p>
+                    <p className='text-md'>Supply Kit (prep pads, syringe, gloves)</p>
                     </div>
 
                     {/* <div className='flex justify-start items-start gap-3'>
@@ -135,7 +135,7 @@ export default function Pricing() {
                 </div>
                 
             </AnimationOnScroll> */}
-            {plans.length && (
+            {/* {plans.length && (
             <AnimationOnScroll animateIn="animate__fadeInRight" animateOnce={true} className='border border-maize shadow-lg flex flex-col w-full mx-auto max-w-[600px] text-left bg-white rounded-md'>
                 <div className='p-[30px] text-center'>
                     <p className='font-semibold text-[26px]'>{plans[1].planName}</p>
@@ -173,7 +173,7 @@ export default function Pricing() {
                         </div>
                         
 
-                        {/* <div className='flex justify-start items-start gap-3'>
+                        <div className='flex justify-start items-start gap-3'>
                         <img src='/check.svg' className='w-6 h-6 dark-gold' />
                         <p className='text-md'>FREE exclusive weekly check-ins with our dedicated weight loss team</p>
                         </div>
@@ -191,14 +191,14 @@ export default function Pricing() {
                         <div className='flex justify-start items-start gap-3'>
                         <img src='/check.svg' className='w-6 h-6 dark-gold' />
                         <p className='text-md'>FREE weekly emails with delicious, registered-dietitian-approved meal plans</p>
-                        </div> */}
+                        </div>
 
                     </div>
                 </AnimationOnScroll>
-                )}
+                )} */}
             </div>
 
-            <div className='max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-center items-stretch mt-20 gap-20 lg:gap-10 '>
+            {/* <div className='max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-center items-stretch mt-20 gap-20 lg:gap-10 '>
                 <div className='w-full lg:w-1/2 mx-auto text-left max-w-[600px]'>
                     <p className='text-xl font-semibold'>All plans include:</p>
                     {inclusions && inclusions.content[0].content.map((content:any) => (
@@ -208,7 +208,7 @@ export default function Pricing() {
                         </div>
                     ))}
                     
-                    {/* <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
+                    <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/check.svg' className='w-7 h-7 dark-gold' />
                         <p className='text-md'>Select pharmacy-to-door Rx delivery! Shipping costs may apply.**</p>
                     </div>
@@ -223,7 +223,7 @@ export default function Pricing() {
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/check.svg' className='w-7 h-7 dark-gold' />
                         <p className='text-md'>No lock-in, cancel anytime via email</p>
-                    </div> */}
+                    </div>
                 </div>
 
                 <div className='w-full lg:w-1/2 mx-auto text-left max-w-[600px]'>
@@ -235,7 +235,7 @@ export default function Pricing() {
                         </div>
                     ))}
                     
-                    {/* <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
+                    <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/x.svg' className='w-7 h-7' />
                         <p className='text-md'>Labs (typically covered by insurance)</p>
                     </div>
@@ -246,10 +246,10 @@ export default function Pricing() {
                     <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
                         <img src='/x.svg' className='w-7 h-7' />
                         <p className='text-md'>Optional* Home injections ($100 add-on fee** subject to availability)</p>
-                    </div> */}
+                    </div>
                     <p className='text-md mt-5 ml-10'>{exclusions && exclusions.disclaimer}</p>
                 </div>
-            </div>
+            </div> */}
 
 
             
