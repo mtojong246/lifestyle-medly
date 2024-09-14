@@ -66,7 +66,7 @@ export default function Pricing() {
 
                     <div className='flex justify-start items-start gap-3'>
                     <img src='/check.svg' className='w-6 h-6 dark-gold' />
-                    <p className='text-md'>Labs</p>
+                    <p className='text-md'>Lab costs are included*</p>
                     </div>
 
                     <div className='flex justify-start items-start gap-3'>
@@ -198,8 +198,9 @@ export default function Pricing() {
                 )} */}
             </div>
 
-            {/* <div className='max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-center items-stretch mt-20 gap-20 lg:gap-10 '>
-                <div className='w-full lg:w-1/2 mx-auto text-left max-w-[600px]'>
+            <div className='max-w-[1200px] mx-auto flex flex-col lg:flex-row justify-center items-stretch mt-20 gap-20 lg:gap-10 '>
+                <p className='text-md'>*Tests must be completed at our partner lab facility.</p>
+                {/* <div className='w-full lg:w-1/2 mx-auto text-left max-w-[600px]'>
                     <p className='text-xl font-semibold'>All plans include:</p>
                     {inclusions && inclusions.content[0].content.map((content:any) => (
                         <div className='flex justify-start items-start gap-3 ml-4 sm:ml-10 mt-5'>
@@ -248,8 +249,8 @@ export default function Pricing() {
                         <p className='text-md'>Optional* Home injections ($100 add-on fee** subject to availability)</p>
                     </div>
                     <p className='text-md mt-5 ml-10'>{exclusions && exclusions.disclaimer}</p>
-                </div>
-            </div> */}
+                </div> */}
+            </div>
 
 
             
