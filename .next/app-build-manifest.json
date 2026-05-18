@@ -17,6 +17,11 @@
       "static/chunks/main-app.js",
       "static/css/app/Eligibility/page.css",
       "static/chunks/app/Eligibility/page.js"
+    ],
+    "/Blog/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/Blog/page.js"
     ]
   }
 }

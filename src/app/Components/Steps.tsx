@@ -12,7 +12,7 @@ export default function Steps() {
         <p className='text-lg max-w-[600px] mx-auto my-0'>Welcome to your personally tailored program, where results are  promised and <span className='font-bold'>DELIVERED!</span></p>
         <div className='w-full flex justify-between items-stretch mt-[120px] flex-col md:flex-row gap-24 md:gap-0'>
 
-          <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='border-4 border-charcoal rounded-md p-[30px] flex-grow relative max-w-[600px] mx-auto md:max-w-[32%]'>
+          <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} className='border-4 border-charcoal rounded-md p-[30px] flex-grow relative max-w-[600px] mx-auto md:max-w-[32%] bg-vanilla'>
             <div className='absolute w-full top-[-55px] left-0 flex justify-center'>
               <div className='bg-maize flex justify-center items-center rounded-full w-[100px] h-[100px]'>
                 <img src='/call.png' />
@@ -25,7 +25,7 @@ export default function Steps() {
             </div>
           </AnimationOnScroll>
 
-          <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} delay={100} className='border-4 border-charcoal rounded-md p-[30px] flex-grow relative max-w-[600px] mx-auto md:max-w-[32%]'>
+          <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} delay={100} className='border-4 border-charcoal rounded-md p-[30px] flex-grow relative max-w-[600px] mx-auto md:max-w-[32%] bg-vanilla'>
             <div className='absolute w-full top-[-55px] left-0 flex justify-center'>
               <div className='bg-maize flex justify-center items-center rounded-full w-[100px] h-[100px]'>
                 <img src='/pill.png' />
@@ -38,7 +38,7 @@ export default function Steps() {
             </div>
           </AnimationOnScroll>
 
-          <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} delay={200} className='border-4 border-charcoal rounded-md p-[30px] flex-grow relative max-w-[600px] mx-auto md:max-w-[32%]'>
+          <AnimationOnScroll animateIn="animate__fadeInUp" animateOnce={true} delay={200} className='border-4 border-charcoal rounded-md p-[30px] flex-grow relative max-w-[600px] mx-auto md:max-w-[32%] bg-vanilla'>
             <div className='absolute w-full top-[-55px] left-0 flex justify-center'>
               <div className='bg-maize flex justify-center items-center rounded-full w-[100px] h-[100px]'>
                 <img src='/body.png' />

@@ -27,12 +27,12 @@ export default function RootLayout({
             {children}
           <Footer />
         </GlobalContextProvider>
-        <Script type="text/javascript">
+        {/* <Script type="text/javascript">
           window.klaraWidget = window.klaraWidget || [];
           window.klaraWidget.push(["setWidgetId", "e9800103-4073-4ccb-871b-c21daaf2448d"]);
         </Script>
 
-        <Script type="text/javascript" src="https://s3.amazonaws.com/widget-frontend.klara.com/bundle.js"> </Script>
+        <Script type="text/javascript" src="https://s3.amazonaws.com/widget-frontend.klara.com/bundle.js"> </Script> */}
       </body>
     </html>
   )
