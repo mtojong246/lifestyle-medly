@@ -25,8 +25,8 @@ export default function ContactPopup() {
   const handleClose = () => setOpen(false);
 
   return (
-    <div>
-      <button onClick={handleOpen}><p className='under'>Contact</p></button>
+    <>
+      <button onClick={handleOpen} className='under'><p>Contact</p></button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -49,6 +49,6 @@ export default function ContactPopup() {
           </Typography> */}
         </Box>
       </Modal>
-    </div>
+    </>
   );
 }
